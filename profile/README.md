@@ -1,10 +1,10 @@
-![BRAN Banner](assets/Branbannerorg.png)
+![BRAN Banner](../assets/Branbannerorg.png)
 
 <p align="center">
   <a href="README.en.md"><img src="https://img.shields.io/badge/Read%20in-English-blue.svg?style=for-the-badge" alt="Read in English"></a>
   <a href="https://github.com/BRAN-Org"><img src="https://img.shields.io/badge/Bases%20de%20Dados-1-green?style=for-the-badge&logo=database" alt="Bases de Dados"></a>
   <a href="https://www.budapestopenaccessinitiative.org/"><img src="https://img.shields.io/badge/BOAI-Signatory-orange.svg?style=for-the-badge" alt="BOAI Signatory"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-MIT-yellow?style=for-the-badge" alt="Licença MIT"></a>
+  <a href="../LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-MIT-yellow?style=for-the-badge" alt="Licença MIT"></a>
 </p>
 
 ## Quem somos e Nossa missão
