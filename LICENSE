@@ -1,6 +1,6 @@
-# BRAN Org - Dual Open Science & Open Data License
+# BRAN Org - Dual Open Science & Anti-AI Exploitation License
 
-This organization and its repositories are licensed under a dual-licensing structure to guarantee software freedom (Open Source Copyleft) and open scientific data interoperability (Open Access / Open Data).
+This organization and its repositories are licensed under a dual-licensing structure to guarantee software freedom (Open Source Copyleft) and protect scientific datasets from commercial exploitation and unauthorized AI model training.
 
 ---
 
@@ -17,16 +17,16 @@ For full license terms, see: https://www.gnu.org/licenses/gpl-3.0.html
 
 ---
 
-## 2. Scientific Dataset & Metadata License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+## 2. Scientific Dataset & Metadata License: CC BY-NC-SA 4.0 (Non-Commercial & Anti-AI Ingestion)
 
-All scientific datasets, article metadata, JSON databases, CSV exports, and scientometric schemas provided by BRAN Org (under `data/` directories or served via REST API endpoints) are licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license.
+All scientific datasets, article metadata, JSON databases, CSV exports, and scientometric schemas provided by BRAN Org (under `data/` directories or served via REST API endpoints) are licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** license.
 
-### Summary of Rights:
-- **Share**: Copy and redistribute the material in any medium or format.
-- **Adapt**: Remix, transform, and build upon the material for any purpose, including academic research, AI model training, scientometric analyses, and commercial indexing.
-- **Attribution**: You must give appropriate credit to BRAN Org and the original source (e.g., ABEC Brasil / EBBC), provide a link to the license, and indicate if changes were made.
+### Explicit Restrictions on Commercial Use & AI Training:
+- **Academic & Scientific Reuse**: Permitted exclusively for non-commercial academic research, bibliometric studies, citation analysis, and open scientific indexing.
+- **Prohibition of Commercial AI Training**: Bulk harvesting, automated scraping, or ingestion of this dataset for training commercial Artificial Intelligence (AI) models, Large Language Models (LLMs), or proprietary Machine Learning systems is **STRICTLY PROHIBITED** without prior explicit authorization from BRAN Org and the content rights holders.
+- **ShareAlike Guarantee**: Any non-commercial derivative work or scientific analysis dataset created using this data MUST also be distributed under the CC BY-NC-SA 4.0 license.
 
-For full license terms, see: https://creativecommons.org/licenses/by/4.0/legalcode
+For full license terms, see: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 
 ---
 

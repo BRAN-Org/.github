@@ -4,7 +4,7 @@
   <a href="README.en.md"><img src="https://img.shields.io/badge/Read%20in-English-blue.svg?style=for-the-badge" alt="Read in English"></a>
   <a href="https://github.com/BRAN-Org"><img src="https://img.shields.io/badge/Bases%20de%20Dados-2-green?style=for-the-badge&logo=database" alt="Bases de Dados"></a>
   <a href="https://www.budapestopenaccessinitiative.org/"><img src="https://img.shields.io/badge/BOAI-Signatory-orange.svg?style=for-the-badge" alt="BOAI Signatory"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-GPLv3%20%7C%20CC%20BY%204.0-blue?style=for-the-badge" alt="Licença GPLv3 | CC BY 4.0"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="Licença GPLv3 | CC BY-NC-SA 4.0"></a>
 </p>
 
 ## Quem somos e Nossa missão
@@ -26,7 +26,7 @@ Mapeamos **dados acadêmicos que já são públicos**, mas que não oferecem API
 
 | Repositório | DOI | Descrição |
 | :--- | :---: | :--- |
-| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.1000000-blue)](https://github.com/BRAN-Org/abec-open-database) | Open REST API & dashboard interativo para dados bibliométricos do ABEC Meeting (2013-2025) · 259 artigos |
+| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [![DOI](https://img.shields.io/badge/DOI-10.21452%2Fabecmeeting-blue)](https://github.com/BRAN-Org/abec-open-database) | Open REST API & dashboard interativo para dados bibliométricos do ABEC Meeting (2013-2025) · 259 artigos |
 | [EBBC-OpenData](https://github.com/BRAN-Org/EBBC-OpenData) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20722056.svg)](https://doi.org/10.5281/zenodo.20722056) | Open REST API & dashboard interativo para dados bibliométricos do EBBC · Base de dados aberta e citável |
 
 </details>
@@ -43,7 +43,7 @@ Nossa atuação é guiada pelos princípios e declarações internacionais de Ci
 
 - **[Princípios FAIR](https://www.go-fair.org/fair-principles/)**: Compromisso em disponibilizar dados **Localizáveis, Acessíveis, Interoperáveis e Reutilizáveis** (*Findable, Accessible, Interoperable, Reusable*).
 - **[Budapest Open Access Initiative (BOAI)](https://www.budapestopenaccessinitiative.org/)**: Alinhamento com as diretrizes históricas de Acesso Aberto para o livre uso, distribuição e reutilização do conhecimento científico.
-- **Dados Abertos (CC BY 4.0)**: Garantia de acesso livre, gratuito e sem restrições a todas as bases geradas sob a licença Creative Commons Attribution 4.0.
+- **Proteção dos Dados Científicos (CC BY-NC-SA 4.0)**: Acesso livre para pesquisa acadêmica não-comercial, com restrição expressa contra raspagem/ingestão para treino comercial de modelos de Inteligência Artificial sem autorização.
 - **Software Livre & Copyleft (GPLv3)**: Código-fonte 100% aberto sob a licença GNU GPLv3, garantindo que qualquer melhoria ou ferramenta derivada permaneça aberta.
 - **Transparência**: Processos de coleta, tratamento e documentação abertos e auditáveis pela comunidade.
 
@@ -51,4 +51,4 @@ Nossa atuação é guiada pelos princípios e declarações internacionais de Ci
 - **Formulário de Contato**: [Envie uma mensagem pelo formulário](https://forms.google.com/sua-url-de-contato-aqui)
 - **E-mail**: [gabrielngama@gmail.com](mailto:gabrielngama@gmail.com)
 - **GitHub**: [BRAN-Org](https://github.com/BRAN-Org)
-- Dúvidas ou sugestões? Abra uma [Issue](https://github.com/BRAN-Org/.github/issues) em容器.
+- Dúvidas ou sugestões? Abra uma [Issue](https://github.com/BRAN-Org/.github/issues) em nosso repositório.
