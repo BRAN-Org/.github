@@ -27,7 +27,7 @@ Mapeamos **dados acadêmicos que já são públicos**, mas que não oferecem API
 | Repositório | Acervo / Registros | Descrição |
 | :--- | :---: | :--- |
 | [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | **259 Artigos** (2013-2025) | Open REST API & dashboard interativo para dados bibliométricos do ABEC Meeting (ABEC Brasil) |
-| [EBBC-OpenData](https://github.com/BRAN-Org/EBBC-OpenData) | **EBBC Meeting** | Open REST API & dashboard interativo para dados bibliométricos do Encontro Brasileiro de Bibliometria e Cientometria |
+| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | **643 Artigos** (2012-2024) | Open REST API & dashboard interativo para dados bibliométricos do Encontro Brasileiro de Bibliometria e Cientometria (EBBC) |
 
 </details>
 
