@@ -2,9 +2,9 @@
 
 <p align="center">
   <a href="README.md"><img src="https://img.shields.io/badge/Ler%20em-Portugu%C3%AAs-blue.svg?style=for-the-badge" alt="Ler em Português"></a>
-  <a href="https://github.com/BRAN-Org"><img src="https://img.shields.io/badge/Databases-1-green?style=for-the-badge&logo=database" alt="Databases"></a>
+  <a href="https://github.com/BRAN-Org"><img src="https://img.shields.io/badge/Databases-2-green?style=for-the-badge&logo=database" alt="Databases"></a>
   <a href="https://www.budapestopenaccessinitiative.org/"><img src="https://img.shields.io/badge/BOAI-Signatory-orange.svg?style=for-the-badge" alt="BOAI Signatory"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3%20%7C%20CC%20BY%204.0-blue?style=for-the-badge" alt="GPLv3 | CC BY 4.0 License"></a>
 </p>
 
 ## About Us & Our Mission
@@ -20,13 +20,14 @@ We map **academic data that is already public**, but lacks APIs or easy programm
 
 ## Our Projects
 
-<details>
+<details open>
 <summary><b>Databases & Tools</b></summary>
 <br>
 
 | Repository | DOI | Description |
 | :--- | :---: | :--- |
-| [EBBC-OpenData](https://github.com/GabrielBaiano/EBBC-OpenData) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20722056.svg)](https://doi.org/10.5281/zenodo.20722056) | Open REST API & interactive dashboard for EBBC bibliometric data · Citable open dataset |
+| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.1000000-blue)](https://github.com/BRAN-Org/abec-open-database) | Open REST API & interactive dashboard for ABEC Meeting (2013-2025) bibliometric data · 259 articles |
+| [EBBC-OpenData](https://github.com/BRAN-Org/EBBC-OpenData) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20722056.svg)](https://doi.org/10.5281/zenodo.20722056) | Open REST API & interactive dashboard for EBBC bibliometric data · Citable open dataset |
 
 </details>
 
@@ -42,8 +43,8 @@ Our work is guided by international Open Science principles and declarations:
 
 - **[FAIR Principles](https://www.go-fair.org/fair-principles/)**: Commitment to making data **Findable, Accessible, Interoperable, and Reusable**.
 - **[Budapest Open Access Initiative (BOAI)](https://www.budapestopenaccessinitiative.org/)**: Alignment with landmark Open Access guidelines advocating for free use, distribution, and reuse of scientific knowledge.
-- **Open Data**: Guaranteeing free, public, and unrestricted access to all datasets generated.
-- **Open Source**: Keeping our codebase 100% open under permissive licenses.
+- **Open Data (CC BY 4.0)**: Guaranteeing free, public, and unrestricted access to all datasets under Creative Commons Attribution 4.0.
+- **Open Source & Copyleft (GPLv3)**: Keeping our codebase 100% open under GNU GPLv3, ensuring derived tools remain open source.
 - **Transparency**: Open and auditable workflows for data collection, cleaning, and documentation.
 
 ## Contact
