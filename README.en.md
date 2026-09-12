@@ -24,10 +24,10 @@ We map **academic data that is already public**, but lacks APIs or easy programm
 <summary><b>Databases & Tools</b></summary>
 <br>
 
-| Repository | DOI | Description |
+| Repository | Collection / Records | Description |
 | :--- | :---: | :--- |
-| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [![DOI](https://img.shields.io/badge/DOI-10.21452%2Fabecmeeting-blue)](https://github.com/BRAN-Org/abec-open-database) | Open REST API & interactive dashboard for ABEC Meeting (2013-2025) bibliometric data · 259 articles |
-| [EBBC-OpenData](https://github.com/BRAN-Org/EBBC-OpenData) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20722056.svg)](https://doi.org/10.5281/zenodo.20722056) | Open REST API & interactive dashboard for EBBC bibliometric data · Citable open dataset |
+| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | **259 Articles** (2013-2025) | Open REST API & interactive dashboard for ABEC Meeting (ABEC Brasil) bibliometric data |
+| [EBBC-OpenData](https://github.com/BRAN-Org/EBBC-OpenData) | **EBBC Meeting** | Open REST API & interactive dashboard for EBBC bibliometric data |
 
 </details>
 
