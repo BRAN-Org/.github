@@ -1,4 +1,4 @@
-![BRAN Banner](../assets/bran_banner_v2.png)
+![BRAN Banner](../assets/f2cb99aa-7e97-4e88-9a6c-eb55d56cd888.png)
 
 <p align="center">
   <a href="README.md"><img src="https://img.shields.io/badge/Ler%20em-Portugu%C3%AAs-blue.svg?style=for-the-badge" alt="Ler em Português"></a>
@@ -7,15 +7,9 @@
   <a href="../LICENSE"><img src="https://img.shields.io/badge/License-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="GPLv3 | CC BY-NC-SA 4.0 License"></a>
 </p>
 
-## 💡 About BRAN Org
-
-**BRAN Org** (**Brazilian Research Archive Network**) is an independent organization dedicated to building open infrastructure for academic and scientific information in **Brazil**.
-
-👉 **[Want to learn more about us, our mission, goals, principles, contact info, and full history? Click here to read our ABOUT.en.md!](ABOUT.en.md)**
+👉 **[Want to learn more about us, our story, mission, goals, and full vision? Check out our ABOUT.en.md!](ABOUT.en.md)**
 
 ---
-
-## Our Projects
 
 ### Databases & Collections
 
@@ -42,9 +36,9 @@ To ensure academic transparency and scientific rigor, every **BRAN Org** dataset
 
 ---
 
-## How to Contribute
-We invite researchers, developers, and open science enthusiasts to collaborate with us:
-- **Suggest Data Sources**: Know a public Brazilian academic dataset that needs an API? [Submit your suggestion via Google Form](https://forms.google.com/sua-url-de-sugestao-aqui).
-- **Develop & Improve**: Collaborate on building and improving our open-source APIs and tools on GitHub.
-- **Open Issues**: Send feedback, report bugs, or share ideas directly in our repositories.
-- **Share**: Spread the word about our open tools to the research community.
+## 🤝 Get Involved
+
+This community has a [Code of Conduct](CODE_OF_CONDUCT.md). You must follow it when interacting with the community.
+
+- **For questions or support:** see [SUPPORT.md](SUPPORT.md) or send a message via our [Contact Form](https://forms.google.com/sua-url-de-sugestao-aqui).
+- **To help or contribute:** see [CONTRIBUTING.md](CONTRIBUTING.md).

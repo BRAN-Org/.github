@@ -1,4 +1,4 @@
-![BRAN Banner](../assets/bran_banner_v2.png)
+![BRAN Banner](../assets/f2cb99aa-7e97-4e88-9a6c-eb55d56cd888.png)
 
 <p align="center">
   <a href="README.en.md"><img src="https://img.shields.io/badge/Read%20in-English-blue.svg?style=for-the-badge" alt="Read in English"></a>
@@ -7,15 +7,9 @@
   <a href="../LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="Licença GPLv3 | CC BY-NC-SA 4.0"></a>
 </p>
 
-## 💡 Sobre a BRAN Org
-
-A **BRAN Org** (**Brazilian Research Archive Network**) é uma organização independente dedicada a construir infraestrutura aberta para a informação acadêmica e científica no **Brasil**.
-
-👉 **[Se quiser saber mais sobre a gente, nossa missão, nossos objetivos, princípios, contato e nossa história completa, acesse o nosso ABOUT.md!](ABOUT.md)**
+👉 **[Quer saber mais sobre a gente, nossa história, missão, objetivos e visão completa? Acesse o nosso ABOUT.md!](ABOUT.md)**
 
 ---
-
-## Nossos projetos
 
 ### Bases de Dados & Acervos
 
@@ -42,9 +36,9 @@ Para assegurar transparência acadêmica e rigor científico, cada repositório 
 
 ---
 
-## Como contribuir
-Convidamos pesquisadores, desenvolvedores e entusiastas da ciência aberta a colaborar conosco:
-- **Sugerir fontes de dados**: Conhece uma base acadêmica brasileira pública que precisa de uma API? [Envie sua sugestão pelo formulário](https://forms.google.com/sua-url-de-sugestao-aqui).
-- **Desenvolver e aprimorar**: Colaborar no desenvolvimento das nossas APIs e ferramentas no GitHub.
-- **Abrir Issues**: Enviar feedbacks, correções de bugs ou idéias diretamente nos nossos repositórios.
-- **Divulgar**: Compartilhar nossas ferramentas com pesquisadores e a comunidade acadêmica.
+## 🤝 Participe
+
+Esta comunidade possui um [Código de Conduta](CODE_OF_CONDUCT.md). Você deve segui-lo ao interagir com a comunidade.
+
+- **Para dúvidas ou suporte:** veja o [SUPPORT.md](SUPPORT.md) ou envie uma mensagem através do [Formulário de Contato](https://forms.google.com/sua-url-de-sugestao-aqui).
+- **Para ajudar ou contribuir:** veja o [CONTRIBUTING.md](CONTRIBUTING.md).
