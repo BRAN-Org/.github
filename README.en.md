@@ -22,11 +22,7 @@ We map **academic data that is already public**, but lacks APIs or easy programm
 
 ### Databases & Collections
 
-This section aggregates the open academic collections and repositories maintained and curated by **BRAN Org**:
-
-- **What it is**: The central catalog of Brazilian academic databases converted into open, standardized formats.
-- **What it contains**: Comprehensive bibliometric data from scientific events and journals (articles, authors, affiliations, abstracts, citations, and methodological metadata).
-- **How it works**: Each repository serves standardized data files (`JSON`/`CSV`), alongside a **free, public REST API** (no API key required) and an **interactive Web Dashboard** for real-time visual exploration and analysis.
+Public catalog of bibliometric databases from Brazilian scientific output, provided in open formats (`JSON`/`CSV`), featuring a free REST API and interactive dashboard for analysis.
 
 | Repository | Official Event | Records | Data Reliability |
 | :--- | :--- | :---: | :---: |

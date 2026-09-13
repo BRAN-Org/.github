@@ -22,11 +22,7 @@ Mapeamos **dados acadêmicos que já são públicos**, mas que não oferecem API
 
 ### Bases de Dados & Acervos
 
-Esta seção reúne os acervos e repositórios acadêmicos públicos mantidos e curados pela **BRAN Org**:
-
-- **O que é**: O catálogo central de bases de dados acadêmicas brasileiras convertidas para formatos abertos e estruturados.
-- **O que contém**: Dados bibliométricos completos de eventos e periódicos científicos (artigos, autores, afiliações, resumos, citações e metadados metodológicos).
-- **Como funciona**: Cada repositório disponibiliza os dados em arquivos padronizados (`JSON`/`CSV`), acompanhados por uma **API REST pública e gratuita** (sem necessidade de chaves) e um **Dashboard Web interativo** para consulta e análise visual em tempo real.
+Catálogo público de bases de dados bibliométricos da produção científica brasileira, disponibilizadas em formatos abertos (`JSON`/`CSV`), com API REST gratuita e dashboard interativo para análise.
 
 | Repositório | Evento Oficial | Registros | Confiabilidade |
 | :--- | :--- | :---: | :---: |
