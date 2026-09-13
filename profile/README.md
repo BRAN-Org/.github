@@ -12,7 +12,7 @@ A **BRAN Org** (**Brazilian Research Archive Network**) é uma organização ind
 
 Mapeamos **dados acadêmicos que já são públicos**, mas que não oferecem APIs ou formas fáceis de acesso programático. Nosso trabalho é coletar, tratar e disponibilizar essas informações em formatos abertos e padronizados, por meio de APIs públicas e ferramentas *open-source*, reduzindo barreiras técnicas para pesquisadores e impulsionando os estudos sobre a produção científica brasileira.
 
-👉 [**📖 Saiba mais sobre a nossa história, a inspiração em Brann Bronzebeard e nossa visão para a ciência brasileira**](ABOUT.md)
+[Saiba mais sobre a nossa história e visão](ABOUT.md)
 
 ## Nossos objetivos
 - **Mapear fontes brasileiras**: Identificar acervos, repositórios e bases acadêmicas públicas que carecem de acesso programático.
