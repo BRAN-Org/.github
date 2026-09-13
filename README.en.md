@@ -8,7 +8,7 @@
 </p>
 
 ## About Us & Our Mission
-**BRAN Org** (**Brazilian Research Archive Network**) is an independent organization dedicated to building open infrastructure for academic and scientific information in **Brazil**.
+**BRAN Org** is an independent organization dedicated to building open infrastructure for academic and scientific information in **Brazil**.
 
 We map **academic data that is already public**, but lacks APIs or easy programmatic access. Our work is to collect, clean, and provide this information in open and standardized formats through public APIs and open-source tools, lowering technical barriers for researchers and boosting quantitative studies on Brazilian scientific output.
 
@@ -20,16 +20,24 @@ We map **academic data that is already public**, but lacks APIs or easy programm
 
 ## Our Projects
 
-<details open>
-<summary><b>Databases & Tools</b></summary>
-<br>
+### Databases & Collections
 
-| Repository | Collection / Records | Description |
-| :--- | :---: | :--- |
-| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | **259 Articles** (2013-2025) | Open REST API & interactive dashboard for ABEC Meeting (ABEC Brasil) bibliometric data |
-| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | **643 Articles** (2012-2024) | Open REST API & interactive dashboard for EBBC bibliometric data |
+| Repository | Collection / Records | Data Reliability | Tools | Description |
+| :--- | :---: | :---: | :---: | :--- |
+| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | **259 Articles** (2013-2025) | [![Reliability: In Curation](https://img.shields.io/badge/Reliability-In%20Curation-orange.svg?style=flat-square)](#-data-reliability-levels) | - | Open REST API & interactive dashboard for ABEC Meeting (ABEC Brasil) bibliometric data |
+| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | **643 Articles** (2012-2024) | [![Reliability: Source Faithful](https://img.shields.io/badge/Reliability-Source%20Faithful%20(Limitations)-yellow.svg?style=flat-square)](#-data-reliability-levels) | - | Open REST API & interactive dashboard for EBBC bibliometric data |
 
-</details>
+### 🏅 Data Reliability Levels
+
+To ensure academic transparency and scientific rigor, every **BRAN Org** dataset features a data reliability and integrity tier:
+
+- 🟢 **Green (100% Audited & Complete)**: Fully extracted, validated, and sanitized. Contains all fundamental metadata (title, authors, affiliations, abstracts, DOIs, and PDF links) without known structural gaps.
+- 🔵 **Blue (High Fidelity with Sparse Source Omissions)**: Complete coverage of editions/years and DOIs, containing only rare metadata gaps inherited directly from the official website in specific editions.
+- 🟡 **Yellow (100% Faithful to Source with Native Limitations)**: 100% of articles available online on the official website were extracted without loss, but the official source presents native limitations (e.g., lack of DOIs in proceedings or missing early historical proceedings not digitized online). *(Ex: `ebbc-open-database`)*.
+- 🟠 **Orange (In Curation / Processing)**: Extraction completed successfully, but the collection is undergoing curation, schema validation, and metadata sanitation. *(Ex: `abec-open-database`)*.
+- 🔴 **Red (Unaudited Data / Low Reliability)**: Unaudited raw records or high incidence of extraction errors. Requires caution for direct analytical use.
+
+
 
 ## How to Contribute
 We invite researchers, developers, and open science enthusiasts to collaborate with us:

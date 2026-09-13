@@ -8,7 +8,7 @@
 </p>
 
 ## Quem somos e Nossa missão
-A **BRAN Org** (**Brazilian Research Archive Network**) é uma organização independente dedicada a construir infraestrutura aberta para a informação acadêmica e científica no **Brasil**.
+A **BRAN Org** é uma organização independente dedicada a construir infraestrutura aberta para a informação acadêmica e científica no **Brasil**.
 
 Mapeamos **dados acadêmicos que já são públicos**, mas que não oferecem APIs ou formas fáceis de acesso programático. Nosso trabalho é coletar, tratar e disponibilizar essas informações em formatos abertos e padronizados, por meio de APIs públicas e ferramentas *open-source*, reduzindo barreiras técnicas para pesquisadores e impulsionando os estudos sobre a produção científica brasileira.
 
@@ -20,16 +20,24 @@ Mapeamos **dados acadêmicos que já são públicos**, mas que não oferecem API
 
 ## Nossos projetos
 
-<details open>
-<summary><b>Bases de Dados & Ferramentas</b></summary>
-<br>
+### Bases de Dados & Acervos
 
-| Repositório | Acervo / Registros | Descrição |
-| :--- | :---: | :--- |
-| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | **259 Artigos** (2013-2025) | Open REST API & dashboard interativo para dados bibliométricos do ABEC Meeting (ABEC Brasil) |
-| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | **643 Artigos** (2012-2024) | Open REST API & dashboard interativo para dados bibliométricos do Encontro Brasileiro de Bibliometria e Cientometria (EBBC) |
+| Repositório | Acervo / Registros | Confiabilidade | Ferramentas | Descrição |
+| :--- | :---: | :---: | :---: | :--- |
+| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | **259 Artigos** (2013-2025) | [![Confiabilidade: Em Curadoria](https://img.shields.io/badge/Confiabilidade-Em%20Curadoria-orange.svg?style=flat-square)](#-níveis-de-confiabilidade-dos-dados) | - | Open REST API & dashboard interativo para dados bibliométricos do ABEC Meeting (ABEC Brasil) |
+| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | **643 Artigos** (2012-2024) | [![Confiabilidade: Fiel à Fonte](https://img.shields.io/badge/Confiabilidade-Fiel%20%C3%A0%20Fonte%20(Limita%C3%A7%C3%B5es)-yellow.svg?style=flat-square)](#-níveis-de-confiabilidade-dos-dados) | - | Open REST API & dashboard interativo para dados bibliométricos do Encontro Brasileiro de Bibliometria e Cientometria (EBBC) |
 
-</details>
+### 🏅 Níveis de Confiabilidade dos Dados
+
+Para assegurar transparência acadêmica e rigor científico, cada repositório da **BRAN Org** possui uma marcação de confiabilidade e integridade dos dados:
+
+- 🟢 **Verde (100% Auditado & Completo)**: Dados totalmente extraídos, validados e higienizados. Contém todos os metadados fundamentais (título, autores, afiliações, resumos, DOIs e links para PDF) sem lacunas conhecidas.
+- 🔵 **Azul (Alta Fidelidade com Omissões Esparsas da Fonte)**: Cobertura completa de edições/anos e DOIs, contendo apenas raras ausências de metadados herdadas do próprio site oficial em edições específicas.
+- 🟡 **Amarelo (100% Fiel à Fonte com Limitações da Origem)**: 100% dos artigos disponibilizados online pelo evento foram extraídos sem perdas, porém a fonte oficial apresenta limitações nativas (ex: ausência de DOIs nos anais do evento ou falta dos primeiros anais históricos que não estão digitalizados online). *(Ex: `ebbc-open-database`)*.
+- 🟠 **Laranja (Em Curadoria / Processamento)**: Extração realizada com sucesso, mas o acervo ainda passa por etapas de curadoria, validação de schema e saneamento de metadados. *(Ex: `abec-open-database`)*.
+- 🔴 **Vermelho (Dados Não Auditados / Baixa Confiabilidade)**: Registros brutos não auditados ou com alta incidência de falhas de extração. Requer cautela no uso analítico direto.
+
+
 
 ## Como contribuir
 Convidamos pesquisadores, desenvolvedores e entusiastas da ciência aberta a colaborar conosco:
