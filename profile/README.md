@@ -7,7 +7,9 @@
   <a href="../LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="Licença GPLv3 | CC BY-NC-SA 4.0"></a>
 </p>
 
-📖 **[Saiba mais sobre nossa história, missão e visão em ABOUT.md](ABOUT.md)**
+<p align="center">
+  📖 <b><a href="ABOUT.md">Saiba mais sobre nossa história, missão e visão em ABOUT.md</a></b>
+</p>
 
 ---
 
@@ -40,5 +42,5 @@ Para assegurar transparência acadêmica e rigor científico, cada repositório 
 
 Esta comunidade possui um [Código de Conduta](CODE_OF_CONDUCT.md). Você deve segui-lo ao interagir com a comunidade.
 
-- **Para dúvidas ou suporte:** veja o [SUPPORT.md](SUPPORT.md) ou envie uma mensagem através do [Formulário de Contato](https://forms.google.com/sua-url-de-sugestao-aqui).
+- **Para dúvidas ou suporte:** veja o [SUPPORT.md](SUPPORT.md) ou envie uma mensagem através do [Formulário de Contato](https://forms.gle/bran-org-contato).
 - **Para ajudar ou contribuir:** veja o [CONTRIBUTING.md](CONTRIBUTING.md).

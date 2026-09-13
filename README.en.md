@@ -7,7 +7,9 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="GPLv3 | CC BY-NC-SA 4.0 License"></a>
 </p>
 
-📖 **[Learn more about our story, mission, and vision in ABOUT.en.md](ABOUT.en.md)**
+<p align="center">
+  📖 <b><a href="ABOUT.en.md">Learn more about our story, mission, and vision in ABOUT.en.md</a></b>
+</p>
 
 ---
 
@@ -40,5 +42,5 @@ To ensure academic transparency and scientific rigor, every **BRAN Org** dataset
 
 This community has a [Code of Conduct](CODE_OF_CONDUCT.md). You must follow it when interacting with the community.
 
-- **For questions or support:** see [SUPPORT.md](SUPPORT.md) or send a message via our [Contact Form](https://forms.google.com/sua-url-de-sugestao-aqui).
+- **For questions or support:** see [SUPPORT.md](SUPPORT.md) or send a message via our [Contact Form](https://forms.gle/bran-org-contato).
 - **To help or contribute:** see [CONTRIBUTING.md](CONTRIBUTING.md).
