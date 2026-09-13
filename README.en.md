@@ -1,4 +1,4 @@
-![BRAN Banner](assets/Branbannerorg.png)
+![BRAN Banner](assets/bran_banner_v2.png)
 
 <p align="center">
   <a href="README.md"><img src="https://img.shields.io/badge/Ler%20em-Portugu%C3%AAs-blue.svg?style=for-the-badge" alt="Ler em Português"></a>

@@ -1,4 +1,4 @@
-![BRAN Banner](../assets/Branbannerorg.png)
+![BRAN Banner](../assets/bran_banner_v2.png)
 
 <p align="center">
   <a href="README.en.md"><img src="https://img.shields.io/badge/Read%20in-English-blue.svg?style=for-the-badge" alt="Read in English"></a>
