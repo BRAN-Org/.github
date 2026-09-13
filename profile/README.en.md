@@ -7,7 +7,7 @@
   <a href="../LICENSE"><img src="https://img.shields.io/badge/License-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="GPLv3 | CC BY-NC-SA 4.0 License"></a>
 </p>
 
-👉 **[Want to learn more about us, our story, mission, goals, and full vision? Check out our ABOUT.en.md!](ABOUT.en.md)**
+📖 **[Learn more about our story, mission, and vision in ABOUT.en.md](ABOUT.en.md)**
 
 ---
 
