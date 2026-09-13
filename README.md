@@ -66,5 +66,3 @@ Nossa atuação é guiada pelos princípios e declarações internacionais de Ci
 ## Contato
 - **Formulário de Contato**: [Envie uma mensagem pelo formulário](https://forms.google.com/sua-url-de-contato-aqui)
 - **E-mail**: [gabrielngama@gmail.com](mailto:gabrielngama@gmail.com)
-- **GitHub**: [BRAN-Org](https://github.com/BRAN-Org)
-- Dúvidas ou sugestões? Abra uma [Issue](https://github.com/BRAN-Org/.github/issues) em nosso repositório.

@@ -66,5 +66,3 @@ Our work is guided by international Open Science principles and declarations:
 ## Contact
 - **Contact Form**: [Send us a message via Google Form](https://forms.google.com/sua-url-de-contato-aqui)
 - **Email**: [gabrielngama@gmail.com](mailto:gabrielngama@gmail.com)
-- **GitHub**: [BRAN-Org](https://github.com/BRAN-Org)
-- Questions or suggestions? Open an [Issue](https://github.com/BRAN-Org/.github/issues) in our repository.
