@@ -27,7 +27,7 @@ Catálogo público de bases de dados bibliométricos da produção científica b
 | Repositório | Evento Oficial | Registros | Confiabilidade |
 | :--- | :--- | :---: | :---: |
 | [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting](https://www.abecbrasil.org.br/) | **259 Artigos** (2013-2025) | [🟠 Em Curadoria](#-níveis-de-confiabilidade-dos-dados) |
-| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC](https://ebbc.ibict.br/) | **643 Artigos** (2012-2024) | [🟡 Fiel à Fonte (Limitações)](#-níveis-de-confiabilidade-dos-dados) |
+| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC](https://ebbc.inf.br) | **643 Artigos** (2012-2024) | [🟡 Fiel à Fonte (Limitações)](#-níveis-de-confiabilidade-dos-dados) |
 
 <details>
 <summary><b>Níveis de Confiabilidade dos Dados</b></summary>

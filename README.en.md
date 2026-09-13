@@ -27,7 +27,7 @@ Public catalog of bibliometric databases from Brazilian scientific output, provi
 | Repository | Official Event | Records | Data Reliability |
 | :--- | :--- | :---: | :---: |
 | [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting](https://www.abecbrasil.org.br/) | **259 Articles** (2013-2025) | [🟠 In Curation](#-data-reliability-levels) |
-| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC](https://ebbc.ibict.br/) | **643 Articles** (2012-2024) | [🟡 Source Faithful (Limitations)](#-data-reliability-levels) |
+| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC](https://ebbc.inf.br) | **643 Articles** (2012-2024) | [🟡 Source Faithful (Limitations)](#-data-reliability-levels) |
 
 <details>
 <summary><b>Data Reliability Levels</b></summary>
