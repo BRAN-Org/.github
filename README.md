@@ -22,10 +22,10 @@ Mapeamos **dados acadêmicos que já são públicos**, mas que não oferecem API
 
 ### Bases de Dados & Acervos
 
-| Repositório | Acervo / Registros | Confiabilidade | Descrição |
-| :--- | :---: | :---: | :--- |
-| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | **259 Artigos** (2013-2025) | [🟠 Em Curadoria](#-níveis-de-confiabilidade-dos-dados) | Open REST API & dashboard interativo para dados bibliométricos do ABEC Meeting (ABEC Brasil) |
-| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | **643 Artigos** (2012-2024) | [🟡 Fiel à Fonte (Limitações)](#-níveis-de-confiabilidade-dos-dados) | Open REST API & dashboard interativo para dados bibliométricos do Encontro Brasileiro de Bibliometria e Cientometria (EBBC) |
+| Repositório | Evento Oficial | Registros | Confiabilidade |
+| :--- | :--- | :---: | :---: |
+| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting](https://www.abecbrasil.org.br/) | **259 Artigos** (2013-2025) | [🟠 Em Curadoria](#-níveis-de-confiabilidade-dos-dados) |
+| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC](https://ebbc.ibict.br/) | **643 Artigos** (2012-2024) | [🟡 Fiel à Fonte (Limitações)](#-níveis-de-confiabilidade-dos-dados) |
 
 <details>
 <summary><b>Níveis de Confiabilidade dos Dados</b></summary>
