@@ -4,7 +4,7 @@
 
 Caso você esteja se perguntando sobre a inspiração por trás da sigla **BRAN** (**Brazilian Research Archive Network**), o nome é uma referência a **Brann Bronzebeard**, personagem do jogo *World of Warcraft*.
 
-![Brann Bronzebeard em ação](assets/brann_bronzebeard_ingame.png)
+![Brann Bronzebeard em ação](../assets/brann_bronzebeard_ingame.png)
 
 Brann é um arqueólogo e pesquisador dedicado a explorar ruínas esquecidas, resgatar registros históricos e compartilhar suas descobertas abertamente. Essa ideia traduz a nossa missão no mundo real: resgatar acervos e dados acadêmicos brasileiros que estão desestruturados ou esquecidos na web e torná-los acessíveis a todos.
 
