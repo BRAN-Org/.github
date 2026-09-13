@@ -8,7 +8,7 @@
 </p>
 
 ## About Us & Our Mission
-**BRAN Org** is an independent organization dedicated to building open infrastructure for academic and scientific information in **Brazil**.
+**BRAN Org** (**Brazilian Research Archive Network**) is an independent organization dedicated to building open infrastructure for academic and scientific information in **Brazil**.
 
 We map **academic data that is already public**, but lacks APIs or easy programmatic access. Our work is to collect, clean, and provide this information in open and standardized formats through public APIs and open-source tools, lowering technical barriers for researchers and boosting quantitative studies on Brazilian scientific output.
 
