@@ -79,7 +79,8 @@ Os repositórios de dados públicos (`abec-open-database`, `ebbc-open-database`,
 ## 🎨 4. Alterações em Templates do Site e Aplicações
 
 - **Regra Fundamental**: **JAMAIS** faça alterações de layout, componentes React/Vue/HTML, servidor backend (`server.js`) ou estilização diretamente em um repositório de base de dados final (ex: `abec-open-database`).
-- **Procedimento**: Qualquer melhoria visual ou estrutural deve ser realizada no repositório **`abec-open-database_template`** (ou template correspondente). As alterações aprovadas na branch `main` do template serão sincronizadas automaticamente para todas as bases de dados ativas.
+- **Procedimento**: Qualquer melhoria visual ou estrutural deve ser realizada no repositório **`abec-open-database_template`** (ou template correspondente).
+- ⚠️ **Branch de Destino Obrigatória**: Todo Pull Request de desenvolvimento ou template DEVE ser direcionado à branch **`development`** (`base: development`). PRs diretos para a branch `main` serão rejeitados. O merge na `main` ocorre apenas após testes de homologação.
 
 ---
 
