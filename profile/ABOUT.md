@@ -6,7 +6,7 @@ Caso você esteja se perguntando sobre a inspiração por trás da sigla **BRAN*
 
 ![Brann Bronzebeard em ação](assets/brann_bronzebeard_ingame.png)
 
-No jogo, Brann é um arqueólogo e pesquisador dedicado a explorar ruínas esquecidas, resgatar registros históricos e compartilhar suas descobertas abertamente. Essa ideia traduz a nossa missão no mundo real: resgatar acervos e dados acadêmicos brasileiros que estão desestruturados ou esquecidos na web e torná-los acessíveis a todos.
+Brann é um arqueólogo e pesquisador dedicado a explorar ruínas esquecidas, resgatar registros históricos e compartilhar suas descobertas abertamente. Essa ideia traduz a nossa missão no mundo real: resgatar acervos e dados acadêmicos brasileiros que estão desestruturados ou esquecidos na web e torná-los acessíveis a todos.
 
 ---
 
