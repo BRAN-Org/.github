@@ -4,7 +4,7 @@
 
 If you're wondering about the inspiration behind the acronym **BRAN** (**Brazilian Research Archive Network**), the name is a nod to **Brann Bronzebeard**, a character from *World of Warcraft*.
 
-![Brann Bronzebeard in action](assets/brann_bronzebeard_ingame.png)
+![Brann Bronzebeard in action](../assets/brann_bronzebeard_ingame.png)
 
 In the game, Brann is an archaeologist and researcher dedicated to exploring forgotten ruins, rescuing historical records, and sharing his discoveries openly. This directly reflects our real-world mission: excavating fragmented or forgotten Brazilian academic data and making it accessible to everyone.
 
