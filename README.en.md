@@ -12,6 +12,8 @@
 
 We map **academic data that is already public**, but lacks APIs or easy programmatic access. Our work is to collect, clean, and provide this information in open and standardized formats through public APIs and open-source tools, lowering technical barriers for researchers and boosting quantitative studies on Brazilian scientific output.
 
+👉 [**📖 Learn more about our story, the inspiration behind Brann Bronzebeard, and our vision for Brazilian science**](ABOUT.en.md)
+
 ## Our Goals
 - **Map Brazilian Sources**: Identify public academic collections, repositories, and databases that lack programmatic access.
 - **Structure Public Data**: Convert raw or fragmented data into clean, standardized formats ready for analysis.

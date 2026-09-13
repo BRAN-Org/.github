@@ -1,16 +1,18 @@
-![BRAN Banner](../assets/bran_banner_v2.png)
+![BRAN Banner](assets/bran_banner_v2.png)
 
 <p align="center">
   <a href="README.md"><img src="https://img.shields.io/badge/Ler%20em-Portugu%C3%AAs-blue.svg?style=for-the-badge" alt="Ler em Português"></a>
-  <a href="https://github.com/BRAN-Org"><img src="https://img.shields.io/badge/Databases-1-green?style=for-the-badge&logo=database" alt="Databases"></a>
+  <a href="https://github.com/BRAN-Org"><img src="https://img.shields.io/badge/Databases-2-green?style=for-the-badge&logo=database" alt="Databases"></a>
   <a href="https://www.budapestopenaccessinitiative.org/"><img src="https://img.shields.io/badge/BOAI-Signatory-orange.svg?style=for-the-badge" alt="BOAI Signatory"></a>
-  <a href="../LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="GPLv3 | CC BY-NC-SA 4.0 License"></a>
 </p>
 
 ## About Us & Our Mission
 **BRAN Org** (**Brazilian Research Archive Network**) is an independent organization dedicated to building open infrastructure for academic and scientific information in **Brazil**.
 
 We map **academic data that is already public**, but lacks APIs or easy programmatic access. Our work is to collect, clean, and provide this information in open and standardized formats through public APIs and open-source tools, lowering technical barriers for researchers and boosting quantitative studies on Brazilian scientific output.
+
+👉 [**📖 Learn more about our story, the inspiration behind Brann Bronzebeard, and our vision for Brazilian science**](ABOUT.en.md)
 
 ## Our Goals
 - **Map Brazilian Sources**: Identify public academic collections, repositories, and databases that lack programmatic access.
@@ -33,7 +35,7 @@ Public catalog of bibliometric databases from Brazilian scientific output, provi
 <summary><b>Data Reliability Levels</b></summary>
 <br>
 
-To ensure academic transparency and scientific rigor, every **BRAN Org** dataset features a data reliability and integrity tier:
+To ensure academic transparency and scientific rigor, every **BRAN Org** dataset features a data reliability tier:
 
 - 🟢 **Green (100% Audited & Complete)**: Fully extracted, validated, and sanitized. Contains all fundamental metadata (title, authors, affiliations, abstracts, DOIs, and PDF links) without known structural gaps.
 - 🔵 **Blue (High Fidelity with Sparse Source Omissions)**: Complete coverage of editions/years and DOIs, containing only rare metadata gaps inherited directly from the official website in specific editions.
@@ -42,6 +44,8 @@ To ensure academic transparency and scientific rigor, every **BRAN Org** dataset
 - 🔴 **Red (Unaudited Data / Low Reliability)**: Unaudited raw records or high incidence of extraction errors. Requires caution for direct analytical use.
 
 </details>
+
+
 
 ## How to Contribute
 We invite researchers, developers, and open science enthusiasts to collaborate with us:
@@ -55,8 +59,8 @@ Our work is guided by international Open Science principles and declarations:
 
 - **[FAIR Principles](https://www.go-fair.org/fair-principles/)**: Commitment to making data **Findable, Accessible, Interoperable, and Reusable**.
 - **[Budapest Open Access Initiative (BOAI)](https://www.budapestopenaccessinitiative.org/)**: Alignment with landmark Open Access guidelines advocating for free use, distribution, and reuse of scientific knowledge.
-- **Open Data**: Guaranteeing free, public, and unrestricted access to all datasets generated.
-- **Open Source**: Keeping our codebase 100% open under permissive licenses.
+- **Scientific Data Protection (CC BY-NC-SA 4.0)**: Free access for non-commercial academic research, with explicit restrictions against scraping/ingestion for commercial AI model training.
+- **Open Source & Copyleft (GPLv3)**: Keeping our codebase 100% open under GNU GPLv3, ensuring derived tools remain open source.
 - **Transparency**: Open and auditable workflows for data collection, cleaning, and documentation.
 
 ## Contact

@@ -1,16 +1,18 @@
-![BRAN Banner](../assets/bran_banner_v2.png)
+![BRAN Banner](assets/bran_banner_v2.png)
 
 <p align="center">
   <a href="README.en.md"><img src="https://img.shields.io/badge/Read%20in-English-blue.svg?style=for-the-badge" alt="Read in English"></a>
   <a href="https://github.com/BRAN-Org"><img src="https://img.shields.io/badge/Bases%20de%20Dados-2-green?style=for-the-badge&logo=database" alt="Bases de Dados"></a>
   <a href="https://www.budapestopenaccessinitiative.org/"><img src="https://img.shields.io/badge/BOAI-Signatory-orange.svg?style=for-the-badge" alt="BOAI Signatory"></a>
-  <a href="../LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="Licença GPLv3 | CC BY-NC-SA 4.0"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="Licença GPLv3 | CC BY-NC-SA 4.0"></a>
 </p>
 
 ## Quem somos e Nossa missão
 A **BRAN Org** (**Brazilian Research Archive Network**) é uma organização independente dedicada a construir infraestrutura aberta para a informação acadêmica e científica no **Brasil**.
 
 Mapeamos **dados acadêmicos que já são públicos**, mas que não oferecem APIs ou formas fáceis de acesso programático. Nosso trabalho é coletar, tratar e disponibilizar essas informações em formatos abertos e padronizados, por meio de APIs públicas e ferramentas *open-source*, reduzindo barreiras técnicas para pesquisadores e impulsionando os estudos sobre a produção científica brasileira.
+
+👉 [**📖 Saiba mais sobre a nossa história, a inspiração em Brann Bronzebeard e nossa visão para a ciência brasileira**](ABOUT.md)
 
 ## Nossos objetivos
 - **Mapear fontes brasileiras**: Identificar acervos, repositórios e bases acadêmicas públicas que carecem de acesso programático.
@@ -64,3 +66,5 @@ Nossa atuação é guiada pelos princípios e declarações internacionais de Ci
 ## Contato
 - **Formulário de Contato**: [Envie uma mensagem pelo formulário](https://forms.google.com/sua-url-de-contato-aqui)
 - **E-mail**: [gabrielngama@gmail.com](mailto:gabrielngama@gmail.com)
+- **GitHub**: [BRAN-Org](https://github.com/BRAN-Org)
+- Dúvidas ou sugestões? Abra uma [Issue](https://github.com/BRAN-Org/.github/issues) em nosso repositório.

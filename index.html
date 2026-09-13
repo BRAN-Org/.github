@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pré-visualização README - BRAN Org</title>
+  <title>Pré-visualização README & ABOUT - BRAN Org</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
@@ -40,6 +40,8 @@
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .brand {
@@ -60,6 +62,11 @@
       align-items: center;
     }
 
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+    }
+
     button {
       background-color: var(--border-color);
       color: var(--text-color);
@@ -73,6 +80,12 @@
     }
 
     button:hover {
+      background-color: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    button.active {
       background-color: var(--accent);
       color: white;
       border-color: var(--accent);
@@ -127,9 +140,13 @@
   <header>
     <div class="brand">
       <svg height="24" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
-      <span>BRAN-Org / .github — Pré-visualização</span>
+      <span>BRAN-Org / .github — Visualização Local</span>
     </div>
     <div class="controls">
+      <div class="nav-tabs">
+        <button onclick="setDoc('readme')" id="btnReadme" class="active">📄 README.md</button>
+        <button onclick="setDoc('about')" id="btnAbout">📖 ABOUT.md (Saiba Mais)</button>
+      </div>
       <button onclick="toggleLang()" id="langBtn">🌐 English Version</button>
       <button onclick="toggleTheme()" id="themeBtn">Modo Claro / Escuro</button>
     </div>
@@ -139,14 +156,14 @@
     <div class="github-card">
       <div class="github-card-header">
         <span id="fileName">📄 README.md (Português)</span>
-        <span class="badge">Cores dos Badges Atualizadas</span>
+        <span class="badge">Acesso às Páginas de Documentação</span>
       </div>
       <article id="content" class="markdown-body"></article>
     </div>
   </main>
 
   <script>
-    const contentPt = `![BRAN Banner](assets/bran_banner_v2.png)
+    const contentPtReadme = `![BRAN Banner](assets/bran_banner_v2.png)
 
 <p align="center">
   <a href="javascript:toggleLang()"><img src="https://img.shields.io/badge/Read%20in-English-blue.svg?style=for-the-badge" alt="Read in English"></a>
@@ -160,6 +177,8 @@ A **BRAN Org** (**Brazilian Research Archive Network**) é uma organização ind
 
 Mapeamos **dados acadêmicos que já são públicos**, mas que não oferecem APIs ou formas fáceis de acesso programático. Nosso trabalho é coletar, tratar e disponibilizar essas informações em formatos abertos e padronizados, por meio de APIs públicas e ferramentas *open-source*, reduzindo barreiras técnicas para pesquisadores e impulsionando os estudos sobre a produção científica brasileira.
 
+👉 [**📖 Saiba mais sobre a nossa história, a inspiração em Brann Bronzebeard e nossa visão para a ciência brasileira**](ABOUT.md)
+
 ## Nossos objetivos
 - **Mapear fontes brasileiras**: Identificar acervos, repositórios e bases acadêmicas públicas que carecem de acesso programático.
 - **Estruturar dados públicos**: Converter dados brutos ou fragmentados em formatos limpos, padronizados e prontos para análise.
@@ -170,7 +189,7 @@ Mapeamos **dados acadêmicos que já são públicos**, mas que não oferecem API
 
 ### Bases de Dados & Acervos
 
-Catálogo público de bases de dados bibliométricos da produção científica brasileira, disponibilizadas em formatos abertos (`JSON`/`CSV`), com API REST gratuita e dashboard interativo para análise.
+Catálogo público de bases de dados bibliométricos da produção científica brasileira, disponibilizadas em formatos abertos (\`JSON\`/\`CSV\`), com API REST gratuita e dashboard interativo para análise.
 
 | Repositório | Evento Oficial | Registros | Confiabilidade |
 | :--- | :--- | :---: | :---: |
@@ -185,8 +204,8 @@ Para assegurar transparência acadêmica e rigor científico, cada repositório 
 
 - 🟢 **Verde (100% Auditado & Completo)**: Dados totalmente extraídos, validados e higienizados. Contém todos os metadados fundamentais sem lacunas conhecidas.
 - 🔵 **Azul (Alta Fidelidade com Omissões Esparsas da Fonte)**: Cobertura completa de edições/anos e DOIs, contendo apenas raras ausências de metadados herdadas do próprio site oficial.
-- 🟡 **Amarelo (100% Fiel à Fonte com Limitações da Origem)**: 100% dos artigos disponibilizados online no site oficial extraídos sem perdas, porém o site oficial apresenta limitações nativas (ex: ausência de DOIs nos anais ou falta dos primeiros anais históricos que não estão online). *(Ex: `ebbc-open-database`)*.
-- 🟠 **Laranja (Em Curadoria / Processamento)**: Extração realizada com sucesso, mas o acervo ainda passa por etapas de curadoria, validação de schema e saneamento de metadados. *(Ex: `abec-open-database`)*.
+- 🟡 **Amarelo (100% Fiel à Fonte com Limitações da Origem)**: 100% dos artigos disponibilizados online no site oficial extraídos sem perdas, porém o site oficial apresenta limitações nativas (ex: ausência de DOIs nos anais ou falta dos primeiros anais históricos que não estão online). *(Ex: \`ebbc-open-database\`)*.
+- 🟠 **Laranja (Em Curadoria / Processamento)**: Extração realizada com sucesso, mas o acervo ainda passa por etapas de curadoria, validação de schema e saneamento de metadados. *(Ex: \`abec-open-database\`)*.
 - 🔴 **Vermelho (Dados Não Auditados / Baixa Confiabilidade)**: Registros brutos não auditados ou com alta incidência de falhas de extração. Requer cautela no uso analítico direto.
 
 </details>
@@ -213,7 +232,7 @@ Nossa atuação é guiada pelos princípios e declarações internacionais de Ci
 - **GitHub**: [BRAN-Org](https://github.com/BRAN-Org)
 - Dúvidas ou sugestões? Abra uma [Issue](https://github.com/BRAN-Org/.github/issues) em nosso repositório.`;
 
-    const contentEn = `![BRAN Banner](assets/bran_banner_v2.png)
+    const contentEnReadme = `![BRAN Banner](assets/bran_banner_v2.png)
 
 <p align="center">
   <a href="javascript:toggleLang()"><img src="https://img.shields.io/badge/Ler%20em-Portugu%C3%AAs-blue.svg?style=for-the-badge" alt="Ler em Português"></a>
@@ -227,6 +246,8 @@ Nossa atuação é guiada pelos princípios e declarações internacionais de Ci
 
 We map **academic data that is already public**, but lacks APIs or easy programmatic access. Our work is to collect, clean, and provide this information in open and standardized formats through public APIs and open-source tools, lowering technical barriers for researchers and boosting quantitative studies on Brazilian scientific output.
 
+👉 [**📖 Learn more about our story, the inspiration behind Brann Bronzebeard, and our vision for Brazilian science**](ABOUT.en.md)
+
 ## Our Goals
 - **Map Brazilian Sources**: Identify public academic collections, repositories, and databases that lack programmatic access.
 - **Structure Public Data**: Convert raw or fragmented data into clean, standardized formats ready for analysis.
@@ -237,7 +258,7 @@ We map **academic data that is already public**, but lacks APIs or easy programm
 
 ### Databases & Collections
 
-Public catalog of bibliometric databases from Brazilian scientific output, provided in open formats (`JSON`/`CSV`), featuring a free REST API and interactive dashboard for analysis.
+Public catalog of bibliometric databases from Brazilian scientific output, provided in open formats (\`JSON\`/\`CSV\`), featuring a free REST API and interactive dashboard for analysis.
 
 | Repository | Official Event | Records | Data Reliability |
 | :--- | :--- | :---: | :---: |
@@ -252,13 +273,11 @@ To ensure academic transparency and scientific rigor, every **BRAN Org** dataset
 
 - 🟢 **Green (100% Audited & Complete)**: Fully extracted, validated, and sanitized. Contains all fundamental metadata without known gaps.
 - 🔵 **Blue (High Fidelity with Sparse Omissions)**: Complete coverage of editions/years and DOIs, containing only rare metadata gaps inherited directly from the official website.
-- 🟡 **Yellow (100% Faithful to Source with Native Limitations)**: 100% of articles available online on the official website were extracted without loss, but the official source presents native limitations (e.g., lack of DOIs in proceedings or missing early historical proceedings not digitized online). *(Ex: `ebbc-open-database`)*.
-- 🟠 **Orange (In Curation / Processing)**: Extraction completed successfully, but the collection is undergoing curation, schema validation, and metadata sanitation. *(Ex: `abec-open-database`)*.
+- 🟡 **Yellow (100% Faithful to Source with Native Limitations)**: 100% of articles available online on the official website were extracted without loss, but the official source presents native limitations (e.g., lack of DOIs in proceedings or missing early historical proceedings not digitized online). *(Ex: \`ebbc-open-database\`)*.
+- 🟠 **Orange (In Curation / Processing)**: Extraction completed successfully, but the collection is undergoing curation, schema validation, and metadata sanitation. *(Ex: \`abec-open-database\`)*.
 - 🔴 **Red (Unaudited Data / Low Reliability)**: Unaudited raw records or high incidence of extraction errors. Requires caution for direct analytical use.
 
 </details>
-
-
 
 ## How to Contribute
 We invite researchers, developers, and open science enthusiasts to collaborate with us:
@@ -282,13 +301,136 @@ Our work is guided by international Open Science principles and declarations:
 - **GitHub**: [BRAN-Org](https://github.com/BRAN-Org)
 - Questions or suggestions? Open an [Issue](https://github.com/BRAN-Org/.github/issues) in our repository.`;
 
+    const contentPtAbout = `# Sobre a BRAN Org: Nossa História e Visão
+
+## 1. A Origem do Nome BRAN
+
+Caso você esteja se perguntando sobre a inspiração por trás da sigla **BRAN** (**Brazilian Research Archive Network**), o nome é uma referência a **Brann Bronzebeard**, personagem do jogo *World of Warcraft*.
+
+![Brann Bronzebeard em ação](assets/brann_bronzebeard_ingame.png)
+
+No jogo, Brann é um arqueólogo e pesquisador dedicado a explorar ruínas esquecidas, resgatar registros históricos e compartilhar suas descobertas abertamente. Essa ideia traduz a nossa missão no mundo real: resgatar acervos e dados acadêmicos brasileiros que estão desestruturados ou esquecidos na web e torná-los acessíveis a todos.
+
+---
+
+## 2. Um Pequeno Passo para a Ciência Brasileira
+
+No cenário científico internacional, pesquisadores e cientistas de dados dispõem de ecossistemas altamente integrados e elegantes para a análise de metadados acadêmicos (como *Crossref*, *OpenAlex*, *Semantic Scholar*, *PubMed* e *Web of Science*). Nesses ambientes, APIs REST robustas, esquemas estruturados em JSON e identificadores persistentes (DOIs) são o padrão estabelecido.
+
+No **Brasil**, porém, existe um contraste desafiador. Embora periódicos de grande porte possuam boa indexação, uma parte vital do conhecimento produzido no país permanece em um vácuo de infraestrutura tecnológica:
+
+* **Anais de Eventos e Congressos**: Milhares de conferências e simpósios nacionais publicam seus anais em páginas estáticas, portais legados ou PDFs isolados, desprovidos de padronização, DOIs ou acesso programático.
+* **Periódicos Regionais e Institucionais**: Revistas científicas de menor porte enfrentam severas barreiras orçamentárias e técnicas para implementar e manter plataformas modernas de metadados.
+
+A **BRAN Org** surge para dar um passo concreto no fortalecimento desse ecossistema, atuando em duas frentes complementares:
+
+1. **Estruturação e Rastreabilidade para Eventos e Revistas**: Oferecemos suporte a organizadores e editores regionais ao converter acervos desestruturados em dados limpos, padronizados e com preservação digital assegurada.
+2. **Acessibilidade Direta para Pesquisa Científica**: Eliminamos a necessidade de construir *scrapers* complexos e manuais, fornecendo aos pesquisadores de bibliometria e cientometria bases abertas (\`JSON\`/\`CSV\`) e APIs REST gratuitas para análise imediata da produção acadêmica nacional.
+
+---
+
+## 3. Olhando Além dos Grandes: O Complemento às Plataformas Nacionais (Ex: Projeto Laguna)
+
+Grandes iniciativas de infraestrutura científica no Brasil — como a **Plataforma Lattes**, o sistema **Sucupira/CAPES**, o **BDTD/IBICT** ou o **Projeto Laguna** — cumprem um papel fundamental na centralização dos currículos de pesquisadores, no acompanhamento da pós-graduação e no mapeamento de periódicos de alto impacto.
+
+Contudo, devido ao escopo massivo e às prioridades institucionais desses grandes portais, parcelas expressivas da memória científica brasileira acabam ficando à margem do sistema:
+
+* **Produção Regional e Acadêmica Inicial**: Trabalhos apresentados em congressos regionais, encontros de iniciação científica (PIBIC) e simpósios de sociedades acadêmicas locais raramente integram os indexadores centrais.
+* **Acervos Históricos e "Órfãos"**: Edições históricas de eventos que mudaram de domínio ou cujas comissões organizadoras se desfizeram ao longo dos anos.
+
+A atuação da **BRAN Org** é estritamente simbiótica. Não buscamos concorrer com as grandes plataformas nacionais, mas sim **resgatar, organizar e preservar a literatura acadêmica que fica de fora dos grandes portais** — garantindo que a pesquisa regional, emergente e histórica do Brasil tenha a visibilidade, a organização e a rastreabilidade que merece.
+
+---
+
+## 4. O Horizonte: Preparando o Terreno para a Unificação de Dados no Brasil
+
+Almejamos que o trabalho da **BRAN Org** sirva como base e catalisador para iniciativas ainda maiores no futuro. 
+
+Ao adotar os **Princípios FAIR** (*Findable, Accessible, Interoperable, Reusable*), a **Declaração BOAI** e licenças estritamente abertas, estamos construindo uma infraestrutura modular e interoperável. Nosso horizonte é preparar a informação acadêmica brasileira para integrar ou fundamentar **projetos nacionais mais amplos de unificação de bases de dados científicos**, conectando ilhas de informação em uma rede coesa, transparente e soberana de conhecimento aberto.`;
+
+    const contentEnAbout = `# About BRAN Org: Our Story and Vision
+
+## 1. The Origin of the Name BRAN
+
+If you're wondering about the inspiration behind the acronym **BRAN** (**Brazilian Research Archive Network**), the name is a nod to **Brann Bronzebeard**, a character from *World of Warcraft*.
+
+![Brann Bronzebeard in action](assets/brann_bronzebeard_ingame.png)
+
+In the game, Brann is an archaeologist and researcher dedicated to exploring forgotten ruins, rescuing historical records, and sharing his discoveries openly. This directly reflects our real-world mission: excavating fragmented or forgotten Brazilian academic data and making it accessible to everyone.
+
+---
+
+## 2. A Small Step for Brazilian Science
+
+In the international scientific arena, researchers and data scientists benefit from highly integrated and elegant ecosystems for academic metadata analysis (such as *Crossref*, *OpenAlex*, *Semantic Scholar*, *PubMed*, and *Web of Science*). In those environments, robust REST APIs, structured JSON schemas, and persistent identifiers (DOIs) are the established standard.
+
+In **Brazil**, however, there is a challenging contrast. While major publications enjoy proper indexing, a vital portion of the nation's scientific output remains in a technological infrastructure void:
+
+* **Conference Proceedings & Symposia**: Thousands of national conferences publish their proceedings on static web pages, legacy portals, or isolated PDFs lacking standardization, DOIs, or programmatic access.
+* **Regional & Institutional Journals**: Smaller scientific journals face severe budget and technical constraints to implement and maintain modern metadata platforms.
+
+**BRAN Org** emerges to take a concrete step toward strengthening this ecosystem through two complementary fronts:
+
+1. **Structuring & Traceability for Events and Journals**: We support regional organizers and editors by converting unstructured archives into clean, standardized datasets with guaranteed digital preservation.
+2. **Direct Accessibility for Scientific Research**: We eliminate the need to build complex manual web scrapers, equipping bibliometric and scientometric researchers with open datasets (\`JSON\`/\`CSV\`) and free REST APIs for immediate quantitative analysis.
+
+---
+
+## 3. Looking Beyond the Mainstream: Complementing National Platforms (e.g., Projeto Laguna)
+
+Major national scientific infrastructure initiatives in Brazil — such as **Plataforma Lattes**, **Sucupira/CAPES**, **BDTD/IBICT**, or **Projeto Laguna** — play an essential role in centralizing researcher CVs, tracking graduate output, and indexing high-impact journals.
+
+However, due to the massive scope and institutional priorities of these major portals, significant portions of Brazilian scientific memory remain outside the core system:
+
+* **Regional & Early-Career Output**: Papers presented at regional conferences, undergraduate research meetings (PIBIC), and local academic society symposia rarely reach central indexers.
+* **Historical & "Orphan" Archives**: Older conference editions whose web domains expired or whose organizing committees dissolved over time.
+
+**BRAN Org**'s work is strictly symbiotic. We do not compete with major national platforms; instead, we **rescue, structure, and preserve the academic literature that falls outside mainstream portals** — ensuring that Brazil's regional, emerging, and historical research gains the visibility, organization, and digital preservation it deserves.
+
+---
+
+## 4. The Horizon: Preparing the Ground for Unified Data in Brazil
+
+We aspire for **BRAN Org**'s work to serve as a foundation and catalyst for even broader future initiatives.
+
+By adhering to the **FAIR Principles** (*Findable, Accessible, Interoperable, Reusable*), the **BOAI Declaration**, and strictly open-source licenses, we are building a modular, interoperable infrastructure. Our horizon is to prepare Brazilian academic information to integrate into or catalyze **larger national projects aimed at unifying scientific databases across Brazil**, connecting islands of information into a cohesive, transparent, and sovereign open knowledge network.`;
+
     let currentLang = 'pt';
+    let currentDoc = 'readme'; // 'readme' or 'about'
 
     function renderContent() {
-      const markdown = currentLang === 'pt' ? contentPt : contentEn;
+      let markdown = '';
+      if (currentDoc === 'readme') {
+        markdown = currentLang === 'pt' ? contentPtReadme : contentEnReadme;
+        document.getElementById('fileName').textContent = currentLang === 'pt' ? '📄 README.md (Português)' : '📄 README.en.md (English)';
+      } else {
+        markdown = currentLang === 'pt' ? contentPtAbout : contentEnAbout;
+        document.getElementById('fileName').textContent = currentLang === 'pt' ? '📖 ABOUT.md (Português)' : '📖 ABOUT.en.md (English)';
+      }
+
       document.getElementById('content').innerHTML = marked.parse(markdown);
-      document.getElementById('fileName').textContent = currentLang === 'pt' ? '📄 README.md (Português)' : '📄 README.en.md (English)';
       document.getElementById('langBtn').textContent = currentLang === 'pt' ? '🌐 English Version' : '🌐 Versão em Português';
+      
+      document.getElementById('btnReadme').classList.toggle('active', currentDoc === 'readme');
+      document.getElementById('btnAbout').classList.toggle('active', currentDoc === 'about');
+
+      // Intercept inline links to ABOUT.md
+      const links = document.getElementById('content').getElementsByTagName('a');
+      for (let link of links) {
+        const href = link.getAttribute('href');
+        if (href && (href === 'ABOUT.md' || href === 'ABOUT.en.md' || href.endsWith('/ABOUT.md') || href.endsWith('/ABOUT.en.md'))) {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            setDoc('about');
+          });
+        }
+      }
+    }
+
+    function setDoc(doc) {
+      currentDoc = doc;
+      renderContent();
+      window.scrollTo(0, 0);
     }
 
     function toggleLang() {
