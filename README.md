@@ -8,7 +8,7 @@
 </p>
 
 ## Quem somos e Nossa missão
-A **BRAN Org** é uma organização independente dedicada a construir infraestrutura aberta para a informação acadêmica e científica no **Brasil**.
+A **BRAN Org** (**Brazilian Research Archive Network**) é uma organização independente dedicada a construir infraestrutura aberta para a informação acadêmica e científica no **Brasil**.
 
 Mapeamos **dados acadêmicos que já são públicos**, mas que não oferecem APIs ou formas fáceis de acesso programático. Nosso trabalho é coletar, tratar e disponibilizar essas informações em formatos abertos e padronizados, por meio de APIs públicas e ferramentas *open-source*, reduzindo barreiras técnicas para pesquisadores e impulsionando os estudos sobre a produção científica brasileira.
 
