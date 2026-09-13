@@ -22,12 +22,14 @@ Mapeamos **dados acadêmicos que já são públicos**, mas que não oferecem API
 
 ### Bases de Dados & Acervos
 
-| Repositório | Acervo / Registros | Confiabilidade | Ferramentas | Descrição |
-| :--- | :---: | :---: | :---: | :--- |
-| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | **259 Artigos** (2013-2025) | [![Confiabilidade: Em Curadoria](https://img.shields.io/badge/Confiabilidade-Em%20Curadoria-orange.svg?style=flat-square)](#-níveis-de-confiabilidade-dos-dados) | - | Open REST API & dashboard interativo para dados bibliométricos do ABEC Meeting (ABEC Brasil) |
-| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | **643 Artigos** (2012-2024) | [![Confiabilidade: Fiel à Fonte](https://img.shields.io/badge/Confiabilidade-Fiel%20%C3%A0%20Fonte%20(Limita%C3%A7%C3%B5es)-yellow.svg?style=flat-square)](#-níveis-de-confiabilidade-dos-dados) | - | Open REST API & dashboard interativo para dados bibliométricos do Encontro Brasileiro de Bibliometria e Cientometria (EBBC) |
+| Repositório | Acervo / Registros | Confiabilidade | Descrição |
+| :--- | :---: | :---: | :--- |
+| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | **259 Artigos** (2013-2025) | [🟠 Em Curadoria](#-níveis-de-confiabilidade-dos-dados) | Open REST API & dashboard interativo para dados bibliométricos do ABEC Meeting (ABEC Brasil) |
+| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | **643 Artigos** (2012-2024) | [🟡 Fiel à Fonte (Limitações)](#-níveis-de-confiabilidade-dos-dados) | Open REST API & dashboard interativo para dados bibliométricos do Encontro Brasileiro de Bibliometria e Cientometria (EBBC) |
 
-### 🏅 Níveis de Confiabilidade dos Dados
+<details>
+<summary><b>Níveis de Confiabilidade dos Dados</b></summary>
+<br>
 
 Para assegurar transparência acadêmica e rigor científico, cada repositório da **BRAN Org** possui uma marcação de confiabilidade e integridade dos dados:
 
@@ -36,6 +38,8 @@ Para assegurar transparência acadêmica e rigor científico, cada repositório 
 - 🟡 **Amarelo (100% Fiel à Fonte com Limitações da Origem)**: 100% dos artigos disponibilizados online pelo evento foram extraídos sem perdas, porém a fonte oficial apresenta limitações nativas (ex: ausência de DOIs nos anais do evento ou falta dos primeiros anais históricos que não estão digitalizados online). *(Ex: `ebbc-open-database`)*.
 - 🟠 **Laranja (Em Curadoria / Processamento)**: Extração realizada com sucesso, mas o acervo ainda passa por etapas de curadoria, validação de schema e saneamento de metadados. *(Ex: `abec-open-database`)*.
 - 🔴 **Vermelho (Dados Não Auditados / Baixa Confiabilidade)**: Registros brutos não auditados ou com alta incidência de falhas de extração. Requer cautela no uso analítico direto.
+
+</details>
 
 
 

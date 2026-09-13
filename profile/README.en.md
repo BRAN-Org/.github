@@ -22,12 +22,14 @@ We map **academic data that is already public**, but lacks APIs or easy programm
 
 ### Databases & Collections
 
-| Repository | Collection / Records | Data Reliability | Tools | Description |
-| :--- | :---: | :---: | :---: | :--- |
-| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | **259 Articles** (2013-2025) | [![Reliability: In Curation](https://img.shields.io/badge/Reliability-In%20Curation-orange.svg?style=flat-square)](#-data-reliability-levels) | - | Open REST API & interactive dashboard for ABEC Meeting (ABEC Brasil) bibliometric data |
-| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | **643 Articles** (2012-2024) | [![Reliability: Source Faithful](https://img.shields.io/badge/Reliability-Source%20Faithful%20(Limitations)-yellow.svg?style=flat-square)](#-data-reliability-levels) | - | Open REST API & interactive dashboard for EBBC bibliometric data |
+| Repository | Collection / Records | Data Reliability | Description |
+| :--- | :---: | :---: | :--- |
+| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | **259 Articles** (2013-2025) | [🟠 In Curation](#-data-reliability-levels) | Open REST API & interactive dashboard for ABEC Meeting (ABEC Brasil) bibliometric data |
+| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | **643 Articles** (2012-2024) | [🟡 Source Faithful (Limitations)](#-data-reliability-levels) | Open REST API & interactive dashboard for EBBC bibliometric data |
 
-### 🏅 Data Reliability Levels
+<details>
+<summary><b>Data Reliability Levels</b></summary>
+<br>
 
 To ensure academic transparency and scientific rigor, every **BRAN Org** dataset features a data reliability and integrity tier:
 
@@ -36,6 +38,8 @@ To ensure academic transparency and scientific rigor, every **BRAN Org** dataset
 - 🟡 **Yellow (100% Faithful to Source with Native Limitations)**: 100% of articles available online on the official website were extracted without loss, but the official source presents native limitations (e.g., lack of DOIs in proceedings or missing early historical proceedings not digitized online). *(Ex: `ebbc-open-database`)*.
 - 🟠 **Orange (In Curation / Processing)**: Extraction completed successfully, but the collection is undergoing curation, schema validation, and metadata sanitation. *(Ex: `abec-open-database`)*.
 - 🔴 **Red (Unaudited Data / Low Reliability)**: Unaudited raw records or high incidence of extraction errors. Requires caution for direct analytical use.
+
+</details>
 
 ## How to Contribute
 We invite researchers, developers, and open science enthusiasts to collaborate with us:
