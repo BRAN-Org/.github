@@ -1,84 +1,126 @@
-# About BRAN Org
+# 🏛️ About BRAN Org (Brazilian Research Archive Network)
 
-## About Us & Our Mission
-
-**BRAN Org** (**Brazilian Research Archive Network**) is an independent organization dedicated to building open infrastructure for academic and scientific information in **Brazil**.
-
-We map **academic data that is already public**, but lacks APIs or easy programmatic access. Our work is to collect, clean, and provide this information in open and standardized formats through public APIs and open-source tools, lowering technical barriers for researchers and boosting quantitative studies on Brazilian scientific output.
-
----
-
-## Our Goals
-
-- **Map Brazilian Sources**: Identify public academic collections, repositories, and databases that lack programmatic access.
-- **Structure Public Data**: Convert raw or fragmented data into clean, standardized formats ready for analysis.
-- **Create Open APIs**: Provide public, accessible endpoints for integration into research and software.
-- **Develop Tools**: Build open-source packages and applications focused on quantitative scientific analysis.
+<p align="center">
+  <a href="ABOUT.md"><img src="https://img.shields.io/badge/Leia%20em-Portugu%C3%AAs-green.svg?style=for-the-badge" alt="Leia em Português"></a>
+  <a href="https://www.go-fair.org/fair-principles/"><img src="https://img.shields.io/badge/FAIR-Principles-green?style=for-the-badge" alt="FAIR Principles"></a>
+  <a href="https://www.budapestopenaccessinitiative.org/"><img src="https://img.shields.io/badge/BOAI-Signatory-orange.svg?style=for-the-badge" alt="BOAI Signatory"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="License GPLv3 | CC BY-NC-SA 4.0"></a>
+</p>
 
 ---
 
-## Principles
+## 🧭 Who We Are & Our Mission
 
-Our work is guided by international Open Science principles and declarations:
+**BRAN Org** (**Brazilian Research Archive Network**) is an independent technological infrastructure collective dedicated to **rescuing, structuring, and preserving Brazil's scientific and bibliometric memory**.
 
-- **[FAIR Principles](https://www.go-fair.org/fair-principles/)**: Commitment to making data **Findable, Accessible, Interoperable, and Reusable**.
-- **[Budapest Open Access Initiative (BOAI)](https://www.budapestopenaccessinitiative.org/)**: Alignment with landmark Open Access guidelines advocating for free use, distribution, and reuse of scientific knowledge.
-- **Scientific Data Protection (CC BY-NC-SA 4.0)**: Free access for non-commercial academic research, with explicit restrictions against scraping/ingestion for commercial AI model training.
-- **Open Source & Copyleft (GPLv3)**: Keeping our codebase 100% open under GNU GPLv3, ensuring derived tools remain open source.
-- **Transparency**: Open and auditable workflows for data collection, cleaning, and documentation.
+Our focus is on **academic data that is already public, yet trapped in a technological void**: conference proceedings, symposia of academic societies, graduate research meetings, and regional journals lacking APIs, programmatic access, or facing the imminent threat of digital disappearance (*link rot*).
+
+We harvest, sanitize, enrich, and distribute these archives in **open, standardized formats** through **free public REST APIs**, analytical dashboards, and universal academic exchange standards (`CSV with UTF-8 BOM`, `JSON`, `BibTeX`, and `RIS`), lowering technical barriers for researchers and catalyzing quantitative studies on Brazilian science.
 
 ---
 
-## Contact
+## 🌪️ The Diagnosis: "Digital Amnesia" in Brazilian Science
 
-- **Contact Form**: [Send us a message via Google Form](https://forms.google.com/sua-url-de-contato-aqui)
-- **Email**: [gabrielngama@gmail.com](mailto:gabrielngama@gmail.com)
+In the international scientific arena, researchers rely on mature, highly integrated ecosystems for academic metadata (*Crossref*, *OpenAlex*, *Semantic Scholar*, *PubMed*, and *Web of Science*). In those environments, high-availability REST APIs, strict JSON Schema data contracts, and persistent identifiers (DOIs) are standard requirements.
+
+In **Brazil**, however, the academic community faces a stark contrast and a critical structural vulnerability:
+
+### 1. The Ephemerality of Proceedings & Historical Amnesia
+Thousands of national conferences, academic meetings, and research summits elect new organizing committees periodically. With shifting administrative tenures:
+* Web domains expire without renewal;
+* Legacy university servers are powered off without accessible archival backups;
+* Outdated content management portals suffer database corruption or cyberattacks.
+
+The outcome is **digital amnesia**: hundreds of thousands of research works produced by faculty members, master's and doctoral students, and undergraduate research fellows (PIBIC) vanish from the web, turning decades of genuine scientific work into "phantom citations."
+
+### 2. Proceedings as the "Cradle of Science"
+In contemporary research dynamics, **it is within conference proceedings that pioneering hypotheses and novel methodologies are debated for the very first time**, years before maturing into journal articles in high-impact commercial publications.
+
+Losing or neglecting conference proceedings means erasing the very genesis of Brazilian scientific thought.
 
 ---
 
-## Our Story and Vision
+## 🤝 Our Stance: Symbiosis with Major National Platforms
 
-### 1. The Origin of the Name BRAN
+National governmental and scientific infrastructure initiatives in Brazil — such as **Plataforma Lattes**, the **CAPES/Sucupira** systems, **BDTD/IBICT**, and the recent **Projeto Laguna** — perform an invaluable duty in centralizing researcher CVs, evaluating graduate programs, and indexing mainstream journals.
 
-If you're wondering about the inspiration behind the acronym **BRAN** (**Brazilian Research Archive Network**), the name is a nod to **Brann Bronzebeard**, a character from *World of Warcraft*.
+However, given the massive scale and institutional priorities of these federal portals, substantial portions of the scientific literature remain off the radar:
+* Undergraduate research papers and specialized symposia from regional scientific societies;
+* Historical archives and "orphan" proceedings published prior to the digital identifier era;
+* Fine-grained methodological telemetry (computational tools, algorithms, and data sources employed in research).
+
+**BRAN Org**'s mission is strictly **symbiotic and complementary**. We do not compete with national platforms; instead, we **fill critical frontline infrastructure gaps**, rescuing forgotten archives and curating them to the highest technical standard so they can seamlessly interface with both domestic and international scientific networks.
+
+---
+
+## 🔬 BRAN Org's Scientific Integrity Pipeline
+
+To uphold our **uncompromising commitment to academic truth**, zero-metadata-hallucination, and full auditability, every archive published by BRAN Org passes through a rigorous 5-stage pipeline:
+
+```mermaid
+flowchart LR
+    A["1. Open Harvester<br>(Auditable Scrapers)"] --> B["2. Sanitization & Curation<br>(Metadata & Methods)"]
+    B --> C["3. Strict Contract<br>(JSON Schema v1)"]
+    C --> D["4. Cryptographic Audit<br>(SHA-256 & Provenance)"]
+    D --> E["5. Universal Distribution<br>(REST API, BibTeX, RIS, CSV)"]
+```
+
+1. **Open & Reproducible Harvesters**: Every database repository maintains its extraction source code under version control, allowing anyone in the scientific community to audit, reproduce, or improve the collection process.
+2. **Methodological Sanitization & Enrichment**: Automated text anomaly remediation, diacritics normalization, and scientometric classification of software tools and data sources referenced in research.
+3. **Formal Data Contracts (JSON Schema)**: Strict validation against centralized specifications hosted on our canonical repository [`BRAN-Org/schemas`](https://github.com/BRAN-Org/schemas) (`article.v1.schema.json`, `event.v1.schema.json`, `provenance.v1.schema.json`).
+4. **Cryptographic Provenance Audit**: Every dataset batch includes a signed `provenance.json` manifest recording the SHA-256 cryptographic hash of raw data, ISO 8601 timestamps, source URLs, and a formal reliability classification (*Health Level*).
+5. **Universal Distribution**: High-performance REST APIs, interactive analytical dashboards, and one-click data downloads in key research formats (`CSV` with UTF-8 BOM for Excel, `JSON`, `BibTeX` for LaTeX/Zotero, and `RIS` for VOSviewer/Mendeley).
+
+---
+
+## 🛡️ Data Reliability Levels (Data Health Levels)
+
+To provide complete methodological transparency for bibliometricians and data scientists, every dataset is formally classified:
+
+* 🟢 **Green (100% Audited & Complete)**: Fully audited, sanitized, and validated records. Contains all fundamental metadata (title, authors, affiliations, abstracts, DOIs, and PDF links) without structural omissions.
+* 🔵 **Blue (High Fidelity with Minor Upstream Omissions)**: Comprehensive coverage across years and DOIs, bearing only rare metadata absences inherited directly from the original source.
+* 🟡 **Yellow (100% Faithful to Source with Native Origin Limitations)**: 100% of online materials were rescued without data loss, but the official source features historical structural limitations (e.g., legacy editions not digitized online or native absence of DOIs in early proceedings). *(e.g., `ebbc-open-database`)*.
+* 🟠 **Orange (Under Active Curation & Sanitization)**: Data extraction completed successfully, with records undergoing active curation and schema normalization. *(e.g., `abec-open-database`)*.
+* 🔴 **Red (Raw / Unaudited Records)**: Preliminary extractions requiring caution before direct analytical usage.
+
+---
+
+## ⚖️ Scientific Sovereignty & Ethical Artificial Intelligence
+
+**BRAN Org** enforces an explicit dual-licensing policy to defend Brazilian science as an **inalienable public good**:
+
+### 1. Free Software & Copyleft (GNU GPLv3)
+All of our codebase (search engines, scientometric analyzers, scrapers, and web templates) is licensed under the **GNU General Public License v3.0**. This guarantees that any improvements, forks, or derivative platforms remain permanently free and open source, preventing proprietary lock-in.
+
+### 2. Protected Scientific Open Data (CC BY-NC-SA 4.0)
+Our scientific datasets and metadata are distributed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** license:
+* **Free for Non-Commercial Research**: Researchers, students, and academic institutions may explore, analyze, remix, and publish studies utilizing our datasets without cost.
+* **Protection Against Commercial Exploitation**: Direct commercialization of these datasets and bulk scraping for proprietary commercial Artificial Intelligence model training without formal authorization and fair reciprocity to the national scientific community are strictly prohibited.
+
+---
+
+## ⛏️ The Inspiration: Why "BRAN"?
+
+The acronym **BRAN** (**Brazilian Research Archive Network**) pays tribute to **Brann Bronzebeard**, a legendary character and explorer from the *World of Warcraft* universe.
 
 ![Brann Bronzebeard in action](assets/brann_bronzebeard_ingame.png)
 
-In the game, Brann is an archaeologist and researcher dedicated to exploring forgotten ruins, rescuing historical records, and sharing his discoveries openly. This directly reflects our real-world mission: excavating fragmented or forgotten Brazilian academic data and making it accessible to everyone.
+In the lore, Brann is the founder of the Explorer's League—a field scholar who ventures into forgotten ruins, recovers historical relics doomed to oblivion, and passionately shares his findings with the entire realm.
+
+This captures the essence of our initiative: **we are academic data archaeologists**. Where others see only outdated PDFs, dead links, and abandoned static websites, we see the living heritage of Brazilian intelligence and scientific discovery ready to be preserved and returned to society.
 
 ---
 
-### 2. A Small Step for Brazilian Science
+## 🤝 How to Participate & Institutional Partnerships
 
-In the international scientific arena, researchers and data scientists benefit from highly integrated and elegant ecosystems for academic metadata analysis (such as *Crossref*, *OpenAlex*, *Semantic Scholar*, *PubMed*, and *Web of Science*). In those environments, robust REST APIs, structured JSON schemas, and persistent identifiers (DOIs) are the established standard.
+BRAN Org is an open, living initiative welcoming collaboration from across the scientific ecosystem:
 
-In **Brazil**, however, there is a challenging contrast. While major publications enjoy proper indexing, a vital portion of the nation's scientific output remains in a technological infrastructure void:
+* **For Academic Societies & Conference Organizers**: If you organize or represent a Brazilian academic conference whose historical proceedings are scattered or lack modern APIs, [open an issue](https://github.com/BRAN-Org/.github/issues) or reach out. We assist in transforming your archives into standardized open databases with guaranteed digital preservation.
+* **For Bibliometrics & Information Science Researchers**: Suggest new archives for recovery, contribute metadata corrections, or leverage our open APIs in your theses, dissertations, and research papers.
+* **For Developers & Engineers**: Contribute scrapers, enhancements to the `statsEngine` analytics suite, or help build our upcoming `bran-py` Python SDK.
 
-* **Conference Proceedings & Symposia**: Thousands of national conferences publish their proceedings on static web pages, legacy portals, or isolated PDFs lacking standardization, DOIs, or programmatic access.
-* **Regional & Institutional Journals**: Smaller scientific journals face severe budget and technical constraints to implement and maintain modern metadata platforms.
+### Contact Channels
+* **General Coordination**: [gabrielngama@gmail.com](mailto:gabrielngama@gmail.com)
+* **GitHub Issues**: [Central Demand & Discussion Tracker](https://github.com/BRAN-Org/.github/issues)
+* **Contributor Guidelines**: Read our [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
-**BRAN Org** emerges to take a concrete step toward strengthening this ecosystem through two complementary fronts:
-
-1. **Structuring & Traceability for Events and Journals**: We support regional organizers and editors by converting unstructured archives into clean, standardized datasets with guaranteed digital preservation.
-2. **Direct Accessibility for Scientific Research**: We eliminate the need to build complex manual web scrapers, equipping bibliometric and scientometric researchers with open datasets (`JSON`/`CSV`) and free REST APIs for immediate quantitative analysis.
-
----
-
-### 3. Looking Beyond the Mainstream: Complementing National Platforms (e.g., Projeto Laguna)
-
-Major national scientific infrastructure initiatives in Brazil — such as **Plataforma Lattes**, **Sucupira/CAPES**, **BDTD/IBICT**, or **Projeto Laguna** — play an essential role in centralizing researcher CVs, tracking graduate output, and indexing high-impact journals.
-
-However, due to the massive scope and institutional priorities of these major portals, significant portions of Brazilian scientific memory remain outside the core system:
-
-* **Regional & Early-Career Output**: Papers presented at regional conferences, undergraduate research meetings (PIBIC), and local academic society symposia rarely reach central indexers.
-* **Historical & "Orphan" Archives**: Older conference editions whose web domains expired or whose organizing committees dissolved over time.
-
-**BRAN Org**'s work is strictly symbiotic. We do not compete with major national platforms; instead, we **rescue, structure, and preserve the academic literature that falls outside mainstream portals** — ensuring that Brazil's regional, emerging, and historical research gains the visibility, organization, and digital preservation it deserves.
-
----
-
-### 4. The Horizon: Preparing the Ground for Unified Data in Brazil
-
-We aspire for **BRAN Org**'s work to serve as a foundation and catalyst for even broader future initiatives.
-
-By adhering to the **FAIR Principles** (*Findable, Accessible, Interoperable, Reusable*), the **BOAI Declaration**, and strictly open-source licenses, we are building a modular, interoperable infrastructure. Our horizon is to prepare Brazilian academic information to integrate into or catalyze **larger national projects aimed at unifying scientific databases across Brazil**, connecting islands of information into a cohesive, transparent, and sovereign open knowledge network.
