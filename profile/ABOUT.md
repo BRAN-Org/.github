@@ -1,4 +1,4 @@
-# 🏛️ Sobre a BRAN Org (Brazilian Research Archive Network)
+# Sobre a BRAN Org (Brazilian Research Archive Network)
 
 <p align="center">
   <a href="ABOUT.en.md"><img src="https://img.shields.io/badge/Read%20in-English-blue.svg?style=for-the-badge" alt="Read in English"></a>
@@ -9,7 +9,7 @@
 
 ---
 
-## 🧭 Quem Somos e Nossa Missão
+## Quem Somos e Nossa Missão
 
 A **BRAN Org** (**Brazilian Research Archive Network**) é uma organização independente e coletivo de infraestrutura tecnológica dedicado a **resgatar, estruturar e preservar a memória científica e bibliométrica do Brasil**.
 
@@ -19,7 +19,7 @@ Coletamos, tratamos, enriquecemos e disponibilizamos esses acervos em **formatos
 
 ---
 
-## 🌪️ O Diagnóstico: A "Amnésia Digital" na Ciência Brasileira
+## O Diagnóstico: A "Amnésia Digital" na Ciência Brasileira
 
 No cenário científico internacional, pesquisadores dispõem de ecossistemas maduros e integrados para metadados acadêmicos (*Crossref*, *OpenAlex*, *Semantic Scholar*, *PubMed* e *Web of Science*). Nesses ambientes, APIs REST de alta disponibilidade, contratos rígidos em JSON Schema e identificadores persistentes (DOIs) são a regra elementar.
 
@@ -40,7 +40,7 @@ Perder ou negligenciar os anais de congressos significa apagar a gênese do pens
 
 ---
 
-## 🤝 Nossa Postura: Simbiose com as Grandes Plataformas Nacionais
+## Nossa Postura: Simbiose com as Grandes Plataformas Nacionais
 
 Iniciativas de infraestrutura governamental e acadêmica no Brasil — como a **Plataforma Lattes**, os sistemas da **CAPES/Sucupira**, o **BDTD/IBICT** ou o recente **Projeto Laguna** — cumprem um papel inestimável na consolidação dos currículos de pesquisadores, na avaliação dos programas de pós-graduação e no mapeamento de periódicos consolidados.
 
@@ -53,39 +53,7 @@ A atuação da **BRAN Org** é estritamente **simbiótica e complementar**. Não
 
 ---
 
-## 🔬 O Pipeline de Integridade Científica da BRAN Org
-
-Para garantir o **compromisso com a verdade acadêmica**, a não-alucinação de metadados e a integridade de cada registro, todo acervo publicado pela BRAN Org percorre um ciclo rigoroso de 5 etapas:
-
-```mermaid
-flowchart LR
-    A["1. Harvester Aberto<br>(Scrapers Auditáveis)"] --> B["2. Higienização & Curadoria<br>(Metadados & Metodologia)"]
-    B --> C["3. Contrato Rígido<br>(JSON Schema v1)"]
-    C --> D["4. Auditoria Criptográfica<br>(SHA-256 & Provenance)"]
-    D --> E["5. Distribuição Universal<br>(API REST, BibTeX, RIS, CSV)"]
-```
-
-1. **Harvester Aberto & Reprodutível**: Cada repositório de dados mantém versionado seu código-fonte de extração, permitindo que qualquer membro da comunidade acadêmica audite, reproduza ou aperfeiçoe o processo de coleta.
-2. **Higienização & Enriquecimento Metodológico**: Tratamento de anomalias textuais, normalização de caracteres com acentuação e classificação bibliométrica de softwares utilizados e fontes consultadas.
-3. **Contratos Formais de Dados (JSON Schema)**: Validação estrita contra especificações padronizadas no repositório canônico [`BRAN-Org/schemas`](https://github.com/BRAN-Org/schemas) (`article.v1.schema.json`, `event.v1.schema.json`, `provenance.v1.schema.json`).
-4. **Auditoria Criptográfica de Proveniência**: Cada lote de dados possui um manifesto `provenance.json` contendo o hash criptográfico SHA-256 do arquivo original, timestamp ISO 8601, fonte de origem e classificação formal de confiabilidade (*Health Level*).
-5. **Distribuição Universal**: APIs REST de alto desempenho, painéis analíticos interativos e exportação imediata nos formatos analíticos mais demandados pela pesquisa (`CSV` com UTF-8 BOM, `JSON`, `BibTeX` e `RIS`).
-
----
-
-## 🛡️ Níveis de Confiabilidade dos Dados (Data Health Levels)
-
-Para assegurar transparência metodológica a bibliometristas e cientistas de dados, todo dataset é classificado formalmente:
-
-* 🟢 **Verde (100% Auditado & Completo)**: Registros totalmente auditados, higienizados e validados. Contém todos os metadados fundamentais (título, autores, afiliações, resumos, DOIs e links para PDF) sem lacunas estruturais.
-* 🔵 **Azul (Alta Fidelidade com Omissões Esparsas da Fonte)**: Cobertura completa de edições/anos e DOIs, contendo apenas raras ausências de metadados herdadas do próprio portal original.
-* 🟡 **Amarelo (100% Fiel à Fonte com Limitações Nativas da Origem)**: 100% dos trabalhos disponíveis online foram resgatados sem perda, porém a fonte oficial apresenta limitações históricas (ex: anais dos anos iniciais não digitalizados pela organização original ou ausência nativa de DOIs). *(Ex: `ebbc-open-database`)*.
-* 🟠 **Laranja (Em Curadoria / Saneamento Metodológico)**: Coleta realizada com sucesso, mas o acervo passa por etapas ativas de curadoria e padronização. *(Ex: `abec-open-database`)*.
-* 🔴 **Vermelho (Dados Não Auditados / Baixa Confiabilidade)**: Registros preliminares que exigem cautela para uso analítico direto.
-
----
-
-## ⚖️ Soberania Científica & Inteligência Artificial Ética
+## Soberania Científica & Inteligência Artificial Ética
 
 A **BRAN Org** adota uma política expressa de licenciamento dual para defender a ciência brasileira como um **bem público inegociável**:
 
@@ -99,7 +67,7 @@ Nossos datasets e metadados científicos são distribuídos sob a licença **Cre
 
 ---
 
-## ⛏️ A Inspiração: Por que "BRAN"?
+## A Inspiração: Por que "BRAN"?
 
 A sigla **BRAN** (**Brazilian Research Archive Network**) presta uma homenagem afetuosa a **Brann Bronzebeard**, lendário personagem e explorador do universo de *World of Warcraft*.
 
@@ -111,7 +79,7 @@ Essa figura resume o espírito do nosso projeto: **somos arqueólogos de dados a
 
 ---
 
-## 🤝 Como Participar & Parcerias Institucionais
+## Como Participar & Parcerias Institucionais
 
 A BRAN Org é um projeto vivo e aberto para toda a comunidade científica:
 
@@ -123,4 +91,3 @@ A BRAN Org é um projeto vivo e aberto para toda a comunidade científica:
 * **Coordenação Geral**: [gabrielngama@gmail.com](mailto:gabrielngama@gmail.com)
 * **GitHub Issues**: [Repositório Central de Demandas & Discussões](https://github.com/BRAN-Org/.github/issues)
 * **Diretrizes para Colaboradores**: Consulte nosso [CONTRIBUTING.md](CONTRIBUTING.md) e o [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
-

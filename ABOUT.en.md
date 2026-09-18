@@ -1,4 +1,4 @@
-# 🏛️ About BRAN Org (Brazilian Research Archive Network)
+# About BRAN Org (Brazilian Research Archive Network)
 
 <p align="center">
   <a href="ABOUT.md"><img src="https://img.shields.io/badge/Leia%20em-Portugu%C3%AAs-green.svg?style=for-the-badge" alt="Leia em Português"></a>
@@ -9,7 +9,7 @@
 
 ---
 
-## 🧭 Who We Are & Our Mission
+## Who We Are & Our Mission
 
 **BRAN Org** (**Brazilian Research Archive Network**) is an independent technological infrastructure collective dedicated to **rescuing, structuring, and preserving Brazil's scientific and bibliometric memory**.
 
@@ -19,7 +19,7 @@ We harvest, sanitize, enrich, and distribute these archives in **open, standardi
 
 ---
 
-## 🌪️ The Diagnosis: "Digital Amnesia" in Brazilian Science
+## The Diagnosis: "Digital Amnesia" in Brazilian Science
 
 In the international scientific arena, researchers rely on mature, highly integrated ecosystems for academic metadata (*Crossref*, *OpenAlex*, *Semantic Scholar*, *PubMed*, and *Web of Science*). In those environments, high-availability REST APIs, strict JSON Schema data contracts, and persistent identifiers (DOIs) are standard requirements.
 
@@ -40,7 +40,7 @@ Losing or neglecting conference proceedings means erasing the very genesis of Br
 
 ---
 
-## 🤝 Our Stance: Symbiosis with Major National Platforms
+## Our Stance: Symbiosis with Major National Platforms
 
 National governmental and scientific infrastructure initiatives in Brazil — such as **Plataforma Lattes**, the **CAPES/Sucupira** systems, **BDTD/IBICT**, and the recent **Projeto Laguna** — perform an invaluable duty in centralizing researcher CVs, evaluating graduate programs, and indexing mainstream journals.
 
@@ -53,39 +53,7 @@ However, given the massive scale and institutional priorities of these federal p
 
 ---
 
-## 🔬 BRAN Org's Scientific Integrity Pipeline
-
-To uphold our **uncompromising commitment to academic truth**, zero-metadata-hallucination, and full auditability, every archive published by BRAN Org passes through a rigorous 5-stage pipeline:
-
-```mermaid
-flowchart LR
-    A["1. Open Harvester<br>(Auditable Scrapers)"] --> B["2. Sanitization & Curation<br>(Metadata & Methods)"]
-    B --> C["3. Strict Contract<br>(JSON Schema v1)"]
-    C --> D["4. Cryptographic Audit<br>(SHA-256 & Provenance)"]
-    D --> E["5. Universal Distribution<br>(REST API, BibTeX, RIS, CSV)"]
-```
-
-1. **Open & Reproducible Harvesters**: Every database repository maintains its extraction source code under version control, allowing anyone in the scientific community to audit, reproduce, or improve the collection process.
-2. **Methodological Sanitization & Enrichment**: Automated text anomaly remediation, diacritics normalization, and scientometric classification of software tools and data sources referenced in research.
-3. **Formal Data Contracts (JSON Schema)**: Strict validation against centralized specifications hosted on our canonical repository [`BRAN-Org/schemas`](https://github.com/BRAN-Org/schemas) (`article.v1.schema.json`, `event.v1.schema.json`, `provenance.v1.schema.json`).
-4. **Cryptographic Provenance Audit**: Every dataset batch includes a signed `provenance.json` manifest recording the SHA-256 cryptographic hash of raw data, ISO 8601 timestamps, source URLs, and a formal reliability classification (*Health Level*).
-5. **Universal Distribution**: High-performance REST APIs, interactive analytical dashboards, and one-click data downloads in key research formats (`CSV` with UTF-8 BOM for Excel, `JSON`, `BibTeX` for LaTeX/Zotero, and `RIS` for VOSviewer/Mendeley).
-
----
-
-## 🛡️ Data Reliability Levels (Data Health Levels)
-
-To provide complete methodological transparency for bibliometricians and data scientists, every dataset is formally classified:
-
-* 🟢 **Green (100% Audited & Complete)**: Fully audited, sanitized, and validated records. Contains all fundamental metadata (title, authors, affiliations, abstracts, DOIs, and PDF links) without structural omissions.
-* 🔵 **Blue (High Fidelity with Minor Upstream Omissions)**: Comprehensive coverage across years and DOIs, bearing only rare metadata absences inherited directly from the original source.
-* 🟡 **Yellow (100% Faithful to Source with Native Origin Limitations)**: 100% of online materials were rescued without data loss, but the official source features historical structural limitations (e.g., legacy editions not digitized online or native absence of DOIs in early proceedings). *(e.g., `ebbc-open-database`)*.
-* 🟠 **Orange (Under Active Curation & Sanitization)**: Data extraction completed successfully, with records undergoing active curation and schema normalization. *(e.g., `abec-open-database`)*.
-* 🔴 **Red (Raw / Unaudited Records)**: Preliminary extractions requiring caution before direct analytical usage.
-
----
-
-## ⚖️ Scientific Sovereignty & Ethical Artificial Intelligence
+## Scientific Sovereignty & Ethical Artificial Intelligence
 
 **BRAN Org** enforces an explicit dual-licensing policy to defend Brazilian science as an **inalienable public good**:
 
@@ -99,7 +67,7 @@ Our scientific datasets and metadata are distributed under the **Creative Common
 
 ---
 
-## ⛏️ The Inspiration: Why "BRAN"?
+## The Inspiration: Why "BRAN"?
 
 The acronym **BRAN** (**Brazilian Research Archive Network**) pays tribute to **Brann Bronzebeard**, a legendary character and explorer from the *World of Warcraft* universe.
 
@@ -111,7 +79,7 @@ This captures the essence of our initiative: **we are academic data archaeologis
 
 ---
 
-## 🤝 How to Participate & Institutional Partnerships
+## How to Participate & Institutional Partnerships
 
 BRAN Org is an open, living initiative welcoming collaboration from across the scientific ecosystem:
 
@@ -123,4 +91,3 @@ BRAN Org is an open, living initiative welcoming collaboration from across the s
 * **General Coordination**: [gabrielngama@gmail.com](mailto:gabrielngama@gmail.com)
 * **GitHub Issues**: [Central Demand & Discussion Tracker](https://github.com/BRAN-Org/.github/issues)
 * **Contributor Guidelines**: Read our [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
-
