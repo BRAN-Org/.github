@@ -1,10 +1,10 @@
-![BRAN Banner](../assets/f2cb99aa-7e97-4e88-9a6c-eb55d56cd888.png)
+![BRAN Banner](assets/f2cb99aa-7e97-4e88-9a6c-eb55d56cd888.png)
 
 <p align="center">
   <a href="README.en.md"><img src="https://img.shields.io/badge/Read%20in-English-blue.svg?style=for-the-badge" alt="Read in English"></a>
   <a href="https://github.com/BRAN-Org"><img src="https://img.shields.io/badge/Bases%20de%20Dados-2-green?style=for-the-badge&logo=database" alt="Bases de Dados"></a>
   <a href="https://www.budapestopenaccessinitiative.org/"><img src="https://img.shields.io/badge/BOAI-Signatory-orange.svg?style=for-the-badge" alt="BOAI Signatory"></a>
-  <a href="../LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="Licença GPLv3 | CC BY-NC-SA 4.0"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="Licença GPLv3 | CC BY-NC-SA 4.0"></a>
 </p>
 
 <p align="center">
@@ -28,11 +28,14 @@ Catálogo público de bases de dados bibliométricos da produção científica b
 
 Para assegurar transparência acadêmica e rigor científico, cada repositório da **BRAN Org** possui uma marcação de confiabilidade e integridade dos dados:
 
-- 🟢 **Verde (100% Auditado & Completo)**: Dados totalmente extraídos, validados e higienizados. Contém todos os metadados fundamentais (título, autores, afiliações, resumos, DOIs e links para PDF) sem lacunas conhecidas.
-- 🔵 **Azul (Alta Fidelidade com Omissões Esparsas da Fonte)**: Cobertura completa de edições/anos e DOIs, contendo apenas raras ausências de metadados herdadas do próprio site oficial em edições específicas.
-- 🟡 **Amarelo (100% Fiel à Fonte com Limitações da Origem)**: 100% dos artigos disponibilizados online pelo evento foram extraídos sem perdas, porém a fonte oficial apresenta limitações nativas (ex: ausência de DOIs nos anais do evento ou falta dos primeiros anais históricos que não estão digitalizados online). *(Ex: `ebbc-open-database`)*.
-- 🟠 **Laranja (Em Curadoria / Processamento)**: Extração realizada com sucesso, mas o acervo ainda passa por etapas de curadoria, validação de schema e saneamento de metadados. *(Ex: `abec-open-database`)*.
-- 🔴 **Vermelho (Dados Não Auditados / Baixa Confiabilidade)**: Registros brutos não auditados ou com alta incidência de falhas de extração. Requer cautela no uso analítico direto.
+- 🟢 **Verificado e Auditado**: Dados extraídos da fonte primária e submetidos a validações automáticas e/ou manuais. Identificadores persistentes foram resolvidos quando disponíveis, metadados comparados com fontes externas e inconsistências conhecidas documentadas.
+- 🔵 **Alta Fidelidade à Fonte**: Cobertura considerada completa em relação ao acervo digital disponível. Dados reproduzem a fonte oficial, porém nem todos os campos puderam ser verificados independentemente.
+- 🟡 **Fiel à Fonte / Cobertura Limitada**: Todos os registros publicamente disponíveis foram coletados, mas existem lacunas originadas no próprio acervo, como edições não digitalizadas, ausência de DOI ou metadados incompletos. *(Ex: `ebbc-open-database`)*.
+- 🟠 **Em Curadoria**: Dados coletados, mas ainda passando por normalização, deduplicação, validação de identificadores e revisão de metadados. *(Ex: `abec-open-database`)*.
+- 🔴 **Não Auditado**: Dados brutos ou parcialmente processados. Não devem ser considerados validados.
+
+> **Nota Metodológica Oficial:**  
+> *Os níveis de confiabilidade indicam o grau de auditoria, proveniência e validação dos dados, e não uma garantia absoluta de correção. A BRAN preserva divergências encontradas nas fontes originais e documenta correções realizadas durante o processo de curadoria.*
 
 </details>
 
