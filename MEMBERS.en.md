@@ -16,21 +16,22 @@ All member activities within the organization are governed by three non-negotiab
 
 ## 2. Onboarding New Members
 
-BRAN does not conduct corporate hiring processes. Membership is based on hands-on contributions, genuine dedication to open science, and alignment with our technical guidelines.
+Formal membership in the organization is neither automatic nor open to casual contributions. Minor or sporadic contributions (small fixes, metadata adjustments, or suggestions) should be made externally via Pull Requests, Issues, or submission forms.
 
-### How Membership Works:
-1. **Initial Contribution**: A collaborator shows interest by opening a technical Issue, proposing an audited data fix, or submitting a PR in open repositories (such as templates or helper scripts).
-2. **Organization Invitation**: Active members may invite contributors who demonstrate technical consistency and respect for data collection/sanitization standards.
-3. **Onboarding Steps**:
-   - Mandatory reading of this guide, `CONTRIBUTING.md`, and `ABOUT.en.md`.
+### Membership Criteria:
+1. **Significant Contribution Capacity**: Prospective members must be thoroughly evaluated and demonstrate proven technical capability to deliver substantial, continuous contributions aligned with BRAN Org's methodology.
+2. **Prior Assessment**: Membership requires verification of technical track record, adherence to organizational practices, and unyielding commitment to ethical scraping and data integrity.
+3. **Limited Initial Responsibilities**: New members join with a deliberately restricted scope and limited permissions. Critical responsibilities — such as access management, core infrastructure, release management, and maintaining shared tools and libraries — are exclusively reserved for designated core members.
+4. **Onboarding Steps**:
+   - Mandatory reading of this guide, `CONTRIBUTING.md`, and `ABOUT.en.md` in the `.github` repo.
    - Local environment setup with Python 3.10+, Node.js (if applicable), and schema validation tools (`scripts/validate_data.py`).
-   - Initial write access granted to development branches (`development`) or specific repositories undergoing curation.
+   - Initial write access restricted to development branches (`development`) or specific repositories undergoing active curation.
 
 ---
 
 ## 3. Roles & Responsibilities
 
-At BRAN, roles are not rigid managerial titles, but operational hats that any member can wear depending on project needs and availability:
+At BRAN, roles represent operational workstreams. New members operate with limited responsibilities, while maintenance of core tools, libraries, and infrastructure remains strictly under designated core members:
 
 ### 3.1. Tool Engineering & Harvesters
 - **Role**: Builds and maintains scrapers, extraction scripts (OAI-PMH, PDFs via GROBID/pdfplumber, HTML pages), sanitization pipelines, and visualization APIs.
@@ -38,6 +39,7 @@ At BRAN, roles are not rigid managerial titles, but operational hats that any me
   - Ensure harvesters gracefully handle network timeouts, drops, and corrupted formats.
   - Write readable, modular code with lean technical documentation (how to run, required variables).
   - Never couple presentation/UI logic into final dataset repositories; always use the base template (`bran-web-database-template`).
+  - Access to and maintenance of shared libraries and organization-wide core tools are restricted to authorized core members.
 
 ### 3.2. Data Stewardship & Auditing
 - **Role**: Inspects collected dataset quality, flags anomalies, calculates coverage metrics, and defines repository reliability levels.
@@ -54,7 +56,7 @@ At BRAN, roles are not rigid managerial titles, but operational hats that any me
   - Enforce Conventional Commits standards without generic messages.
 
 ### 3.4. Infrastructure, Schemas & CI/CD
-- **Role**: Maintains GitHub Actions workflows, cryptographic integrity checks, and data contracts (canonical JSON Schemas).
+- **Role**: Maintains GitHub Actions workflows, cryptographic integrity checks, and data contracts (canonical JSON Schemas). This domain is restricted to designated core members.
 - **Responsibilities**:
   - Ensure CI pipelines never silence errors or mask schema breaking changes.
   - Maintain semantic versioning and consistency across schema definitions (`schemas/article.vX.schema.json`).
@@ -63,7 +65,7 @@ At BRAN, roles are not rigid managerial titles, but operational hats that any me
 - **Role**: Monitors community Issues, researcher inquiries, and reported data discrepancies.
 - **Responsibilities**:
   - Technically investigate reported discrepancies against original sources.
-  - Respond transparently and constructively, indicating whether an anomaly stems from our harvester or is an inherent omission of the source archive.
+  - Respond politely, objectively, and transparently.
 
 ---
 
@@ -77,8 +79,6 @@ The proposal must answer 4 direct questions:
 2. **Technical Feasibility**: What is the primary source (OJS, DSpace, static HTML)? Is the volume manageable? Is there any risk of downtime or IP blocking?
 3. **Maintenance Cost**: Is this a closed historical archive or a recurring annual event requiring updates? Who will lead initial curation?
 4. **Tool Scope**: For utility tools, does it solve a recurring challenge across multiple BRAN datasets or is it overly bespoke? Should it be integrated into an existing repo or require a new one?
-
-**Approval Threshold**: At least two active members must sign off on the RFC before creating a new repository or starting heavy development.
 
 ---
 

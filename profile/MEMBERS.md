@@ -16,21 +16,22 @@ Toda atuação de membros na organização é regida por três regras inegociáv
 
 ## 2. Entrada e Onboarding de Novos Membros
 
-A BRAN não adota processos seletivos corporativos. O ingresso é baseado em contribuição prática, interesse legítimo em ciência aberta e alinhamento com nossas diretrizes técnicas.
+A entrada formal como membro da organização não é automática nem aberta a qualquer contribuição casual. Pequenas contribuições (ajustes pontuais, correções de metadados ou sugestões) devem ser feitas externamente via Pull Requests, Issues ou formulários.
 
-### Como funciona o ingresso:
-1. **Primeiro Contato / Contribuição Inicial**: O colaborador demonstra interesse abrindo uma Issue técnica, propondo uma correção auditada de dados ou enviando um PR em repositórios abertos (como templates ou scripts auxiliares).
-2. **Convite para a Organização**: Membros ativos podem convidar colaboradores que demonstraram consistência técnica e respeito às regras de coleta/sanitização.
-3. **Passo a Passo de Onboarding**:
+### Critérios de Ingresso:
+1. **Capacidade de Contribuição Significativa**: Novos membros devem ser previamente apurados e demonstrar capacidade técnica comprovada para realizar contribuições substanciais, contínuas e alinhadas ao rigor metodológico da BRAN Org.
+2. **Avaliação Prévia**: A admissão exige verificação do histórico técnico, domínio das práticas da organização e compromisso inegociável com as regras de coleta ética e integridade do dado.
+3. **Responsabilidades Limitadas no Ingresso**: Novos membros ingressam com escopo deliberadamente restrito e permissões limitadas. Determinadas responsabilidades críticas — como gestão de acessos, infraestrutura central, publicação e manutenção de ferramentas e bibliotecas estruturais — pertencem exclusivamente a membros pontuais da organização.
+4. **Passo a Passo de Onboarding**:
    - Leitura obrigatória deste guia, do `CONTRIBUTING.md` e do `ABOUT.md`.
    - Configuração do ambiente local com Python 3.10+, Node.js (se aplicável) e as ferramentas de validação de schema (`scripts/validate_data.py`).
-   - Acesso inicial concedido com permissão de escrita focada em branches de desenvolvimento (`development`) ou repositórios específicos em fase de curadoria.
+   - Acesso inicial restrito a branches de desenvolvimento (`development`) ou a repositórios específicos em fase de curadoria ativa.
 
 ---
 
 ## 3. Papéis e Responsabilidades
 
-Na BRAN, papéis não são cargos hierárquicos rígidos, mas sim frentes de atuação que qualquer membro pode assumir conforme a demanda e disponibilidade:
+Na BRAN, papéis são frentes de atuação operacional. Novos membros atuam com responsabilidades limitadas, enquanto a manutenção de ferramentas centrais, bibliotecas e infraestrutura permanece sob a tutela de membros pontuais:
 
 ### 3.1. Desenvolvimento e Engenharia de Ferramentas
 - **O que faz**: Constrói e mantém scrapers, scripts de extração (OAI-PMH, PDFs via GROBID/pdfplumber, páginas HTML), pipelines de sanitização e APIs de visualização.
@@ -38,6 +39,7 @@ Na BRAN, papéis não são cargos hierárquicos rígidos, mas sim frentes de atu
   - Garantir que extratores tratem falhas de rede, timeouts e formatos corrompidos com elegância.
   - Escrever código legível, modular e com documentação técnica enxuta (como rodar, variáveis necessárias).
   - Nunca acoplar regras de interface aos repositórios de dados finais; sempre utilizar o repositório de template (`bran-web-database-template`).
+  - O acesso e a manutenção direta de bibliotecas estruturais e ferramentas compartilhadas da organização cabem a membros pontuais autorizados.
 
 ### 3.2. Curadoria e Auditoria de Dados (Data Stewards)
 - **O que faz**: Inspeciona a qualidade dos acervos coletados, verifica anomalias, calcula métricas de cobertura e determina o nível de confiabilidade do repositório.
@@ -54,7 +56,7 @@ Na BRAN, papéis não são cargos hierárquicos rígidos, mas sim frentes de atu
   - Garantir que mensagens de commit sigam o formato Conventional Commits sem ruídos ou mensagens genéricas.
 
 ### 3.4. Infraestrutura, Schemas e CI/CD
-- **O que faz**: Mantém os workflows de GitHub Actions, validações criptográficas de integridade e a evolução dos contratos de dados (JSON Schemas canônicos).
+- **O que faz**: Mantém os workflows de GitHub Actions, validações criptográficas de integridade e a evolução dos contratos de dados (JSON Schemas canônicos). Esta área é restrita a membros pontuais.
 - **Responsabilidades**:
   - Assegurar que nenhum pipeline de CI silencie erros ou mascare quebras de schema.
   - Manter consistência e versionamento semântico nas definições de schema (`schemas/article.vX.schema.json`).
@@ -63,7 +65,7 @@ Na BRAN, papéis não são cargos hierárquicos rígidos, mas sim frentes de atu
 - **O que faz**: Monitora Issues abertas pelo público, dúvidas de pesquisadores e relatos de inconsistências em dados.
 - **Responsabilidades**:
   - Verificar tecnicamente a procedência de apontamentos de erro enviados pela comunidade.
-  - Responder de forma educada, objetiva e transparente, informando se a falha é do extrator ou limitação da própria publicação original.
+  - Responder de forma educada, objetiva e transparente.
 
 ---
 
@@ -77,8 +79,6 @@ A proposta deve responder a 4 perguntas objetivas:
 2. **Viabilidade Técnica**: Qual é a fonte primária (OJS, DSpace, HTML estático)? O volume é tratável? Há risco de bloqueio ou sobrecarga na origem?
 3. **Custo de Manutenção**: Trata-se de um evento encerrado (arquivo histórico) ou de um evento recorrente que precisará de novas extrações anuais? Quem será responsável pela curadoria inicial?
 4. **Escopo da Ferramenta**: Se for uma nova ferramenta utilitária, ela resolve um problema comum a múltiplos acervos da BRAN ou é algo específico demais? Devemos integrá-la a um repositório existente ou criar um novo?
-
-**Critério de Aprovação**: Pelo menos dois membros ativos devem concordar com a proposta antes da criação de um novo repositório ou início do desenvolvimento pesado. Isso evita "repositórios fantasmas" abandonados após o entusiasmo inicial.
 
 ---
 
