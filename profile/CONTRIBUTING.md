@@ -1,5 +1,5 @@
 # 📘 Manual de Operações e Contribuição Interna — BRAN Org
-> **Guia Exclusivo para Membros e Operadores Autorizados da BRAN Org**
+> **Guia Exclusivo para Membros e Operadores Autorizados da BRAN Org** (consulte também o [Guia de Membros](MEMBERS.md) para papéis e governança)
 
 Este documento é o **manual de instruções operacional** para membros com permissão de escrita e gestão na **BRAN Org**. Ele define os procedimentos de escavação, tratamento de dados, validação de schemas e manutenção dos repositórios da organização.
 
