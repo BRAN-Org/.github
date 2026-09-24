@@ -1,10 +1,11 @@
 # 🏛️ BRAN Org Governance
 
-**BRAN Org** (**Brazilian Research Archive Network**) is an independent and open initiative dedicated to building open infrastructure for academic information in Brazil.
+**BRAN Org** (**Brazilian Research Archive Network**) is an open initiative dedicated to engineering open-source software, developer tools, libraries, and technical infrastructure for the Brazilian scientific and technical ecosystem.
 
-## 📜 Governance Model
+## 📜 Governance Model & Roles
 
-1. **Open Initiative**: The project is maintained by the community under Free Software (GPLv3) and Open Data (CC BY-NC-SA 4.0) licenses.
-2. **Technical Decisions**: Schema changes, inclusion of new datasets, and operational updates are discussed transparently via Issues and Pull Requests.
-3. **Public Interest Commitment**: All datasets and APIs produced will remain free, open, and accessible to the academic community.
-4. **Members & Internal Operations**: The detailed guide covering technical roles, onboarding, code governance, and proposing new tools is documented in [MEMBERS.en.md](MEMBERS.en.md).
+1. **Free Software & Open Data**: We build open-source software (GPLv3) and maintain public data under transparent licensing (CC BY-NC-SA 4.0).
+2. **Maintainers, Developers & Auditors**: Repositories and tools are led by core maintainers responsible for architecture and releases, supported by active developers and independent technical/data auditors.
+3. **Technical Decisions & RFCs**: New tools, libraries, schema evolutions, and architecture proposals are debated transparently via Issues and Pull Requests.
+4. **Public Commitment**: All tools, software packages, and data catalogs produced by BRAN Org remain accessible, free, and open-source.
+5. **Internal Governance**: Detailed guidelines on roles, onboarding, and project proposal workflows are documented in the [Member Guide (MEMBERS.en.md)](MEMBERS.en.md).

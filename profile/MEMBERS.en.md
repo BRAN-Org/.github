@@ -1,111 +1,109 @@
-# Member Guide & Internal Operations — BRAN Org
+# Member Guide & Technical Governance — BRAN Org
 
-This document defines internal operations, technical responsibilities, and workflows for members of **BRAN Org**. Our goal is to maintain an open and auditable infrastructure for Brazilian scientific data, operating with technical pragmatism and avoiding unnecessary corporate overhead.
+This document outlines internal operations, role distribution, and development workflows for members of **BRAN Org**.
 
----
-
-## 1. Core Principles
-
-All member activities within the organization are governed by three non-negotiable rules:
-
-1. **Inviolability of Primary Sources**: Never guess, deduce, or artificially populate missing metadata from the origin. If an article or event lacks a DOI, abstract, or affiliation, the field must remain strictly `null`.
-2. **Responsible & Ethical Scraping**: Extraction scripts must operate with a minimum rate limit of 1.5 to 2.0 seconds between requests and use the official `User-Agent` (`BRAN-Org-Harvester/1.0 (+https://github.com/BRAN-Org)`).
-3. **Auditability & Reproducibility**: No dataset reaches production without a provenance manifest (`provenance.json`), cryptographic integrity validation, and passing schema checks against canonical JSON Schemas.
+BRAN is not limited to dataset archives and APIs: we engineer tools, software libraries, CLI utilities, web systems, and open software infrastructure, alongside maintaining initiatives dedicated to the preservation, integrity, and accessibility of Brazilian scientific output. We operate with pragmatic engineering, technical rigor, and zero corporate overhead.
 
 ---
 
-## 2. Onboarding New Members
+## 1. Operating Principles
 
-Formal membership in the organization is neither automatic nor open to casual contributions. Minor or sporadic contributions (small fixes, metadata adjustments, or suggestions) should be made externally via Pull Requests, Issues, or submission forms.
+All contributions and projects hosted under the organization must respect three core pillars:
+
+1. **Rigor & Reproducibility**: All software, tools, and pipelines must be testable, modular, and locally reproducible, supported by concise setup instructions and dependency declarations.
+2. **Inviolability of Data & Truth**: For initiatives handling scientific records and metadata, never deduce, infer, or hallucinate missing values. Fields not present at the origin must remain strictly `null`.
+3. **Auditability & Security**: No tool, library, or dataset reaches production without empirical validation, automated testing, and technical approval.
+
+---
+
+## 2. Roles & Technical Responsibilities
+
+At BRAN, responsibilities are clearly delineated across maintainers, developers, and auditors. New members join with a scoped footprint, while critical infrastructure and core library governance remain under designated core members:
+
+### 2.1. Core Project Maintainers
+- **Scope**: Technical and architectural leadership of specific repositories, tools, or libraries within the organization.
+- **Responsibilities**:
+  - Define technical architecture, design standards, and dependency management.
+  - Hold final approval authority on Pull Requests and direct merges into `main`.
+  - Oversee semantic versioning (SemVer), releases, and changelogs.
+  - Maintain organization-level secrets, deployment keys, and core CI/CD infrastructure.
+  - Direct access to and maintenance of shared foundational libraries and tools belong strictly to authorized core maintainers.
+
+### 2.2. Software Engineers & Tool Developers
+- **Scope**: End-to-end engineering and evolution of tools, CLIs, libraries, APIs, automation workflows, and web applications.
+- **Responsibilities**:
+  - Build robust features with readable, modular code resilient to runtime errors (handling timeouts, network partitions, and corrupted data gracefully).
+  - Author developer-oriented documentation (how to run, environment variables, reproducible usage examples).
+  - Ensure automated test coverage for critical paths prior to PR submission.
+  - Operate within feature or `development` branches, without direct write access to production.
+
+### 2.3. Technical & Integrity Auditors
+- **Scope**: Rigorous inspection, empirical validation, schema compliance, security review, and integrity assurance of codebase and data assets.
+- **Responsibilities**:
+  - **Code Audits**: Enforce technical guidelines, code hygiene, absence of exposed credentials, and security best practices.
+  - **Data Audits**: Cross-reference samples against primary sources, assert consistency against canonical schemas (`scripts/validate_data.py`), verify cryptographic provenance (`provenance.json`), and ensure zero data inference.
+  - Possess technical authority to block or request revisions on any PR violating verification criteria.
+
+### 2.4. New Members & Initial Scope
+- **Scope**: Onboarded with limited permissions and a defined operational scope.
+- **Responsibilities**:
+  - Work under maintainer guidance on designated repositories or development branches.
+  - Do not have direct access to package publishing keys, infrastructure settings, or direct-merge permissions on `main`.
+  - Expanded permissions are granted gradually based on proven technical consistency.
+
+---
+
+## 3. Onboarding New Members
+
+Formal membership is neither automatic nor open to casual contributions. Minor bug fixes, documentation adjustments, or suggestions should be made externally through standard Pull Requests, Issues, or public discussions.
 
 ### Membership Criteria:
-1. **Significant Contribution Capacity**: Prospective members must be thoroughly evaluated and demonstrate proven technical capability to deliver substantial, continuous contributions aligned with BRAN Org's methodology.
-2. **Prior Assessment**: Membership requires verification of technical track record, adherence to organizational practices, and unyielding commitment to ethical scraping and data integrity.
-3. **Limited Initial Responsibilities**: New members join with a deliberately restricted scope and limited permissions. Critical responsibilities — such as access management, core infrastructure, release management, and maintaining shared tools and libraries — are exclusively reserved for designated core members.
+1. **Demonstrated Technical Ability**: Prospective members must be vetted and show a verified track record of delivering substantial, sustained technical contributions to tools, software, or auditing pipelines.
+2. **Prior Assessment**: Membership requires established consistency, code literacy, and strict adherence to open-source software principles and data integrity.
+3. **Limited Initial Footprint**: Newly admitted members are granted focused permissions restricted to their immediate project branch. Global access and core tool governance remain reserved for designated maintainers.
 4. **Onboarding Steps**:
-   - Mandatory reading of this guide, `CONTRIBUTING.md`, and `ABOUT.en.md` in the `.github` repo.
-   - Local environment setup with Python 3.10+, Node.js (if applicable), and schema validation tools (`scripts/validate_data.py`).
-   - Initial write access restricted to development branches (`development`) or specific repositories undergoing active curation.
+   - Read this guide, `CONTRIBUTING.md`, and the technical documentation of the target project.
+   - Configure local dev environments, validation scripts, and testing suites.
+   - Coordinate initial scope directly with the target project's core maintainer.
 
 ---
 
-## 3. Roles & Responsibilities
+## 4. Proposing a New Tool or Project (RFC)
 
-At BRAN, roles represent operational workstreams. New members operate with limited responsibilities, while maintenance of core tools, libraries, and infrastructure remains strictly under designated core members:
+Members may propose new tools, libraries, standalone utilities, or datasets by opening an **RFC / Project Proposal** Issue in the relevant repository or the `.github` tracker.
 
-### 3.1. Tool Engineering & Harvesters
-- **Role**: Builds and maintains scrapers, extraction scripts (OAI-PMH, PDFs via GROBID/pdfplumber, HTML pages), sanitization pipelines, and visualization APIs.
-- **Responsibilities**:
-  - Ensure harvesters gracefully handle network timeouts, drops, and corrupted formats.
-  - Write readable, modular code with lean technical documentation (how to run, required variables).
-  - Never couple presentation/UI logic into final dataset repositories; always use the base template (`bran-web-database-template`).
-  - Access to and maintenance of shared libraries and organization-wide core tools are restricted to authorized core members.
+The proposal must address 4 core questions:
 
-### 3.2. Data Stewardship & Auditing
-- **Role**: Inspects collected dataset quality, flags anomalies, calculates coverage metrics, and defines repository reliability levels.
-- **Responsibilities**:
-  - Audit extracted samples directly against primary proceedings and official event portals.
-  - Maintain the `provenance.json` manifest with harvest timestamps, SHA-256 hashes, and missing metadata metrics.
-  - Assign and review official reliability tiers (Verified & Audited, High Source Fidelity, Faithful to Source, In Curation, Unaudited).
-
-### 3.3. Technical Review (Code & Data Review)
-- **Role**: Reviews code PRs and dataset changes prior to merging into main branches.
-- **Responsibilities**:
-  - **Code Review**: Verify code hygiene, absence of leaked credentials, rate limiting compliance, and clean logging.
-  - **Data Review**: Check out branches locally and execute validation suites (`python3 scripts/validate_data.py`). Inspect `git diff` to ensure fields were not inadvertently overwritten or deleted.
-  - Enforce Conventional Commits standards without generic messages.
-
-### 3.4. Infrastructure, Schemas & CI/CD
-- **Role**: Maintains GitHub Actions workflows, cryptographic integrity checks, and data contracts (canonical JSON Schemas). This domain is restricted to designated core members.
-- **Responsibilities**:
-  - Ensure CI pipelines never silence errors or mask schema breaking changes.
-  - Maintain semantic versioning and consistency across schema definitions (`schemas/article.vX.schema.json`).
-
-### 3.5. Community Triage & Support
-- **Role**: Monitors community Issues, researcher inquiries, and reported data discrepancies.
-- **Responsibilities**:
-  - Technically investigate reported discrepancies against original sources.
-  - Respond politely, objectively, and transparently.
+1. **Problem & Purpose**: What concrete engineering problem or data gap does this project solve? Why should it live under the BRAN Org umbrella?
+2. **Architecture & Feasibility**: What technical stack, dependencies, and interfaces (CLI, library, API, UI) will be used? Are there technical bottlenecks or maintenance risks?
+3. **Leadership & Maintenance**: Who will act as the lead maintainer responsible for the project's lifecycle? Is this a stable tool or an actively expanding system?
+4. **Modularity & Reuse**: Does it serve multiple projects across the organization or solve a widespread challenge for researchers and developers? Can it be published as a reusable package?
 
 ---
 
-## 4. Proposing a New Tool or Dataset (RFC)
+## 5. Git Workflow & Release Policies
 
-Before writing code for a new project or database, members must open an **RFC / Proposal** Issue in the organization (`.github` or the relevant discussion board).
-
-The proposal must answer 4 direct questions:
-
-1. **Source & Significance**: What is the scientific archive? Is it public? Why does it need a structured database or open API (e.g. trapped in non-indexed PDFs or legacy portals)?
-2. **Technical Feasibility**: What is the primary source (OJS, DSpace, static HTML)? Is the volume manageable? Is there any risk of downtime or IP blocking?
-3. **Maintenance Cost**: Is this a closed historical archive or a recurring annual event requiring updates? Who will lead initial curation?
-4. **Tool Scope**: For utility tools, does it solve a recurring challenge across multiple BRAN datasets or is it overly bespoke? Should it be integrated into an existing repo or require a new one?
-
----
-
-## 5. Git Workflow & Branching Policies
-
-To protect public data catalog stability:
-
-- **Protected Main**: The `main` branch is stable and represents production. Direct commits to `main` on dataset or template repos are restricted.
-- **Development Branch**: All development and data updates must pass through `development` prior to merging into `main`.
+- **Branching Strategy**:
+  - `main`: Production and release branch. Direct commits are restricted.
+  - `development` / feature branches: Active development branches.
 - **Pull Requests**:
-  - Must include a concise summary of changes.
-  - Must pass all automated CI checks (`validate_data.py` and cryptographic assertions).
-  - Require approval from at least one independent reviewer.
-- **Commit Standards**: Strict Conventional Commits (`feat:`, `fix(data):`, `fix(code):`, `docs:`, `chore:`).
+  - Must provide a clear technical summary of changes and resolved problems.
+  - Must pass 100% of automated CI checks (unit tests, linting, cryptographic assertions, schema validations).
+  - Require formal approval from at least one maintainer or auditor.
+- **Commit Standards**: Enforce strict Conventional Commits (`feat:`, `fix:`, `refactor:`, `docs:`, `test:`, `chore:`). Zero generic or AI-generated commit fluff.
 
 ---
 
 ## 6. Internal Collaboration & Communication
 
-- **Channels**: Project discussions, technical choices, and reviews take place publicly via Issues, Pull Requests, and GitHub Discussions for transparency. Short coordination may occur in designated internal chat spaces.
-- **Tone**: Pragmatic, direct, and respectful. Focus on technical data quality and code reliability.
-- **Respect for Bandwidth**: BRAN is maintained by volunteers dedicating personal time to open science. We value transparent commitments over arbitrary deadlines.
+- **Channels**: Architecture discussions, design choices, and RFCs must be preserved publicly on Issues, Pull Requests, and GitHub Discussions for traceable provenance.
+- **Tone**: Direct, technical, and respectful. Focus on code quality and tool utility.
+- **Bandwidth Transparency**: As a community open-source initiative, we value clear and transparent communication regarding availability and committed tasks.
 
 ---
 
 ## 7. Inactivity & Friendly Offboarding
 
-- **Stepping Back**: If a member needs to pause due to academic, professional, or personal commitments, a quick heads-up allows the team to reassign tasks without friction.
-- **Frictionless Offboarding**: Members choosing to step down remain credited in project records for their contributions.
-- **Access Hygiene**: Accounts inactive for over 6 months without prior notice may have write permissions revoked as a standard security precaution, readily restored upon return.
+- **Communicating Pauses**: If taking time off due to personal or professional commitments, inform project maintainers so responsibilities can be reassigned smoothly.
+- **Frictionless Offboarding**: Departing members retain public attribution for their historical contributions.
+- **Access Hygiene**: Accounts inactive for more than 6 months without prior notice may have write permissions revoked as a standard operational precaution, easily reinstated upon return.

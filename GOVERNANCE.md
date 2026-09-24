@@ -1,10 +1,11 @@
 # 🏛️ Governança da BRAN Org
 
-A **BRAN Org** (**Brazilian Research Archive Network**) é uma iniciativa independente e descentralizada dedicada à construção de infraestrutura aberta para a informação acadêmica no Brasil.
+A **BRAN Org** (**Brazilian Research Archive Network**) é uma iniciativa aberta dedicada ao desenvolvimento de ferramentas, software livre, bibliotecas e infraestrutura técnica para a comunidade científica e tecnológica brasileira.
 
-## 📜 Modelo de Gestão
+## 📜 Modelo de Gestão e Papéis
 
-1. **Iniciativa Aberta**: O projeto é mantido comunitariamente sob licenças de Software Livre (GPLv3) e Dados Abertos (CC BY-NC-SA 4.0).
-2. **Decisões Técnicas**: Mudanças de schema, inclusão de novas bases e atualizações operacionais são discutidas via Issues e Pull Requests transparentes.
-3. **Compromisso com o Interesse Público**: Todas as bases de dados e APIs geradas permanecerão gratuitas, abertas e acessíveis para a comunidade acadêmica.
-4. **Membros e Operação Interna**: O guia detalhado de papéis técnicos, onboarding, governança de código e fluxo de propostas de novas ferramentas está documentado em [MEMBERS.md](MEMBERS.md).
+1. **Software Livre e Dados Abertos**: Desenvolvemos código aberto (GPLv3) e mantemos dados sob licenças transparentes (CC BY-NC-SA 4.0).
+2. **Mantedores, Desenvolvedores e Auditores**: Repositórios e ferramentas possuem mantedores principais responsáveis pela arquitetura e releases, com desenvolvimento colaborativo e auditorias técnicas rigorosas antes de qualquer promoção a produção.
+3. **Decisões Técnicas e RFCs**: Novas ferramentas, bibliotecas, mudanças de schema e arquitetura são propostas e debatidas abertamente via Issues e Pull Requests.
+4. **Compromisso Público**: Todas as ferramentas, bibliotecas e dados gerados pela BRAN Org permanecerão acessíveis, gratuitos e de código aberto.
+5. **Governança Interna**: Diretrizes detalhadas sobre papéis, onboarding e fluxo de novas propostas estão documentadas no [Guia de Membros (MEMBERS.md)](MEMBERS.md).
