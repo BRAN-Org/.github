@@ -1,10 +1,10 @@
-![BRAN Banner](assets/f2cb99aa-7e97-4e88-9a6c-eb55d56cd888.png)
+![BRAN Banner](../assets/f2cb99aa-7e97-4e88-9a6c-eb55d56cd888.png)
 
 <p align="center">
   <a href="README.md"><img src="https://img.shields.io/badge/Ler%20em-Portugu%C3%AAs-blue.svg?style=for-the-badge" alt="Ler em Português"></a>
   <a href="https://github.com/BRAN-Org"><img src="https://img.shields.io/badge/Databases-2-green?style=for-the-badge&logo=database" alt="Databases"></a>
   <a href="https://www.budapestopenaccessinitiative.org/"><img src="https://img.shields.io/badge/BOAI-Signatory-orange.svg?style=for-the-badge" alt="BOAI Signatory"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="GPLv3 | CC BY-NC-SA 4.0 License"></a>
+  <a href="../LICENSE"><img src="https://img.shields.io/badge/License-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="GPLv3 | CC BY-NC-SA 4.0 License"></a>
 </p>
 
 <p align="center">
