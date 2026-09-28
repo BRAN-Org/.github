@@ -10,4 +10,4 @@ Yes! All datasets are open under the **CC BY-NC-SA 4.0** license for academic an
 No. The CC BY-NC-SA 4.0 license explicitly restricts scraping or ingesting datasets for training commercial Artificial Intelligence models without prior authorization.
 
 ### 4. How can I suggest a new event or journal for BRAN Org to map?
-You can open an **Issue** in our repositories or fill out our [Data Suggestion Form](https://forms.gle/bran-org-contato).
+You can open an **Issue** in our repositories or fill out our [Data Suggestion Form](https://forms.gle/qhVXZpaRo26MLuUm8).

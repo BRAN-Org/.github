@@ -45,5 +45,6 @@ Para assegurar transparência acadêmica e rigor científico, cada repositório 
 
 Esta comunidade possui um [Código de Conduta](CODE_OF_CONDUCT.md). Você deve segui-lo ao interagir com a comunidade.
 
-- **Para dúvidas ou suporte:** veja o [SUPPORT.md](SUPPORT.md) ou envie uma mensagem através do [Formulário de Contato](https://forms.gle/bran-org-contato).
+- **Para dúvidas ou suporte:** veja o [SUPPORT.md](SUPPORT.md) ou envie uma mensagem através do [Formulário de Contato](https://forms.gle/qhVXZpaRo26MLuUm8).
 - **Para ajudar ou contribuir:** veja o [CONTRIBUTING.md](CONTRIBUTING.md).
+- **Para submeter dados ou acervos:** preencha o [Formulário de Submissão de Datasets](https://forms.gle/jNBuP1mjyUXc6v1fA).

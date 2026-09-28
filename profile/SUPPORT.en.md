@@ -5,7 +5,7 @@ If you have questions about the project, need help using the bibliometric data, 
 ## 📌 How to get support:
 
 1. **Direct Contact Form**:
-   - Send your question or message via our [Contact Form](https://forms.gle/bran-org-contato).
+   - Send your question or message via our [Contact Form](https://forms.gle/qhVXZpaRo26MLuUm8).
 
 2. **Open an Issue**:
    - To report extraction errors, feature requests, or data inconsistencies, open an **Issue** in the corresponding repository.

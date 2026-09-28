@@ -45,5 +45,6 @@ To ensure academic transparency and scientific rigor, every **BRAN Org** dataset
 
 This community has a [Code of Conduct](CODE_OF_CONDUCT.md). You must follow it when interacting with the community.
 
-- **For questions or support:** see [SUPPORT.md](SUPPORT.md) or send a message via our [Contact Form](https://forms.gle/bran-org-contato).
+- **For questions or support:** see [SUPPORT.md](SUPPORT.md) or send a message via our [Contact Form](https://forms.gle/qhVXZpaRo26MLuUm8).
 - **To help or contribute:** see [CONTRIBUTING.md](CONTRIBUTING.md).
+- **To submit datasets or collections:** fill out the [Dataset Submission Form](https://forms.gle/jNBuP1mjyUXc6v1fA).
