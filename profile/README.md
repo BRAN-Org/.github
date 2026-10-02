@@ -54,11 +54,6 @@ Além dos acervos bibliométricos, mantemos padrões canônicos e ferramentas de
 | [bibliolatam](https://github.com/BRAN-Org/bibliolatam) | Biblioteca Python/R | Normalização, limpeza e parsing de metadados bibliográficos latino-americanos. |
 | [bran-web-database-template](https://github.com/BRAN-Org/bran-web-database-template) | Template & API | Arquitetura de referência para publicação de APIs REST e dashboards com zero dependências externas. |
 
----
-
-## Como Citar
-
-Ao utilizar acervos, APIs ou análises da BRAN Org em artigos científicos, monografias ou relatórios técnicos, consulte os formatos e modelos em [ABOUT.md#como-citar-a-bran-org--nossos-datasets](ABOUT.md#como-citar-a-bran-org--nossos-datasets). Nossas APIs também disponibilizam exportação direta em **BibTeX** e **RIS** via `/api/v1/articles/export?format=bibtex`.
 
 ---
 

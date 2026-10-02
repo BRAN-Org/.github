@@ -54,11 +54,6 @@ Beyond bibliometric collections, we maintain canonical standards and open-source
 | [bibliolatam](https://github.com/BRAN-Org/bibliolatam) | Python/R Library | Normalization, cleaning, and parsing of Latin American bibliographic metadata. |
 | [bran-web-database-template](https://github.com/BRAN-Org/bran-web-database-template) | Template & API | Reference architecture for deploying public REST APIs and dashboards with zero external runtime dependencies. |
 
----
-
-## How to Cite
-
-When utilizing datasets, APIs, or analysis from BRAN Org in research papers or reports, please refer to the citation standards in [ABOUT.en.md#how-to-cite-bran-org--our-datasets](ABOUT.en.md#how-to-cite-bran-org--our-datasets). Our REST APIs also offer instant bibliographic export in **BibTeX** and **RIS** via `/api/v1/articles/export?format=bibtex`.
 
 ---
 
