@@ -38,6 +38,13 @@ In contemporary research dynamics, **it is within conference proceedings that pi
 
 Losing or neglecting conference proceedings means erasing the very genesis of Brazilian scientific thought.
 
+### 3. Scientific Evidence & Digital Memory Loss
+The fragility of the web is not merely an empirical impression; it is an extensively measured phenomenon across scholarly research and science journalism:
+* **Klein et al. (2014, *PLOS ONE*)**: In the landmark study [*Scholarly Context Not Found: One in Five Articles Suffers from Reference Rot*](https://doi.org/10.1371/journal.pone.0115253), researchers examined over 1 million references across 3.5 million scholarly papers, finding that 1 in 5 academic articles suffers from *reference rot* (broken hyperlinks or content drift rendering original sources unverifiable).
+* **Pew Research Center (2024)**: In the comprehensive report [*When Online Content Disappears*](https://www.pewresearch.org/data-labs/2024/05/17/when-online-content-disappears/), the institute established that 38% of webpages existing in 2013 vanished within a decade, and 54% of Wikipedia articles contain dead links in their references.
+* **Jonathan Zittrain (2021, *The Atlantic*)**: In [*The Internet Is Rotting*](https://www.theatlantic.com/technology/archive/2021/06/the-internet-is-broken-and-archive-is-dying/619280/), the Harvard Law professor documented the systemic breakdown of the "chain of custody for facts" caused by link rot and unarchived web hosting.
+* **Science Outreach & Video Analysis**: The educational channel **Veritasium** breaks down this crisis in [*The Internet Is Disappearing: Link Rot, Explained*](https://www.youtube.com/results?search_query=The+Internet+Is+Disappearing+Link+Rot+Explained), echoing the seminal warnings of **Vint Cerf** (Internet pioneer and Google VP) regarding the onset of a *"Digital Dark Age"* if deliberate open data infrastructure is not prioritized.
+
 ---
 
 ## Our Stance: Symbiosis with Major National Platforms
@@ -50,6 +57,27 @@ However, given the massive scale and institutional priorities of these federal p
 * Fine-grained methodological telemetry (computational tools, algorithms, and data sources employed in research).
 
 **BRAN Org**'s mission is strictly **symbiotic and complementary**. We do not compete with national platforms; instead, we **fill critical frontline infrastructure gaps**, rescuing forgotten archives and curating them to the highest technical standard so they can seamlessly interface with both domestic and international scientific networks.
+
+---
+
+## Ecosystem Architecture & Data Lifecycle
+
+To counter digital amnesia with technical rigor and auditability, **BRAN Org**'s infrastructure rests upon three integrated pillars:
+
+1. **Open Databases & REST APIs**: Independent repositories ([`abec-open-database`](https://github.com/BRAN-Org/abec-open-database), [`ebbc-open-database`](https://github.com/BRAN-Org/ebbc-open-database)) delivering curated archives through free HTTP endpoints and universal export formats (`JSON`, `CSV UTF-8 BOM`, `BibTeX`, and `RIS`).
+2. **Canonical Standards & Schemas**: The [`schemas`](https://github.com/BRAN-Org/schemas) repository centralizes canonical JSON Schema v1 definitions (`article`, `provenance`, `event`) and automated CI data integrity suites.
+3. **Libraries & Tooling**: Processing libraries like [`bibliolatam`](https://github.com/BRAN-Org/bibliolatam) (Latin American bibliographic metadata parsing) and reproducible templates ([`bran-web-database-template`](https://github.com/BRAN-Org/bran-web-database-template)).
+
+### Custody and Validation Lifecycle
+
+```mermaid
+flowchart LR
+    A["Primary Source<br>(Official Site / Proceedings)"] --> B["Harvesting & Cleaning<br>(bibliolatam / scrapers)"]
+    B --> C["Canonical Validation<br>(JSON Schemas v1)"]
+    C --> D["Checksum & Provenance<br>(provenance.json SHA-256)"]
+    D --> E["Public Deployment<br>(Free REST API + Dashboard)"]
+    E --> F["Universal Exchange<br>(JSON, CSV BOM, BibTeX, RIS)"]
+```
 
 ---
 

@@ -1,10 +1,14 @@
-![BRAN Banner](../assets/f2cb99aa-7e97-4e88-9a6c-eb55d56cd888.png)
+![BRAN Banner](https://raw.githubusercontent.com/BRAN-Org/.github/main/assets/f2cb99aa-7e97-4e88-9a6c-eb55d56cd888.png)
 
 <p align="center">
  <a href="README.md"><img src="https://img.shields.io/badge/Ler%20em-Portugu%C3%AAs-blue.svg?style=for-the-badge" alt="Ler em Português"></a>
  <a href="https://github.com/BRAN-Org"><img src="https://img.shields.io/badge/Databases-2-green?style=for-the-badge&logo=database" alt="Databases"></a>
  <a href="https://www.budapestopenaccessinitiative.org/"><img src="https://img.shields.io/badge/BOAI-Signatory-orange.svg?style=for-the-badge" alt="BOAI Signatory"></a>
  <a href="../LICENSE"><img src="https://img.shields.io/badge/License-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="GPLv3 | CC BY-NC-SA 4.0 License"></a>
+</p>
+
+<p align="center">
+ <b>BRAN Org</b> (Brazilian Research Archive Network) is an independent data infrastructure collective dedicated to rescuing, standardizing, and preserving Brazilian scientific proceedings and collections through open data, public REST APIs, and auditable canonical schemas.
 </p>
 
 <p align="center">
@@ -37,6 +41,18 @@ To ensure academic transparency and methodological rigor, each **BRAN Org** data
 > *BRAN strictly preserves primary source fidelity and never hallucinates missing information. Gaps and anomalies found on official portals are documented in audit logs and addressed through active investigation and direct contact with organizing institutions.*
 
 </details>
+
+---
+
+### Standards, Schemas & Tools
+
+Beyond bibliometric collections, we maintain canonical standards and open-source tooling for research infrastructure:
+
+| Repository | Type | Description |
+| :--- | :--- | :--- |
+| [schemas](https://github.com/BRAN-Org/schemas) | JSON Standards | Canonical v1 schemas (`article`, `provenance`, `event`) with automated CI validation. |
+| [bibliolatam](https://github.com/BRAN-Org/bibliolatam) | Python/R Library | Normalization, cleaning, and parsing of Latin American bibliographic metadata. |
+| [bran-web-database-template](https://github.com/BRAN-Org/bran-web-database-template) | Template & API | Reference architecture for deploying public REST APIs and dashboards with zero external runtime dependencies. |
 
 ---
 

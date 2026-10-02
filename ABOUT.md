@@ -38,6 +38,13 @@ Na dinâmica da pesquisa contemporânea, **é nos anais de eventos que as ideias
 
 Perder ou negligenciar os anais de congressos significa apagar a gênese do pensamento científico brasileiro.
 
+### 3. Evidências Científicas e a Perda da Memória Digital
+A volatilidade da web não é uma impressão empírica isolada, mas um fenômeno quantificado por pesquisas internacionais e pelo jornalismo científico:
+* **Klein et al. (2014, *PLOS ONE*)**: No artigo seminal [*Scholarly Context Not Found: One in Five Articles Suffers from Reference Rot*](https://doi.org/10.1371/journal.pone.0115253), pesquisadores analisaram mais de 1 milhão de referências em 3,5 milhões de artigos científicos e demonstraram que 1 em cada 5 artigos acadêmicos sofre de *reference rot* (links quebrados ou conteúdo alterado que inviabiliza a checagem da fonte original).
+* **Pew Research Center (2024)**: No relatório [*When Online Content Disappears*](https://www.pewresearch.org/data-labs/2024/05/17/when-online-content-disappears/), o instituto apontou que 38% das páginas da web existentes em 2013 desapareceram completamente em uma década, e que 54% dos artigos da Wikipedia já possuem links quebrados em suas referências.
+* **Jonathan Zittrain (2021, *The Atlantic*)**: No ensaio [*The Internet Is Rotting*](https://www.theatlantic.com/technology/archive/2021/06/the-internet-is-broken-and-archive-is-dying/619280/), o professor de Harvard alertou para a ruptura da "cadeia de custódia dos fatos" na ciência e no direito ocasionada pelo fechamento de servidores e links mortos.
+* **Divulgação Científica e Alertas**: O canal **Veritasium** aborda esse problema em profundidade no documentário explicativo [*The Internet Is Disappearing: Link Rot, Explained*](https://www.youtube.com/results?search_query=The+Internet+Is+Disappearing+Link+Rot+Explained), e **Vint Cerf** (pioneiro da internet e vice-presidente do Google) há anos alerta a comunidade acadêmica para o perigo iminente de uma *"Digital Dark Age"* (Idade das Trevas Digital), caso a preservação de dados e formatos não seja tratada como infraestrutura prioritária.
+
 ---
 
 ## Nossa Postura: Simbiose com as Grandes Plataformas Nacionais
@@ -50,6 +57,27 @@ Contudo, devido à escala massiva e às prioridades institucionais desses órgã
 * Mapeamento fino de metodologias (softwares utilizados, bases consultadas e algoritmos empregados nas pesquisas).
 
 A atuação da **BRAN Org** é estritamente **simbiótica e complementar**. Não buscamos concorrer com as plataformas nacionais, mas sim **preencher as lacunas de infraestrutura na ponta**, resgatando acervos esquecidos e organizando-os com rigor para que estejam aptos a dialogar com as grandes redes de informação globais e nacionais.
+
+---
+
+## Arquitetura do Ecossistema & Ciclo de Vida do Dado
+
+Para combater a amnésia digital com rigor e auditabilidade, a infraestrutura da **BRAN Org** está estruturada em três pilares integrados:
+
+1. **Bases de Dados Abertas & APIs REST**: Repositórios autônomos ([`abec-open-database`](https://github.com/BRAN-Org/abec-open-database), [`ebbc-open-database`](https://github.com/BRAN-Org/ebbc-open-database)) que disponibilizam os acervos tratados via API HTTP gratuita e formatos universais de exportação (`JSON`, `CSV UTF-8 BOM`, `BibTeX` e `RIS`).
+2. **Padrões & Schemas Canônicos**: O repositório [`schemas`](https://github.com/BRAN-Org/schemas) centraliza as especificações JSON Schema v1 (`article`, `provenance`, `event`) e as suítes de validação de dados executadas em CI.
+3. **Bibliotecas & Ferramentas**: Ferramentas de tratamento como a [`bibliolatam`](https://github.com/BRAN-Org/bibliolatam) (normalização de metadados latino-americanos) e templates reproduzíveis ([`bran-web-database-template`](https://github.com/BRAN-Org/bran-web-database-template)).
+
+### Ciclo de Custódia e Validação
+
+```mermaid
+flowchart LR
+    A["Fonte Primária<br>(Site Oficial / Anais)"] --> B["Coleta & Normalização<br>(bibliolatam / scrapers)"]
+    B --> C["Validação Canônica<br>(schemas JSON v1)"]
+    C --> D["Assinatura & Checksum<br>(provenance.json SHA-256)"]
+    D --> E["Disponibilização Pública<br>(API REST gratuita + Dashboard)"]
+    E --> F["Intercâmbio Aberto<br>(JSON, CSV BOM, BibTeX, RIS)"]
+```
 
 ---
 

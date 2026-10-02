@@ -1,10 +1,14 @@
-![BRAN Banner](../assets/f2cb99aa-7e97-4e88-9a6c-eb55d56cd888.png)
+![BRAN Banner](https://raw.githubusercontent.com/BRAN-Org/.github/main/assets/f2cb99aa-7e97-4e88-9a6c-eb55d56cd888.png)
 
 <p align="center">
  <a href="README.en.md"><img src="https://img.shields.io/badge/Read%20in-English-blue.svg?style=for-the-badge" alt="Read in English"></a>
  <a href="https://github.com/BRAN-Org"><img src="https://img.shields.io/badge/Bases%20de%20Dados-2-green?style=for-the-badge&logo=database" alt="Bases de Dados"></a>
  <a href="https://www.budapestopenaccessinitiative.org/"><img src="https://img.shields.io/badge/BOAI-Signatory-orange.svg?style=for-the-badge" alt="BOAI Signatory"></a>
  <a href="../LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="Licença GPLv3 | CC BY-NC-SA 4.0"></a>
+</p>
+
+<p align="center">
+ A <b>BRAN Org</b> (Brazilian Research Archive Network) é um coletivo independente de infraestrutura de dados dedicado a resgatar, padronizar e preservar anais e acervos da produção científica brasileira por meio de dados abertos, APIs REST públicas e schemas canônicos auditáveis.
 </p>
 
 <p align="center">
@@ -37,6 +41,18 @@ Para assegurar transparência acadêmica e rigor metodológico, cada repositóri
 > *A BRAN preserva a fidelidade estrita à fonte de origem e nunca inventa dados inexistentes. Discrepâncias e lacunas identificadas nos portais oficiais são registradas nos relatórios de auditoria e tratadas via averiguação ativa e contato direto com as instituições organizadoras.*
 
 </details>
+
+---
+
+### Padrões, Schemas & Ferramentas
+
+Além dos acervos bibliométricos, mantemos padrões canônicos e ferramentas de código aberto para suporte à infraestrutura de pesquisa:
+
+| Repositório | Tipo | Descrição |
+| :--- | :--- | :--- |
+| [schemas](https://github.com/BRAN-Org/schemas) | Padrões JSON | Schemas canônicos v1 (`article`, `provenance`, `event`) com testes e validação automatizada de integridade. |
+| [bibliolatam](https://github.com/BRAN-Org/bibliolatam) | Biblioteca Python/R | Normalização, limpeza e parsing de metadados bibliográficos latino-americanos. |
+| [bran-web-database-template](https://github.com/BRAN-Org/bran-web-database-template) | Template & API | Arquitetura de referência para publicação de APIs REST e dashboards com zero dependências externas. |
 
 ---
 
