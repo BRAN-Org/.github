@@ -42,18 +42,6 @@ To ensure academic transparency and methodological rigor, each **BRAN Org** data
 
 </details>
 
----
-
-### Standards, Schemas & Tools
-
-Beyond bibliometric collections, we maintain canonical standards and open-source tooling for research infrastructure:
-
-| Repository | Type | Description |
-| :--- | :--- | :--- |
-| [schemas](https://github.com/BRAN-Org/schemas) | JSON Standards | Canonical v1 schemas (`article`, `provenance`, `event`) with automated CI validation. |
-| [bibliolatam](https://github.com/BRAN-Org/bibliolatam) | Python/R Library | Normalization, cleaning, and parsing of Latin American bibliographic metadata. |
-| [bran-web-database-template](https://github.com/BRAN-Org/bran-web-database-template) | Template & API | Reference architecture for deploying public REST APIs and dashboards with zero external runtime dependencies. |
-
 
 ---
 
