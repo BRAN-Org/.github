@@ -42,18 +42,6 @@ Para assegurar transparência acadêmica e rigor metodológico, cada repositóri
 
 </details>
 
----
-
-### Padrões, Schemas & Ferramentas
-
-Além dos acervos bibliométricos, mantemos padrões canônicos e ferramentas de código aberto para suporte à infraestrutura de pesquisa:
-
-| Repositório | Tipo | Descrição |
-| :--- | :--- | :--- |
-| [schemas](https://github.com/BRAN-Org/schemas) | Padrões JSON | Schemas canônicos v1 (`article`, `provenance`, `event`) com testes e validação automatizada de integridade. |
-| [bibliolatam](https://github.com/BRAN-Org/bibliolatam) | Biblioteca Python/R | Normalização, limpeza e parsing de metadados bibliográficos latino-americanos. |
-| [bran-web-database-template](https://github.com/BRAN-Org/bran-web-database-template) | Template & API | Arquitetura de referência para publicação de APIs REST e dashboards com zero dependências externas. |
-
 
 ---
 
