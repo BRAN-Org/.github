@@ -103,38 +103,6 @@ No jogo, Brann é o fundador da Liga dos Exploradores (*Explorer's League*), um 
 
 Essa figura resume o espírito do nosso projeto: **somos arqueólogos de dados acadêmicos**. Onde muitos enxergam apenas PDFs antigos, links mortos e páginas estáticas esquecidas, nós enxergamos a memória viva da inteligência e da ciência brasileira pronta para ser resgatada e devolvida à sociedade.
 
----
-
-## Como Citar a BRAN Org & Nossos Datasets
-
-Ao utilizar dados, APIs ou análises da **BRAN Org** em artigos científicos, dissertações, teses ou relatórios técnicos, utilize as diretrizes de citação abaixo:
-
-### Formato ABNT (Associação Brasileira de Normas Técnicas)
-> BRAN ORG. **[Nome da Base de Dados]: Anais Abertos do [Nome do Evento] ([Período])**. Versão [X.Y.Z]. Curadoria e Infraestrutura de Dados Abertos. [Ano]. Disponível em: \<https://github.com/BRAN-Org/[nome-do-repositorio]\>. Acesso em: [Dia mês. Ano].
-
-*Exemplo prático (EBBC):*
-> BRAN ORG. **EBBC Open Database: Anais Abertos do Encontro Brasileiro de Bibliometria e Cientometria (2012-2024)**. Versão 1.5.0. Curadoria e Infraestrutura de Dados Abertos. 2026. Disponível em: \<https://github.com/BRAN-Org/ebbc-open-database\>. Acesso em: 02 out. 2026.
-
-### Formato BibTeX
-```bibtex
-@misc{bran_org_ebbc,
-  author       = {{BRAN Org}},
-  title        = {{EBBC Open Database: Anais Abertos do Encontro Brasileiro de Bibliometria e Cientometria (2012-2024)}},
-  year         = {2026},
-  publisher    = {GitHub},
-  howpublished = {\url{https://github.com/BRAN-Org/ebbc-open-database}},
-  note         = {Versão 1.5.0. Licença CC BY-NC-SA 4.0}
-}
-```
-
-### Formato APA (7th Edition)
-> BRAN Org. (2026). *EBBC open database: Anais abertos do Encontro Brasileiro de Bibliometria e Cientometria (2012-2024)* (Version 1.5.0) [Data set]. GitHub. https://github.com/BRAN-Org/ebbc-open-database
-
-### Exportação Automatizada via API REST
-Nossas APIs oferecem endpoints nativos de exportação bibliográfica direta para o conjunto completo de dados ou por artigo:
-* **BibTeX**: `GET /api/v1/articles/export?format=bibtex`
-* **RIS** (Zotero, Mendeley, EndNote): `GET /api/v1/articles/export?format=ris`
-* **CSV estruturado** (com UTF-8 BOM): `GET /api/v1/articles/export?format=csv`
 
 ---
 
