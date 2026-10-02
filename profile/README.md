@@ -7,7 +7,7 @@
  <a href="../LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="Licença GPLv3 | CC BY-NC-SA 4.0"></a>
 </p>
 
-<p align="center">
+<p>
  A <b>BRAN Org</b> (Brazilian Research Archive Network) é um coletivo independente de infraestrutura de dados dedicado a resgatar, padronizar e preservar anais e acervos da produção científica brasileira por meio de dados abertos, APIs REST públicas e schemas canônicos auditáveis.
 </p>
 
