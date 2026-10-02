@@ -58,27 +58,6 @@ However, given the massive scale and institutional priorities of these federal p
 
 ---
 
-## Ecosystem Architecture & Data Lifecycle
-
-To counter digital amnesia with technical rigor and auditability, **BRAN Org**'s infrastructure rests upon three integrated pillars:
-
-1. **Open Databases & REST APIs**: Independent repositories ([`abec-open-database`](https://github.com/BRAN-Org/abec-open-database), [`ebbc-open-database`](https://github.com/BRAN-Org/ebbc-open-database)) delivering curated archives through free HTTP endpoints and universal export formats (`JSON`, `CSV UTF-8 BOM`, `BibTeX`, and `RIS`).
-2. **Canonical Standards & Schemas**: The [`schemas`](https://github.com/BRAN-Org/schemas) repository centralizes canonical JSON Schema v1 definitions (`article`, `provenance`, `event`) and automated CI data integrity suites.
-3. **Libraries & Tooling**: Processing libraries like [`bibliolatam`](https://github.com/BRAN-Org/bibliolatam) (Latin American bibliographic metadata parsing) and reproducible templates ([`bran-web-database-template`](https://github.com/BRAN-Org/bran-web-database-template)).
-
-### Custody and Validation Lifecycle
-
-```mermaid
-flowchart LR
-    A["Primary Source<br>(Official Site / Proceedings)"] --> B["Harvesting & Cleaning<br>(bibliolatam / scrapers)"]
-    B --> C["Canonical Validation<br>(JSON Schemas v1)"]
-    C --> D["Checksum & Provenance<br>(provenance.json SHA-256)"]
-    D --> E["Public Deployment<br>(Free REST API + Dashboard)"]
-    E --> F["Universal Exchange<br>(JSON, CSV BOM, BibTeX, RIS)"]
-```
-
----
-
 ## Scientific Sovereignty & Ethical Artificial Intelligence
 
 **BRAN Org** enforces an explicit dual-licensing policy to defend Brazilian science as an **inalienable public good**:

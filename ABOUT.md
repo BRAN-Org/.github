@@ -58,27 +58,6 @@ A atuação da **BRAN Org** é estritamente **simbiótica e complementar**. Não
 
 ---
 
-## Arquitetura do Ecossistema & Ciclo de Vida do Dado
-
-Para combater a amnésia digital com rigor e auditabilidade, a infraestrutura da **BRAN Org** está estruturada em três pilares integrados:
-
-1. **Bases de Dados Abertas & APIs REST**: Repositórios autônomos ([`abec-open-database`](https://github.com/BRAN-Org/abec-open-database), [`ebbc-open-database`](https://github.com/BRAN-Org/ebbc-open-database)) que disponibilizam os acervos tratados via API HTTP gratuita e formatos universais de exportação (`JSON`, `CSV UTF-8 BOM`, `BibTeX` e `RIS`).
-2. **Padrões & Schemas Canônicos**: O repositório [`schemas`](https://github.com/BRAN-Org/schemas) centraliza as especificações JSON Schema v1 (`article`, `provenance`, `event`) e as suítes de validação de dados executadas em CI.
-3. **Bibliotecas & Ferramentas**: Ferramentas de tratamento como a [`bibliolatam`](https://github.com/BRAN-Org/bibliolatam) (normalização de metadados latino-americanos) e templates reproduzíveis ([`bran-web-database-template`](https://github.com/BRAN-Org/bran-web-database-template)).
-
-### Ciclo de Custódia e Validação
-
-```mermaid
-flowchart LR
-    A["Fonte Primária<br>(Site Oficial / Anais)"] --> B["Coleta & Normalização<br>(bibliolatam / scrapers)"]
-    B --> C["Validação Canônica<br>(schemas JSON v1)"]
-    C --> D["Assinatura & Checksum<br>(provenance.json SHA-256)"]
-    D --> E["Disponibilização Pública<br>(API REST gratuita + Dashboard)"]
-    E --> F["Intercâmbio Aberto<br>(JSON, CSV BOM, BibTeX, RIS)"]
-```
-
----
-
 ## Soberania Científica & Inteligência Artificial Ética
 
 A **BRAN Org** adota uma política expressa de licenciamento dual para defender a ciência brasileira como um **bem público inegociável**:
