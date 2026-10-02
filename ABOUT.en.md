@@ -103,35 +103,6 @@ In the lore, Brann is the founder of the Explorer's League—a field scholar who
 
 This captures the essence of our initiative: **we are academic data archaeologists**. Where others see only outdated PDFs, dead links, and abandoned static websites, we see the living heritage of Brazilian intelligence and scientific discovery ready to be preserved and returned to society.
 
----
-
-## How to Cite BRAN Org & Our Datasets
-
-When utilizing datasets, APIs, or analytical tools from **BRAN Org** in research papers, dissertations, theses, or technical reports, please use the following citation standards:
-
-### BibTeX Format
-```bibtex
-@misc{bran_org_ebbc,
-  author       = {{BRAN Org}},
-  title        = {{EBBC Open Database: Open Proceedings of the Brazilian Meeting on Bibliometrics and Scientometrics (2012-2024)}},
-  year         = {2026},
-  publisher    = {GitHub},
-  howpublished = {\url{https://github.com/BRAN-Org/ebbc-open-database}},
-  note         = {Version 1.5.0. Licensed under CC BY-NC-SA 4.0}
-}
-```
-
-### APA Format (7th Edition)
-> BRAN Org. (2026). *EBBC open database: Open proceedings of the Brazilian Meeting on Bibliometrics and Scientometrics (2012-2024)* (Version 1.5.0) [Data set]. GitHub. https://github.com/BRAN-Org/ebbc-open-database
-
-### ABNT Format (Brazilian National Standards)
-> BRAN ORG. **EBBC Open Database: Anais Abertos do Encontro Brasileiro de Bibliometria e Cientometria (2012-2024)**. Versão 1.5.0. Curadoria e Infraestrutura de Dados Abertos. 2026. Disponível em: \<https://github.com/BRAN-Org/ebbc-open-database\>. Acesso em: 02 out. 2026.
-
-### Automated Export via REST API
-Our REST APIs provide native bibliographic export endpoints for the entire corpus or individual articles:
-* **BibTeX**: `GET /api/v1/articles/export?format=bibtex`
-* **RIS** (Zotero, Mendeley, EndNote): `GET /api/v1/articles/export?format=ris`
-* **Structured CSV** (with UTF-8 BOM): `GET /api/v1/articles/export?format=csv`
 
 ---
 
