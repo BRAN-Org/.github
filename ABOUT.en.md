@@ -1,10 +1,10 @@
 # About BRAN Org (Brazilian Research Archive Network)
 
 <p align="center">
-  <a href="ABOUT.md"><img src="https://img.shields.io/badge/Leia%20em-Portugu%C3%AAs-green.svg?style=for-the-badge" alt="Leia em Português"></a>
-  <a href="https://www.go-fair.org/fair-principles/"><img src="https://img.shields.io/badge/FAIR-Principles-green?style=for-the-badge" alt="FAIR Principles"></a>
-  <a href="https://www.budapestopenaccessinitiative.org/"><img src="https://img.shields.io/badge/BOAI-Signatory-orange.svg?style=for-the-badge" alt="BOAI Signatory"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="License GPLv3 | CC BY-NC-SA 4.0"></a>
+ <a href="ABOUT.md"><img src="https://img.shields.io/badge/Leia%20em-Portugu%C3%AAs-green.svg?style=for-the-badge" alt="Leia em Português"></a>
+ <a href="https://www.go-fair.org/fair-principles/"><img src="https://img.shields.io/badge/FAIR-Principles-green?style=for-the-badge" alt="FAIR Principles"></a>
+ <a href="https://www.budapestopenaccessinitiative.org/"><img src="https://img.shields.io/badge/BOAI-Signatory-orange.svg?style=for-the-badge" alt="BOAI Signatory"></a>
+ <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="License GPLv3 | CC BY-NC-SA 4.0"></a>
 </p>
 
 ---

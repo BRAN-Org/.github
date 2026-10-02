@@ -1,5 +1,10 @@
 # ❓ Perguntas Frequentes (FAQ) — BRAN Org
 
+<p align="center">
+  <a href="FAQ.en.md"><img src="https://img.shields.io/badge/Read%20in-English-blue.svg?style=for-the-badge" alt="Read in English"></a>
+</p>
+
+
 ### 1. O que é a BRAN Org?
 A BRAN Org é uma iniciativa independente que resgata, padroniza e disponibiliza dados da produção científica brasileira (como anais de congressos e revistas regionais) através de APIs gratuitas e arquivos abertos (`JSON`/`CSV`).
 
@@ -10,4 +15,4 @@ Sim! Todos os dados são abertos sob a licença **CC BY-NC-SA 4.0** para uso aca
 Não. A licença CC BY-NC-SA 4.0 restringe expressamente a raspagem ou ingestão de dados para treinamento de modelos comerciais de Inteligência Artificial sem autorização prévia.
 
 ### 4. Como posso sugerir um evento ou revista para a BRAN Org mapear?
-Você pode abrir uma **Issue** em nossos repositórios ou preencher o nosso [Formulário de Sugestão de Dados](https://forms.google.com/sua-url-de-sugestao-aqui).
+Você pode abrir uma **Issue** em nossos repositórios ou preencher o nosso [Formulário de Sugestão de Dados](https://forms.gle/jNBuP1mjyUXc6v1fA).

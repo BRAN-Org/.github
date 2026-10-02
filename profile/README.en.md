@@ -1,14 +1,14 @@
 ![BRAN Banner](../assets/f2cb99aa-7e97-4e88-9a6c-eb55d56cd888.png)
 
 <p align="center">
-  <a href="README.md"><img src="https://img.shields.io/badge/Ler%20em-Portugu%C3%AAs-blue.svg?style=for-the-badge" alt="Ler em Português"></a>
-  <a href="https://github.com/BRAN-Org"><img src="https://img.shields.io/badge/Databases-2-green?style=for-the-badge&logo=database" alt="Databases"></a>
-  <a href="https://www.budapestopenaccessinitiative.org/"><img src="https://img.shields.io/badge/BOAI-Signatory-orange.svg?style=for-the-badge" alt="BOAI Signatory"></a>
-  <a href="../LICENSE"><img src="https://img.shields.io/badge/License-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="GPLv3 | CC BY-NC-SA 4.0 License"></a>
+ <a href="README.md"><img src="https://img.shields.io/badge/Ler%20em-Portugu%C3%AAs-blue.svg?style=for-the-badge" alt="Ler em Português"></a>
+ <a href="https://github.com/BRAN-Org"><img src="https://img.shields.io/badge/Databases-2-green?style=for-the-badge&logo=database" alt="Databases"></a>
+ <a href="https://www.budapestopenaccessinitiative.org/"><img src="https://img.shields.io/badge/BOAI-Signatory-orange.svg?style=for-the-badge" alt="BOAI Signatory"></a>
+ <a href="../LICENSE"><img src="https://img.shields.io/badge/License-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="GPLv3 | CC BY-NC-SA 4.0 License"></a>
 </p>
 
 <p align="center">
-  📖 <b><a href="ABOUT.en.md">Learn more about our story, mission, and vision in ABOUT.en.md</a></b>
+ <b><a href="https://github.com/BRAN-Org/.github/blob/main/ABOUT.en.md">Learn more about our story, mission, and vision in ABOUT.en.md</a></b>
 </p>
 
 ---
@@ -19,32 +19,31 @@ Public catalog of bibliometric databases from Brazilian scientific output, provi
 
 | Repository | Official Event | Records | Data Reliability |
 | :--- | :--- | :---: | :---: |
-| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting](https://www.abecbrasil.org.br/) | **259 Articles** (2013-2025) | [🟠 In Curation](#-data-reliability-levels) |
-| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC](https://ebbc.inf.br) | **643 Articles** (2012-2024) | [🟡 Source Faithful (Limitations)](#-data-reliability-levels) |
+| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting](https://www.abecbrasil.org.br/) | **259 Articles** (2013-2025) | [🟠 Under Investigation](#-data-reliability-levels) |
+| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC](https://ebbc.inf.br) | **643 Articles** (2012-2024) | [🟡 Faithful to Source (Incomplete Coverage)](#-data-reliability-levels) |
 
 <details>
 <summary><b>Data Reliability Levels</b></summary>
 <br>
 
-To ensure academic transparency and scientific rigor, every **BRAN Org** dataset features a data reliability tier:
+To ensure academic transparency and methodological rigor, each **BRAN Org** dataset receives an explicit reliability classification:
 
-- 🟢 **Verified & Audited**: Data extracted from primary source and subjected to automated and/or manual validation. Persistent identifiers were resolved when available, metadata cross-referenced with external infrastructures (Crossref/OpenAlex), and known inconsistencies documented.
-- 🔵 **High Source Fidelity**: Complete coverage relative to the available digital collection. Data faithfully reflects the official source, though not all fields could be verified independently.
-- 🟡 **Faithful to Source / Limited Coverage**: All publicly available records collected, but gaps exist due to native source limitations (e.g. non-digitized historical proceedings, absent DOIs, or incomplete metadata). *(Ex: `ebbc-open-database`)*.
-- 🟠 **In Curation**: Data collected, actively undergoing normalization, deduplication, identifier resolution, and metadata review. *(Ex: `abec-open-database`)*.
-- 🔴 **Unaudited**: Raw or partially processed records. Should not be considered validated.
+- 🟢 **Audited & Validated**: Data audited and formally validated in collaboration with official event organizers or organizing committee.
+- 🟡 **Faithful to Source / Incomplete Coverage**: The dataset faithfully mirrors all public records available on the official site, but the original collection contains known gaps (e.g. non-digitized historical proceedings, absent DOIs at the source, or missing editions). *(Ex: `ebbc-open-database`)*.
+- 🟠 **Under Investigation**: Extracted data actively undergoing technical integrity audits, curation, or awaiting formal responses from the organizing institution. *(Ex: `abec-open-database`)*.
+- 🔴 **Unaudited**: Raw or newly extracted datasets that have not yet undergone integrity checks.
 
-> **Official Methodological Note:**  
-> *Reliability levels indicate the degree of auditing, provenance, and validation, rather than an absolute guarantee of accuracy. BRAN preserves divergences found in original sources and documents corrections made during curation.*
+> **Official Methodological Note:** 
+> *BRAN strictly preserves primary source fidelity and never hallucinates missing information. Gaps and anomalies found on official portals are documented in audit logs and addressed through active investigation and direct contact with organizing institutions.*
 
 </details>
 
 ---
 
-## 🤝 Get Involved
+## Get Involved
 
-This community has a [Code of Conduct](CODE_OF_CONDUCT.md). You must follow it when interacting with the community.
+This community has a [Code of Conduct](https://github.com/BRAN-Org/.github/blob/main/CODE_OF_CONDUCT.md). You must follow it when interacting with the community.
 
-- **For questions or support:** see [SUPPORT.md](SUPPORT.md) or send a message via our [Contact Form](https://forms.gle/qhVXZpaRo26MLuUm8).
-- **To help or contribute:** see [CONTRIBUTING.md](CONTRIBUTING.md).
+- **For questions or support:** see [SUPPORT.en.md](https://github.com/BRAN-Org/.github/blob/main/SUPPORT.en.md) or send a message via our [Contact Form](https://forms.gle/qhVXZpaRo26MLuUm8).
+- **To help or contribute:** see [CONTRIBUTING.en.md](https://github.com/BRAN-Org/.github/blob/main/CONTRIBUTING.en.md).
 - **To submit datasets or collections:** fill out the [Dataset Submission Form](https://forms.gle/jNBuP1mjyUXc6v1fA).

@@ -1,93 +1,58 @@
-# 📘 Manual de Operações e Contribuição Interna — BRAN Org
-> **Guia Exclusivo para Membros e Operadores Autorizados da BRAN Org** (consulte também o [Guia de Membros](MEMBERS.md) para papéis e governança)
+# Guia de Contribuição — BRAN Org
 
-Este documento é o **manual de instruções operacional** para membros com permissão de escrita e gestão na **BRAN Org**. Ele define os procedimentos de escavação, tratamento de dados, validação de schemas e manutenção dos repositórios da organização.
+<p align="center">
+  <a href="CONTRIBUTING.en.md"><img src="https://img.shields.io/badge/Read%20in-English-blue.svg?style=for-the-badge" alt="Read in English"></a>
+</p>
 
----
+Agradecemos o interesse em colaborar com a **BRAN Org** (**Brazilian Research Archive Network**). Nossa missão é resgatar, estruturar e preservar a memória científica e bibliométrica do Brasil sob os princípios de ciência aberta, transparência e utilidade pública.
 
-## 🏛️ 1. Princípios Operacionais e Compromisso com a Verdade
-
-Como membro operador da BRAN Org, suas ações devem seguir rigorosamente 3 preceitos:
-
-1. **Inviolabilidade do Dado de Origem**:
-   - Nunca invente, deduza ou tente "adivinhar" metadados que não constam explicitamente no documento/site de origem.
-   - Se um artigo não possui DOI, resumo, ORCID ou e-mail de autor na fonte original, esse campo DEVE permanecer registrado como `null`.
-2. **Scraping Ético e Responsável**:
-   - É obrigatório incluir um delay mínimo (*rate limiting*) de **1.5 a 2.0 segundos** entre requisições em scripts de coleta para não sobrecarregar servidores de universidades brasileiras.
-   - O `User-Agent` de todas as requisições deve ser:
-     `BRAN-Org-Harvester/1.0 (+https://github.com/BRAN-Org)`
-3. **Auditabilidade Total**:
-   - Toda alteração em base de dados deve vir acompanhada da atualização do manifesto `provenance.json` (com URL da fonte, data/hora ISO 8601 e hash dos dados brutos).
+Toda a comunidade acadêmica e técnica — pesquisadores, bibliotecários, cientistas de dados e desenvolvedores — é bem-vinda para contribuir.
 
 ---
 
-## ⛏️ 2. Workflow de Arqueologia e Ingestão de Dados
+## Formas de Contribuição
 
-O ciclo de trabalho de um membro ao adicionar ou atualizar uma base de dados segue 5 etapas rígidas:
+### 1. Correção e Apontamento de Erros em Dados
 
-```text
-[1. Coleta/Harvest] ➔ [2. Sanitização] ➔ [3. Validação de Schema] ➔ [4. Proveniência] ➔ [5. Commit & Release]
-```
+Se você identificou uma inconsistência, título cortado, DOI ausente na extração ou metadado divergente da fonte original em uma de nossas bases:
 
-### Passo 1: Escavação (Harvesting)
-- **OJS / DSpace**: Utilize o protocolo OAI-PMH via biblioteca `Sickle` em Python para extrair Dublin Core.
-- **PDFs de Anais Legados**: Utilize `GROBID` ou `pdfplumber`/`marker-pdf` para estruturar título, autores e referências.
-- **Páginas HTML Estáticas**: Utilize `BeautifulSoup4` ou `Playwright`/`Puppeteer` respeitando o *rate limiting*.
+1. Acesse o repositório específico do dataset (ex: [`ebbc-open-database`](https://github.com/BRAN-Org/ebbc-open-database) ou [`abec-open-database`](https://github.com/BRAN-Org/abec-open-database)).
+2. Abra uma **Issue** detalhando o erro e, **obrigatoriamente**, forneça o link da fonte primária oficial onde o dado correto está publicado.
+3. *Aviso sobre Pull Requests em bases de dados*: Para garantir a inviolabilidade científica e a rastreabilidade da proveniência (`provenance.json`), repositórios de bases de dados não recebem alterações diretas via PR de terceiros. As correções são auditadas e aplicadas pelos mantenedores a partir da fonte oficial indicada.
 
-### Passo 2: Sanitização e Padronização
-- Converta os registros brutos para o formato JSON padrão da BRAN Org.
-- Limpe caracteres especiais invisíveis e garanta enquadramento em UTF-8.
-- Garanta que DOIs sigam a expressão regular: `^10\.\d{4,9}/[-._;()/:A-Za-z0-9]+$`.
+### 2. Sugestão e Submissão de Novos Acervos
 
-### Passo 3: Validação de Schemas
-Antes de realizar commit, execute o script de asserção:
-```bash
-python3 scripts/validate_data.py
-```
-Nenhum dado pode ser comitado se houver falhas na validação contra `schemas/article.v1.schema.json` ou `schemas/event.v1.schema.json`.
+Se você organiza um evento acadêmico, representa uma sociedade científica ou possui anais e acervos históricos que correm risco de desaparecimento digital (*link rot*):
 
-### Passo 4: Atualização da Proveniência (`provenance.json`)
-Preencha ou atualize o manifesto `provenance.json` no repositório de dados:
-```json
-{
-  "dataset_id": "nome-do-dataset-v1",
-  "source_url": "https://link-da-fonte-original.edu.br",
-  "scraped_at": "2026-09-13T16:00:00Z",
-  "extractor_name": "nome_do_script",
-  "health_level": "BLUE",
-  "total_records": 150,
-  "missing_doi_count": 10
-}
-```
+- Submeta a indicação através do **[Formulário de Submissão de Datasets](https://forms.gle/jNBuP1mjyUXc6v1fA)**.
+- Ou abra uma discussão via **[Issues do .github](https://github.com/BRAN-Org/.github/issues)** descrevendo o evento, volume aproximado de artigos e links disponíveis.
+
+### 3. Contribuição com Código e Ferramentas Abertas
+
+Desenvolvemos softwares, analisadores e bibliotecas livres (como o pacote [`bibliolatam`](https://github.com/BRAN-Org/bibliolatam), o repositório de validação [`schemas`](https://github.com/BRAN-Org/schemas) e templates de interface). Nesses repositórios, Pull Requests são muito bem-vindos.
+
+#### Fluxo para Envio de Código:
+1. Faça um Fork do repositório correspondente.
+2. Crie uma branch para sua alteração (`git checkout -b feature/minha-melhoria` ou `git checkout -b fix/descricao-do-bug`).
+3. Adicione ou atualize os testes automatizados cobrindo suas alterações.
+4. Escreva commits semânticos objetivos ([Conventional Commits](https://www.conventionalcommits.org/)):
+   - `feat:` nova funcionalidade ou parser.
+   - `fix:` correção de bug em rotina existente.
+   - `docs:` melhorias em documentação.
+   - `test:` adição ou ajuste de suíte de testes.
+5. Abra o Pull Request descrevendo claramente o que foi feito, o problema resolvido e as evidências de teste.
 
 ---
 
-## 📥 3. Atendimento e Triagem de Issues do Público
+## Regra de Ouro: Inviolabilidade do Dado de Origem
 
-Os repositórios de dados públicos (`abec-open-database`, `ebbc-open-database`, etc.) **NÃO aceitam PRs de terceiros**. O público contribui exclusivamente abrindo Issues.
-
-### Procedimento do Membro ao Analisar uma Issue:
-1. **Verificar a Evidência**: Acesse a URL da fonte original citada na Issue do usuário.
-2. **Auditar o Dado**: Confirme se a inconsistência realmente existe ou se foi uma falha no script de raspagem.
-3. **Corrigir no Scraper/Dataset**: Faça a correção necessária localmente.
-4. **Validar e Comitar**: Rode o `validate_data.py`, atualize a proveniência e comite com a mensagem:
-   `fix(data): 🐛 corrigir metadados do artigo X conforme issue #12`
-5. **Fechar a Issue**: Responda ao usuário confirmando a correção e feche a Issue.
+Em qualquer ferramenta, parser ou enriquecimento mantido pela BRAN:
+- **Nunca invente, extrapole ou deduza valores ausentes na origem.**
+- Campos não informados na publicação original devem permanecer estritamente `null` (ou `NA`).
+- Detalhes de conformidade estão disponíveis na [Política de Segurança e Governança de Dados (SECURITY.md)](SECURITY.md) e no [Código de Conduta (CODE_OF_CONDUCT.md)](CODE_OF_CONDUCT.md).
 
 ---
 
-## 🎨 4. Alterações em Templates do Site e Aplicações
+## Código de Conduta
 
-- **Regra Fundamental**: **JAMAIS** faça alterações de layout, componentes React/Vue/HTML, servidor backend (`server.js`) ou estilização diretamente em um repositório de base de dados final (ex: `abec-open-database`).
-- **Procedimento**: Qualquer melhoria visual ou estrutural deve ser realizada no repositório **`abec-open-database_template`** (ou template correspondente).
-- ⚠️ **Branch de Destino Obrigatória**: Todo Pull Request de desenvolvimento ou template DEVE ser direcionado à branch **`development`** (`base: development`). PRs diretos para a branch `main` serão rejeitados. O merge na `main` ocorre apenas após testes de homologação.
-
----
-
-## 🏷️ 5. Padrão de Commits da Equipe (Conventional Commits)
-
-- `feat:` Novo harvester, nova funcionalidade ou integração de novo evento.
-- `fix(data):` Correção de metadados em base de dados existente.
-- `fix(code):` Correção em scripts de raspagem ou validação.
-- `docs:` Atualizações em documentações e manuais.
-- `chore:` Manutenção de dependências e workflows de CI/CD.
+Ao interagir com a organização (Issues, PRs, fóruns ou formulários), você concorda em seguir nosso [Código de Conduta (CODE_OF_CONDUCT.md)](CODE_OF_CONDUCT.md). Mantemos um ambiente respeitoso, colaborativo e técnico.

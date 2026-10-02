@@ -1,5 +1,10 @@
 # ❓ Frequently Asked Questions (FAQ) — BRAN Org
 
+<p align="center">
+  <a href="FAQ.md"><img src="https://img.shields.io/badge/Leia%20em-Portugu%C3%AAs-green.svg?style=for-the-badge" alt="Leia em Português"></a>
+</p>
+
+
 ### 1. What is BRAN Org?
 BRAN Org is an independent initiative that rescues, standardizes, and provides public Brazilian scientific data (such as conference proceedings and regional journals) via free APIs and open datasets (`JSON`/`CSV`).
 
