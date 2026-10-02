@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use datasets or software from BRAN Org, please cite it as below."
+authors:
+  - name: "BRAN Org"
+    website: "https://github.com/BRAN-Org"
+title: "Brazilian Research Archive Network (BRAN Org)"
+date-released: 2026-10-02
+url: "https://github.com/BRAN-Org"
+repository-code: "https://github.com/BRAN-Org/.github"
+license: "GPL-3.0-or-later"
+keywords:
+  - open-data
+  - bibliometrics
+  - scientometrics
+  - academic-data
+  - research-infrastructure

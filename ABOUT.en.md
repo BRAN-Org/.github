@@ -39,11 +39,9 @@ In contemporary research dynamics, **it is within conference proceedings that pi
 Losing or neglecting conference proceedings means erasing the very genesis of Brazilian scientific thought.
 
 ### 3. Scientific Evidence & Digital Memory Loss
-The fragility of the web is not merely an empirical impression; it is an extensively measured phenomenon across scholarly research and science journalism:
-* **Klein et al. (2014, *PLOS ONE*)**: In the landmark study [*Scholarly Context Not Found: One in Five Articles Suffers from Reference Rot*](https://doi.org/10.1371/journal.pone.0115253), researchers examined over 1 million references across 3.5 million scholarly papers, finding that 1 in 5 academic articles suffers from *reference rot* (broken hyperlinks or content drift rendering original sources unverifiable).
-* **Pew Research Center (2024)**: In the comprehensive report [*When Online Content Disappears*](https://www.pewresearch.org/data-labs/2024/05/17/when-online-content-disappears/), the institute established that 38% of webpages existing in 2013 vanished within a decade, and 54% of Wikipedia articles contain dead links in their references.
-* **Jonathan Zittrain (2021, *The Atlantic*)**: In [*The Internet Is Rotting*](https://www.theatlantic.com/technology/archive/2021/06/the-internet-is-broken-and-archive-is-dying/619280/), the Harvard Law professor documented the systemic breakdown of the "chain of custody for facts" caused by link rot and unarchived web hosting.
-* **Science Outreach & Video Analysis**: The educational channel **Veritasium** breaks down this crisis in [*The Internet Is Disappearing: Link Rot, Explained*](https://www.youtube.com/results?search_query=The+Internet+Is+Disappearing+Link+Rot+Explained), echoing the seminal warnings of **Vint Cerf** (Internet pioneer and Google VP) regarding the onset of a *"Digital Dark Age"* if deliberate open data infrastructure is not prioritized.
+The volatility of the web and the disappearance of scholarly literature are not isolated empirical impressions, but a well-quantified phenomenon across international research and science journalism:
+* **Seminal Scientific Paper (Klein et al., 2014, *PLOS ONE*)**: In the landmark study [*Scholarly Context Not Found: One in Five Articles Suffers from Reference Rot*](https://doi.org/10.1371/journal.pone.0115253), researchers examined over 1 million references across 3.5 million scholarly papers, finding that **1 in 5 academic articles** suffers from *reference rot* (broken hyperlinks or content drift rendering original sources unverifiable).
+* **Documentary & Science Outreach**: The educational channel **Veritasium** breaks down this crisis in [*The Internet Is Disappearing: Link Rot, Explained*](https://www.youtube.com/results?search_query=The+Internet+Is+Disappearing+Link+Rot+Explained), echoing the seminal warnings of **Vint Cerf** (Internet pioneer and Google VP) regarding the onset of a *"Digital Dark Age"* if deliberate open data infrastructure is not prioritized.
 
 ---
 
@@ -104,6 +102,36 @@ The acronym **BRAN** (**Brazilian Research Archive Network**) pays tribute to **
 In the lore, Brann is the founder of the Explorer's League—a field scholar who ventures into forgotten ruins, recovers historical relics doomed to oblivion, and passionately shares his findings with the entire realm.
 
 This captures the essence of our initiative: **we are academic data archaeologists**. Where others see only outdated PDFs, dead links, and abandoned static websites, we see the living heritage of Brazilian intelligence and scientific discovery ready to be preserved and returned to society.
+
+---
+
+## How to Cite BRAN Org & Our Datasets
+
+When utilizing datasets, APIs, or analytical tools from **BRAN Org** in research papers, dissertations, theses, or technical reports, please use the following citation standards:
+
+### BibTeX Format
+```bibtex
+@misc{bran_org_ebbc,
+  author       = {{BRAN Org}},
+  title        = {{EBBC Open Database: Open Proceedings of the Brazilian Meeting on Bibliometrics and Scientometrics (2012-2024)}},
+  year         = {2026},
+  publisher    = {GitHub},
+  howpublished = {\url{https://github.com/BRAN-Org/ebbc-open-database}},
+  note         = {Version 1.5.0. Licensed under CC BY-NC-SA 4.0}
+}
+```
+
+### APA Format (7th Edition)
+> BRAN Org. (2026). *EBBC open database: Open proceedings of the Brazilian Meeting on Bibliometrics and Scientometrics (2012-2024)* (Version 1.5.0) [Data set]. GitHub. https://github.com/BRAN-Org/ebbc-open-database
+
+### ABNT Format (Brazilian National Standards)
+> BRAN ORG. **EBBC Open Database: Anais Abertos do Encontro Brasileiro de Bibliometria e Cientometria (2012-2024)**. Versão 1.5.0. Curadoria e Infraestrutura de Dados Abertos. 2026. Disponível em: \<https://github.com/BRAN-Org/ebbc-open-database\>. Acesso em: 02 out. 2026.
+
+### Automated Export via REST API
+Our REST APIs provide native bibliographic export endpoints for the entire corpus or individual articles:
+* **BibTeX**: `GET /api/v1/articles/export?format=bibtex`
+* **RIS** (Zotero, Mendeley, EndNote): `GET /api/v1/articles/export?format=ris`
+* **Structured CSV** (with UTF-8 BOM): `GET /api/v1/articles/export?format=csv`
 
 ---
 

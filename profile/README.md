@@ -56,6 +56,12 @@ Além dos acervos bibliométricos, mantemos padrões canônicos e ferramentas de
 
 ---
 
+## Como Citar
+
+Ao utilizar acervos, APIs ou análises da BRAN Org em artigos científicos, monografias ou relatórios técnicos, consulte os formatos e modelos em [ABOUT.md#como-citar-a-bran-org--nossos-datasets](ABOUT.md#como-citar-a-bran-org--nossos-datasets). Nossas APIs também disponibilizam exportação direta em **BibTeX** e **RIS** via `/api/v1/articles/export?format=bibtex`.
+
+---
+
 ## Participe
 
 Esta comunidade possui um [Código de Conduta](https://github.com/BRAN-Org/.github/blob/main/CODE_OF_CONDUCT.md). Você deve segui-lo ao interagir com a comunidade.

@@ -56,6 +56,12 @@ Beyond bibliometric collections, we maintain canonical standards and open-source
 
 ---
 
+## How to Cite
+
+When utilizing datasets, APIs, or analysis from BRAN Org in research papers or reports, please refer to the citation standards in [ABOUT.en.md#how-to-cite-bran-org--our-datasets](ABOUT.en.md#how-to-cite-bran-org--our-datasets). Our REST APIs also offer instant bibliographic export in **BibTeX** and **RIS** via `/api/v1/articles/export?format=bibtex`.
+
+---
+
 ## Get Involved
 
 This community has a [Code of Conduct](https://github.com/BRAN-Org/.github/blob/main/CODE_OF_CONDUCT.md). You must follow it when interacting with the community.

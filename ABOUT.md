@@ -39,11 +39,9 @@ Na dinâmica da pesquisa contemporânea, **é nos anais de eventos que as ideias
 Perder ou negligenciar os anais de congressos significa apagar a gênese do pensamento científico brasileiro.
 
 ### 3. Evidências Científicas e a Perda da Memória Digital
-A volatilidade da web não é uma impressão empírica isolada, mas um fenômeno quantificado por pesquisas internacionais e pelo jornalismo científico:
-* **Klein et al. (2014, *PLOS ONE*)**: No artigo seminal [*Scholarly Context Not Found: One in Five Articles Suffers from Reference Rot*](https://doi.org/10.1371/journal.pone.0115253), pesquisadores analisaram mais de 1 milhão de referências em 3,5 milhões de artigos científicos e demonstraram que 1 em cada 5 artigos acadêmicos sofre de *reference rot* (links quebrados ou conteúdo alterado que inviabiliza a checagem da fonte original).
-* **Pew Research Center (2024)**: No relatório [*When Online Content Disappears*](https://www.pewresearch.org/data-labs/2024/05/17/when-online-content-disappears/), o instituto apontou que 38% das páginas da web existentes em 2013 desapareceram completamente em uma década, e que 54% dos artigos da Wikipedia já possuem links quebrados em suas referências.
-* **Jonathan Zittrain (2021, *The Atlantic*)**: No ensaio [*The Internet Is Rotting*](https://www.theatlantic.com/technology/archive/2021/06/the-internet-is-broken-and-archive-is-dying/619280/), o professor de Harvard alertou para a ruptura da "cadeia de custódia dos fatos" na ciência e no direito ocasionada pelo fechamento de servidores e links mortos.
-* **Divulgação Científica e Alertas**: O canal **Veritasium** aborda esse problema em profundidade no documentário explicativo [*The Internet Is Disappearing: Link Rot, Explained*](https://www.youtube.com/results?search_query=The+Internet+Is+Disappearing+Link+Rot+Explained), e **Vint Cerf** (pioneiro da internet e vice-presidente do Google) há anos alerta a comunidade acadêmica para o perigo iminente de uma *"Digital Dark Age"* (Idade das Trevas Digital), caso a preservação de dados e formatos não seja tratada como infraestrutura prioritária.
+A volatilidade da web e a perda da literatura acadêmica não são impressões empíricas isoladas, mas um fenômeno quantificado pela ciência e pela divulgação especializada:
+* **Artigo Científico Seminal (Klein et al., 2014, *PLOS ONE*)**: No estudo [*Scholarly Context Not Found: One in Five Articles Suffers from Reference Rot*](https://doi.org/10.1371/journal.pone.0115253), pesquisadores analisaram mais de 1 milhão de referências em 3,5 milhões de artigos científicos e demonstraram que **1 em cada 5 artigos acadêmicos** sofre de *reference rot* (links quebrados ou conteúdos alterados que inviabilizam a checagem da fonte original).
+* **Documentário & Divulgação Científica**: O canal **Veritasium** aborda esse problema em profundidade no documentário explicativo [*The Internet Is Disappearing: Link Rot, Explained*](https://www.youtube.com/results?search_query=The+Internet+Is+Disappearing+Link+Rot+Explained), ecoando o alerta clássico de **Vint Cerf** (pioneiro da internet e vice-presidente do Google) sobre a iminente *"Digital Dark Age"* (Idade das Trevas Digital), caso a preservação sistemática de dados e formatos abertos não seja tratada como infraestrutura prioritária.
 
 ---
 
@@ -104,6 +102,39 @@ A sigla **BRAN** (**Brazilian Research Archive Network**) presta uma homenagem a
 No jogo, Brann é o fundador da Liga dos Exploradores (*Explorer's League*), um pesquisador que se recusa a ficar em gabinetes: ele viaja para cantos remotos do mundo, escava ruínas esquecidas, recupera artefatos históricos condenados ao esquecimento e insiste em compartilhar suas descobertas com todas as pessoas.
 
 Essa figura resume o espírito do nosso projeto: **somos arqueólogos de dados acadêmicos**. Onde muitos enxergam apenas PDFs antigos, links mortos e páginas estáticas esquecidas, nós enxergamos a memória viva da inteligência e da ciência brasileira pronta para ser resgatada e devolvida à sociedade.
+
+---
+
+## Como Citar a BRAN Org & Nossos Datasets
+
+Ao utilizar dados, APIs ou análises da **BRAN Org** em artigos científicos, dissertações, teses ou relatórios técnicos, utilize as diretrizes de citação abaixo:
+
+### Formato ABNT (Associação Brasileira de Normas Técnicas)
+> BRAN ORG. **[Nome da Base de Dados]: Anais Abertos do [Nome do Evento] ([Período])**. Versão [X.Y.Z]. Curadoria e Infraestrutura de Dados Abertos. [Ano]. Disponível em: \<https://github.com/BRAN-Org/[nome-do-repositorio]\>. Acesso em: [Dia mês. Ano].
+
+*Exemplo prático (EBBC):*
+> BRAN ORG. **EBBC Open Database: Anais Abertos do Encontro Brasileiro de Bibliometria e Cientometria (2012-2024)**. Versão 1.5.0. Curadoria e Infraestrutura de Dados Abertos. 2026. Disponível em: \<https://github.com/BRAN-Org/ebbc-open-database\>. Acesso em: 02 out. 2026.
+
+### Formato BibTeX
+```bibtex
+@misc{bran_org_ebbc,
+  author       = {{BRAN Org}},
+  title        = {{EBBC Open Database: Anais Abertos do Encontro Brasileiro de Bibliometria e Cientometria (2012-2024)}},
+  year         = {2026},
+  publisher    = {GitHub},
+  howpublished = {\url{https://github.com/BRAN-Org/ebbc-open-database}},
+  note         = {Versão 1.5.0. Licença CC BY-NC-SA 4.0}
+}
+```
+
+### Formato APA (7th Edition)
+> BRAN Org. (2026). *EBBC open database: Anais abertos do Encontro Brasileiro de Bibliometria e Cientometria (2012-2024)* (Version 1.5.0) [Data set]. GitHub. https://github.com/BRAN-Org/ebbc-open-database
+
+### Exportação Automatizada via API REST
+Nossas APIs oferecem endpoints nativos de exportação bibliográfica direta para o conjunto completo de dados ou por artigo:
+* **BibTeX**: `GET /api/v1/articles/export?format=bibtex`
+* **RIS** (Zotero, Mendeley, EndNote): `GET /api/v1/articles/export?format=ris`
+* **CSV estruturado** (com UTF-8 BOM): `GET /api/v1/articles/export?format=csv`
 
 ---
 
