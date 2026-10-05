@@ -33,8 +33,8 @@ Catálogo público de bases de dados bibliométricos da produção científica b
 Para assegurar transparência acadêmica e rigor metodológico, cada repositório da **BRAN Org** possui uma marcação de confiabilidade dos dados:
 
 - 🟢 **Auditado e Validado**: Dados auditados e validados formalmente em conjunto com os organizadores ou comissão oficial do evento.
-- 🟡 **Fiel à Fonte / Cobertura Incompleta**: Os dados reproduzem fielmente tudo o que está publicado no site oficial, mas o acervo original possui lacunas conhecidas (como anos de anais não digitalizados pela organização, ausência de DOIs na origem ou edições históricas faltantes). *(Ex: `ebbc-open-database`)*.
-- 🟠 **Em Averiguação**: Dados coletados que estão ativamente sendo averiguados, passando por auditoria técnica de integridade ou aguardando resposta formal da instituição organizadora. *(Ex: `abec-open-database`)*.
+- 🟡 **Fiel à Fonte / Cobertura Incompleta**: Os dados reproduzem fielmente tudo o que está publicado no site oficial, mas o acervo original possui lacunas conhecidas (como anos de anais não digitalizados pela organização, ausência de DOIs na origem ou edições históricas faltantes).
+- 🟠 **Em Averiguação**: Dados coletados que estão ativamente sendo averiguados, passando por auditoria técnica de integridade ou aguardando resposta formal da instituição organizadora.
 - 🔴 **Não Auditado**: Dados brutos ou recém-extraídos que ainda não passaram por averiguação de integridade.
 
 > **Nota Metodológica Oficial:** 
