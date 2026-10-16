@@ -2,7 +2,7 @@
 
 <p align="center">
  <a href="README.en.md"><img src="https://img.shields.io/badge/Read%20in-English-blue.svg?style=for-the-badge" alt="Read in English"></a>
- <a href="https://github.com/BRAN-Org"><img src="https://img.shields.io/badge/Bases%20de%20Dados-2-green?style=for-the-badge&logo=database" alt="Bases de Dados"></a>
+ <a href="https://github.com/BRAN-Org"><img src="https://img.shields.io/badge/Bases%20de%20Dados-3-green?style=for-the-badge&logo=database" alt="Bases de Dados"></a>
  <a href="https://www.budapestopenaccessinitiative.org/"><img src="https://img.shields.io/badge/BOAI-Signatory-orange.svg?style=for-the-badge" alt="BOAI Signatory"></a>
  <a href="../LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-GPLv3%20%7C%20CC%20BY--NC--SA%204.0-blue?style=for-the-badge" alt="Licença GPLv3 | CC BY-NC-SA 4.0"></a>
 </p>
@@ -21,8 +21,9 @@
 
 Catálogo público de bases de dados bibliométricos da produção científica brasileira, disponibilizadas em formatos abertos (`JSON`/`CSV`), com API REST gratuita e dashboard interativo para análise.
 
-| Repositório | Evento Oficial | Registros | Confiabilidade |
+| Repositório | Evento / Fonte Oficial | Registros | Confiabilidade |
 | :--- | :--- | :---: | :---: |
+| [datagramazero-open-database](https://github.com/BRAN-Org/datagramazero-open-database) | [DataGramaZero (DGZero)](http://hdl.handle.net/20.500.11959/1269) | **466 Artigos** (1999-2015) | [🟢 Auditado e Validado](#-níveis-de-confiabilidade-dos-dados) |
 | [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting](https://www.abecbrasil.org.br/) | **259 Artigos** (2013-2025) | [🟠 Em Averiguação](#-níveis-de-confiabilidade-dos-dados) |
 | [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC](https://ebbc.inf.br) | **643 Artigos** (2012-2024) | [🟡 Fiel à Fonte (Cobertura Incompleta)](#-níveis-de-confiabilidade-dos-dados) |
 
