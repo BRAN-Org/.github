@@ -17,12 +17,21 @@
 
 Public catalog of bibliometric databases from Brazilian scientific output, provided in open formats (`JSON`/`CSV`), featuring a free REST API and interactive dashboard for analysis.
 
-| Repository | Official Event / Source | Records | Data Reliability |
-| :--- | :--- | :---: | :---: |
-| [enancib-open-database](https://github.com/BRAN-Org/enancib-open-database) | [ENANCIB (ANCIB / BENANCIB)](https://enancib.ancib.org/) | **6,998 Articles** (1994-2026) | [🟢 Audited & Validated](#-data-reliability-levels) |
-| [datagramazero-open-database](https://github.com/BRAN-Org/datagramazero-open-database) | [DataGramaZero (DGZero)](http://hdl.handle.net/20.500.11959/1269) | **466 Articles** (1999-2015) | [🟢 Audited & Validated](#-data-reliability-levels) |
-| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting](https://www.abecbrasil.org.br/) | **259 Articles** (2013-2025) | [🟠 Under Investigation](#-data-reliability-levels) |
-| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC](https://ebbc.inf.br) | **643 Articles** (2012-2024) | [🟡 Faithful to Source (Incomplete Coverage)](#-data-reliability-levels) |
+| Repository | Official Event / Source | Records | Data Reliability | Official DOI |
+| :--- | :--- | :---: | :---: | :---: |
+| [enancib-open-database](https://github.com/BRAN-Org/enancib-open-database) | [ENANCIB (ANCIB / BENANCIB)](https://enancib.ancib.org/) | **6,998 Articles** (1994-2026) | [🟢 Audited & Validated](#-data-reliability-levels) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23593583.svg)](https://doi.org/10.5281/zenodo.23593583) |
+| [datagramazero-open-database](https://github.com/BRAN-Org/datagramazero-open-database) | [DataGramaZero (DGZero)](http://hdl.handle.net/20.500.11959/1269) | **466 Articles** (1999-2015) | [🟢 Audited & Validated](#-data-reliability-levels) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23593504.svg)](https://doi.org/10.5281/zenodo.23593504) |
+| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting](https://www.abecbrasil.org.br/) | **259 Articles** (2013-2025) | [🟠 Under Investigation](#-data-reliability-levels) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23595236.svg)](https://doi.org/10.5281/zenodo.23595236) |
+| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC](https://ebbc.inf.br) | **643 Articles** (2012-2024) | [🟡 Faithful to Source (Incomplete Coverage)](#-data-reliability-levels) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23593513.svg)](https://doi.org/10.5281/zenodo.23593513) |
+
+#### Digital Preservation on Zenodo (Cold Storage & Full-Text Archives)
+
+| Database | Coverage | Records | Digital Preservation (Full-Text) | Zenodo Package | Size | Official DOI |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **ENANCIB** | 1994–2026 | 6,998 | **6,965 PDFs** (Brapci + OJS ANCIB) | `enancib-open-database-zenodo.zip` | 3.49 GB | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23593583.svg)](https://doi.org/10.5281/zenodo.23593583) |
+| **DataGramaZero** | 1999–2015 | 466 | **1,765 files** (HTMLs, PDFs, CEDAP/UFRGS images) | `datagramazero-open-database-zenodo.zip` | 122 MB | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23593504.svg)](https://doi.org/10.5281/zenodo.23593504) |
+| **ABEC Meeting** | 2013–2025 | 259 | **257 PDFs** (OJS ABEC Brasil) | `abec-open-database-zenodo.zip` | 104 MB | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23595236.svg)](https://doi.org/10.5281/zenodo.23595236) |
+| **EBBC** | 2012–2024 | 643 | Complete census archive *(no digitalized PDFs at source)* | `ebbc-open-database-zenodo.zip` | 1.5 MB | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23593513.svg)](https://doi.org/10.5281/zenodo.23593513) |
 
 <details>
 <summary><b>Data Reliability Levels</b></summary>
