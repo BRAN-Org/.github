@@ -28,6 +28,8 @@ Catálogo público de bases de dados bibliométricos da produção científica b
 | [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting (2013-2025)](https://www.abecbrasil.org.br/) | **259 Artigos** (2013-2025) | [🟠 Em Averiguação](#-níveis-de-confiabilidade-dos-dados) |
 | [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC (2012-2024)](https://ebbc.inf.br) | **643 Artigos** (2012-2024) | [🟡 Fiel à Fonte (Cobertura Incompleta)](#-níveis-de-confiabilidade-dos-dados) |
 
+> 📅 **Governança & Curadoria Contínua:** Os ciclos periódicos de verificação e atualização dos acervos seguem o cronograma oficial documentado em [CALENDAR.md](https://github.com/BRAN-Org/.github/blob/main/CALENDAR.md) (repositório central [calendar_config](https://github.com/BRAN-Org/calendar_config)). Você também pode assinar o feed [iCal (.ics)](https://raw.githubusercontent.com/BRAN-Org/calendar_config/main/calendar.ics) no seu aplicativo de calendário para acompanhar os prazos.
+
 <details>
 <summary><b>Níveis de Confiabilidade dos Dados</b></summary>
 <br>

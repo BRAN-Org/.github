@@ -28,6 +28,8 @@ Public catalog of bibliometric databases from Brazilian scientific output, provi
 | [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting (2013-2025)](https://www.abecbrasil.org.br/) | **259 Articles** (2013-2025) | [🟠 Under Investigation](#-data-reliability-levels) |
 | [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC (2012-2024)](https://ebbc.inf.br) | **643 Articles** (2012-2024) | [🟡 Faithful to Source (Incomplete Coverage)](#-data-reliability-levels) |
 
+> 📅 **Continuous Governance & Curation:** Periodic verification and update cycles for all collections follow the official schedule documented in [CALENDAR.md](https://github.com/BRAN-Org/.github/blob/main/CALENDAR.md) (central repository [calendar_config](https://github.com/BRAN-Org/calendar_config)). You can also subscribe to the [iCal (.ics)](https://raw.githubusercontent.com/BRAN-Org/calendar_config/main/calendar.ics) feed in your calendar application.
+
 <details>
 <summary><b>Data Reliability Levels</b></summary>
 <br>
