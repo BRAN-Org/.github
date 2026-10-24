@@ -1,0 +1,889 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BRAN Org//Data Curation Calendar//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BRAN Org - Calendário de Curadoria de Dados
+X-WR-CALDESC:Ciclos de verificação, atualização e auditoria das bases de dados da BRAN Org.
+X-WR-TIMEZONE:America/Sao_Paulo
+BEGIN:VEVENT
+UID:bran-curation-ebbc-open-database-2024-09@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20240901
+DTEND;VALUE=DATE:20241001
+SUMMARY:[BRAN Curadoria] Verificação dos anais do EBBC e atualização do dataset (2024)
+DESCRIPTION:Janela bienal para conferir a publicação dos anais da edição mais recente do EBBC\, raspar novos artigos\, validar schema e sincronizar com o Zenodo.\n\nRepositório: https://github.com/BRAN-Org/ebbc-open-database\n\nFonte Oficial: https://ebbc.inf.br\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal oficial do EBBC (https://ebbc.inf.br) e verificar a disponibilização dos anais da última edição\n\n- [ ] Executar pipeline de extração e curadoria dos novos artigos e metadados metodológicos\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão do pacote e registrar alterações no CHANGELOG.md\n\n- [ ] Gerar e exportar o novo pacote consolidado para o Zenodo
+URL:https://ebbc.inf.br
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do EBBC e atualização do dataset (2024)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-ebbc-open-database-2024-10@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20241001
+DTEND;VALUE=DATE:20241101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do EBBC e atualização do dataset (2024)
+DESCRIPTION:Janela bienal para conferir a publicação dos anais da edição mais recente do EBBC\, raspar novos artigos\, validar schema e sincronizar com o Zenodo.\n\nRepositório: https://github.com/BRAN-Org/ebbc-open-database\n\nFonte Oficial: https://ebbc.inf.br\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal oficial do EBBC (https://ebbc.inf.br) e verificar a disponibilização dos anais da última edição\n\n- [ ] Executar pipeline de extração e curadoria dos novos artigos e metadados metodológicos\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão do pacote e registrar alterações no CHANGELOG.md\n\n- [ ] Gerar e exportar o novo pacote consolidado para o Zenodo
+URL:https://ebbc.inf.br
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do EBBC e atualização do dataset (2024)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-ebbc-open-database-2026-09@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20261001
+SUMMARY:[BRAN Curadoria] Verificação dos anais do EBBC e atualização do dataset (2026)
+DESCRIPTION:Janela bienal para conferir a publicação dos anais da edição mais recente do EBBC\, raspar novos artigos\, validar schema e sincronizar com o Zenodo.\n\nRepositório: https://github.com/BRAN-Org/ebbc-open-database\n\nFonte Oficial: https://ebbc.inf.br\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal oficial do EBBC (https://ebbc.inf.br) e verificar a disponibilização dos anais da última edição\n\n- [ ] Executar pipeline de extração e curadoria dos novos artigos e metadados metodológicos\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão do pacote e registrar alterações no CHANGELOG.md\n\n- [ ] Gerar e exportar o novo pacote consolidado para o Zenodo
+URL:https://ebbc.inf.br
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do EBBC e atualização do dataset (2026)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-ebbc-open-database-2026-10@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do EBBC e atualização do dataset (2026)
+DESCRIPTION:Janela bienal para conferir a publicação dos anais da edição mais recente do EBBC\, raspar novos artigos\, validar schema e sincronizar com o Zenodo.\n\nRepositório: https://github.com/BRAN-Org/ebbc-open-database\n\nFonte Oficial: https://ebbc.inf.br\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal oficial do EBBC (https://ebbc.inf.br) e verificar a disponibilização dos anais da última edição\n\n- [ ] Executar pipeline de extração e curadoria dos novos artigos e metadados metodológicos\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão do pacote e registrar alterações no CHANGELOG.md\n\n- [ ] Gerar e exportar o novo pacote consolidado para o Zenodo
+URL:https://ebbc.inf.br
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do EBBC e atualização do dataset (2026)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-ebbc-open-database-2028-09@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20280901
+DTEND;VALUE=DATE:20281001
+SUMMARY:[BRAN Curadoria] Verificação dos anais do EBBC e atualização do dataset (2028)
+DESCRIPTION:Janela bienal para conferir a publicação dos anais da edição mais recente do EBBC\, raspar novos artigos\, validar schema e sincronizar com o Zenodo.\n\nRepositório: https://github.com/BRAN-Org/ebbc-open-database\n\nFonte Oficial: https://ebbc.inf.br\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal oficial do EBBC (https://ebbc.inf.br) e verificar a disponibilização dos anais da última edição\n\n- [ ] Executar pipeline de extração e curadoria dos novos artigos e metadados metodológicos\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão do pacote e registrar alterações no CHANGELOG.md\n\n- [ ] Gerar e exportar o novo pacote consolidado para o Zenodo
+URL:https://ebbc.inf.br
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do EBBC e atualização do dataset (2028)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-ebbc-open-database-2028-10@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20281001
+DTEND;VALUE=DATE:20281101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do EBBC e atualização do dataset (2028)
+DESCRIPTION:Janela bienal para conferir a publicação dos anais da edição mais recente do EBBC\, raspar novos artigos\, validar schema e sincronizar com o Zenodo.\n\nRepositório: https://github.com/BRAN-Org/ebbc-open-database\n\nFonte Oficial: https://ebbc.inf.br\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal oficial do EBBC (https://ebbc.inf.br) e verificar a disponibilização dos anais da última edição\n\n- [ ] Executar pipeline de extração e curadoria dos novos artigos e metadados metodológicos\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão do pacote e registrar alterações no CHANGELOG.md\n\n- [ ] Gerar e exportar o novo pacote consolidado para o Zenodo
+URL:https://ebbc.inf.br
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do EBBC e atualização do dataset (2028)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-ebbc-open-database-2030-09@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20300901
+DTEND;VALUE=DATE:20301001
+SUMMARY:[BRAN Curadoria] Verificação dos anais do EBBC e atualização do dataset (2030)
+DESCRIPTION:Janela bienal para conferir a publicação dos anais da edição mais recente do EBBC\, raspar novos artigos\, validar schema e sincronizar com o Zenodo.\n\nRepositório: https://github.com/BRAN-Org/ebbc-open-database\n\nFonte Oficial: https://ebbc.inf.br\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal oficial do EBBC (https://ebbc.inf.br) e verificar a disponibilização dos anais da última edição\n\n- [ ] Executar pipeline de extração e curadoria dos novos artigos e metadados metodológicos\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão do pacote e registrar alterações no CHANGELOG.md\n\n- [ ] Gerar e exportar o novo pacote consolidado para o Zenodo
+URL:https://ebbc.inf.br
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do EBBC e atualização do dataset (2030)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-ebbc-open-database-2030-10@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20301001
+DTEND;VALUE=DATE:20301101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do EBBC e atualização do dataset (2030)
+DESCRIPTION:Janela bienal para conferir a publicação dos anais da edição mais recente do EBBC\, raspar novos artigos\, validar schema e sincronizar com o Zenodo.\n\nRepositório: https://github.com/BRAN-Org/ebbc-open-database\n\nFonte Oficial: https://ebbc.inf.br\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal oficial do EBBC (https://ebbc.inf.br) e verificar a disponibilização dos anais da última edição\n\n- [ ] Executar pipeline de extração e curadoria dos novos artigos e metadados metodológicos\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão do pacote e registrar alterações no CHANGELOG.md\n\n- [ ] Gerar e exportar o novo pacote consolidado para o Zenodo
+URL:https://ebbc.inf.br
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do EBBC e atualização do dataset (2030)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-ebbc-open-database-2032-09@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20320901
+DTEND;VALUE=DATE:20321001
+SUMMARY:[BRAN Curadoria] Verificação dos anais do EBBC e atualização do dataset (2032)
+DESCRIPTION:Janela bienal para conferir a publicação dos anais da edição mais recente do EBBC\, raspar novos artigos\, validar schema e sincronizar com o Zenodo.\n\nRepositório: https://github.com/BRAN-Org/ebbc-open-database\n\nFonte Oficial: https://ebbc.inf.br\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal oficial do EBBC (https://ebbc.inf.br) e verificar a disponibilização dos anais da última edição\n\n- [ ] Executar pipeline de extração e curadoria dos novos artigos e metadados metodológicos\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão do pacote e registrar alterações no CHANGELOG.md\n\n- [ ] Gerar e exportar o novo pacote consolidado para o Zenodo
+URL:https://ebbc.inf.br
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do EBBC e atualização do dataset (2032)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-ebbc-open-database-2032-10@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20321001
+DTEND;VALUE=DATE:20321101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do EBBC e atualização do dataset (2032)
+DESCRIPTION:Janela bienal para conferir a publicação dos anais da edição mais recente do EBBC\, raspar novos artigos\, validar schema e sincronizar com o Zenodo.\n\nRepositório: https://github.com/BRAN-Org/ebbc-open-database\n\nFonte Oficial: https://ebbc.inf.br\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal oficial do EBBC (https://ebbc.inf.br) e verificar a disponibilização dos anais da última edição\n\n- [ ] Executar pipeline de extração e curadoria dos novos artigos e metadados metodológicos\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão do pacote e registrar alterações no CHANGELOG.md\n\n- [ ] Gerar e exportar o novo pacote consolidado para o Zenodo
+URL:https://ebbc.inf.br
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do EBBC e atualização do dataset (2032)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2024-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20241201
+DTEND;VALUE=DATE:20250101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2024)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2024)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2024-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20240101
+DTEND;VALUE=DATE:20240201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2024)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2024)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2025-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20251201
+DTEND;VALUE=DATE:20260101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2025)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2025)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2025-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20250101
+DTEND;VALUE=DATE:20250201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2025)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2025)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2026-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20270101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2026)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2026)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2026-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2026)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2026)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2027-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20271201
+DTEND;VALUE=DATE:20280101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2027)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2027)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2027-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2027)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2027)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2028-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20281201
+DTEND;VALUE=DATE:20290101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2028)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2028)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2028-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20280101
+DTEND;VALUE=DATE:20280201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2028)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2028)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2029-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20291201
+DTEND;VALUE=DATE:20300101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2029)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2029)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2029-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20290101
+DTEND;VALUE=DATE:20290201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2029)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2029)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2030-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20301201
+DTEND;VALUE=DATE:20310101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2030)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2030)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2030-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20300101
+DTEND;VALUE=DATE:20300201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2030)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2030)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2031-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20311201
+DTEND;VALUE=DATE:20320101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2031)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2031)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2031-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20310101
+DTEND;VALUE=DATE:20310201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2031)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2031)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2032-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20321201
+DTEND;VALUE=DATE:20330101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2032)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2032)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-enancib-open-database-2032-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20320101
+DTEND;VALUE=DATE:20320201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ENANCIB e atualização do dataset (2032)
+DESCRIPTION:Janela anual para conferir os anais da última edição do ENANCIB\, incorporar trabalhos dos GTs\, validar conformidade de schema e atualizar preservação digital.\n\nRepositório: https://github.com/BRAN-Org/enancib-open-database\n\nFonte Oficial: https://enancib.ancib.org/\n\n\nChecklist Operacional:\n\n- [ ] Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente\n\n- [ ] Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Gerar novo bundle de preservação digital de texto completo para o Zenodo
+URL:https://enancib.ancib.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ENANCIB e atualização do dataset (2032)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2024-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20241201
+DTEND;VALUE=DATE:20250101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2024)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2024)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2024-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20240101
+DTEND;VALUE=DATE:20240201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2024)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2024)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2025-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20251201
+DTEND;VALUE=DATE:20260101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2025)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2025)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2025-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20250101
+DTEND;VALUE=DATE:20250201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2025)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2025)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2026-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20270101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2026)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2026)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2026-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2026)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2026)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2027-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20271201
+DTEND;VALUE=DATE:20280101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2027)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2027)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2027-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2027)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2027)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2028-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20281201
+DTEND;VALUE=DATE:20290101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2028)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2028)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2028-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20280101
+DTEND;VALUE=DATE:20280201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2028)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2028)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2029-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20291201
+DTEND;VALUE=DATE:20300101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2029)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2029)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2029-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20290101
+DTEND;VALUE=DATE:20290201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2029)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2029)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2030-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20301201
+DTEND;VALUE=DATE:20310101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2030)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2030)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2030-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20300101
+DTEND;VALUE=DATE:20300201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2030)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2030)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2031-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20311201
+DTEND;VALUE=DATE:20320101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2031)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2031)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2031-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20310101
+DTEND;VALUE=DATE:20310201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2031)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2031)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2032-12@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20321201
+DTEND;VALUE=DATE:20330101
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2032)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2032)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-abec-open-database-2032-01@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20320101
+DTEND;VALUE=DATE:20320201
+SUMMARY:[BRAN Curadoria] Verificação dos anais do ABEC Meeting e atualização do dataset (2032)
+DESCRIPTION:Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil\, atualizar base e acervo de PDFs.\n\nRepositório: https://github.com/BRAN-Org/abec-open-database\n\nFonte Oficial: https://www.abecbrasil.org.br/\n\n\nChecklist Operacional:\n\n- [ ] Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual\n\n- [ ] Executar rotina de extração de resumos e metadados dos artigos apresentados\n\n- [ ] Validar integridade do schema JSON (`npm run data:validate`)\n\n- [ ] Atualizar versão e registrar no CHANGELOG.md\n\n- [ ] Atualizar cold storage no Zenodo
+URL:https://www.abecbrasil.org.br/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Verificação dos anais do ABEC Meeting e atualização do dataset (2032)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-datagramazero-open-database-2024-07@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20240701
+DTEND;VALUE=DATE:20240801
+SUMMARY:[BRAN Curadoria] Auditoria de integridade e links do acervo DataGramaZero (2024)
+DESCRIPTION:Rotina anual de auditoria fria no acervo histórico (1999-2015) para checagem de links quebrados (DOIs e acervos UFRGS/CEDAP) e integridade do cold storage.\n\nRepositório: https://github.com/BRAN-Org/datagramazero-open-database\n\nFonte Oficial: http://hdl.handle.net/20.500.11959/1269\n\n\nChecklist Operacional:\n\n- [ ] Executar checagem de integridade de links externos e handles (CEDAP/UFRGS e repositórios)\n\n- [ ] Validar integridade de schema e conformidade de metadados (`npm run data:validate`)\n\n- [ ] Garantir integridade do arquivo estático compactado no Zenodo
+URL:http://hdl.handle.net/20.500.11959/1269
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Auditoria de integridade e links do acervo DataGramaZero (2024)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-datagramazero-open-database-2025-07@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20250701
+DTEND;VALUE=DATE:20250801
+SUMMARY:[BRAN Curadoria] Auditoria de integridade e links do acervo DataGramaZero (2025)
+DESCRIPTION:Rotina anual de auditoria fria no acervo histórico (1999-2015) para checagem de links quebrados (DOIs e acervos UFRGS/CEDAP) e integridade do cold storage.\n\nRepositório: https://github.com/BRAN-Org/datagramazero-open-database\n\nFonte Oficial: http://hdl.handle.net/20.500.11959/1269\n\n\nChecklist Operacional:\n\n- [ ] Executar checagem de integridade de links externos e handles (CEDAP/UFRGS e repositórios)\n\n- [ ] Validar integridade de schema e conformidade de metadados (`npm run data:validate`)\n\n- [ ] Garantir integridade do arquivo estático compactado no Zenodo
+URL:http://hdl.handle.net/20.500.11959/1269
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Auditoria de integridade e links do acervo DataGramaZero (2025)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-datagramazero-open-database-2026-07@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260801
+SUMMARY:[BRAN Curadoria] Auditoria de integridade e links do acervo DataGramaZero (2026)
+DESCRIPTION:Rotina anual de auditoria fria no acervo histórico (1999-2015) para checagem de links quebrados (DOIs e acervos UFRGS/CEDAP) e integridade do cold storage.\n\nRepositório: https://github.com/BRAN-Org/datagramazero-open-database\n\nFonte Oficial: http://hdl.handle.net/20.500.11959/1269\n\n\nChecklist Operacional:\n\n- [ ] Executar checagem de integridade de links externos e handles (CEDAP/UFRGS e repositórios)\n\n- [ ] Validar integridade de schema e conformidade de metadados (`npm run data:validate`)\n\n- [ ] Garantir integridade do arquivo estático compactado no Zenodo
+URL:http://hdl.handle.net/20.500.11959/1269
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Auditoria de integridade e links do acervo DataGramaZero (2026)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-datagramazero-open-database-2027-07@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20270701
+DTEND;VALUE=DATE:20270801
+SUMMARY:[BRAN Curadoria] Auditoria de integridade e links do acervo DataGramaZero (2027)
+DESCRIPTION:Rotina anual de auditoria fria no acervo histórico (1999-2015) para checagem de links quebrados (DOIs e acervos UFRGS/CEDAP) e integridade do cold storage.\n\nRepositório: https://github.com/BRAN-Org/datagramazero-open-database\n\nFonte Oficial: http://hdl.handle.net/20.500.11959/1269\n\n\nChecklist Operacional:\n\n- [ ] Executar checagem de integridade de links externos e handles (CEDAP/UFRGS e repositórios)\n\n- [ ] Validar integridade de schema e conformidade de metadados (`npm run data:validate`)\n\n- [ ] Garantir integridade do arquivo estático compactado no Zenodo
+URL:http://hdl.handle.net/20.500.11959/1269
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Auditoria de integridade e links do acervo DataGramaZero (2027)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-datagramazero-open-database-2028-07@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20280701
+DTEND;VALUE=DATE:20280801
+SUMMARY:[BRAN Curadoria] Auditoria de integridade e links do acervo DataGramaZero (2028)
+DESCRIPTION:Rotina anual de auditoria fria no acervo histórico (1999-2015) para checagem de links quebrados (DOIs e acervos UFRGS/CEDAP) e integridade do cold storage.\n\nRepositório: https://github.com/BRAN-Org/datagramazero-open-database\n\nFonte Oficial: http://hdl.handle.net/20.500.11959/1269\n\n\nChecklist Operacional:\n\n- [ ] Executar checagem de integridade de links externos e handles (CEDAP/UFRGS e repositórios)\n\n- [ ] Validar integridade de schema e conformidade de metadados (`npm run data:validate`)\n\n- [ ] Garantir integridade do arquivo estático compactado no Zenodo
+URL:http://hdl.handle.net/20.500.11959/1269
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Auditoria de integridade e links do acervo DataGramaZero (2028)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-datagramazero-open-database-2029-07@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20290701
+DTEND;VALUE=DATE:20290801
+SUMMARY:[BRAN Curadoria] Auditoria de integridade e links do acervo DataGramaZero (2029)
+DESCRIPTION:Rotina anual de auditoria fria no acervo histórico (1999-2015) para checagem de links quebrados (DOIs e acervos UFRGS/CEDAP) e integridade do cold storage.\n\nRepositório: https://github.com/BRAN-Org/datagramazero-open-database\n\nFonte Oficial: http://hdl.handle.net/20.500.11959/1269\n\n\nChecklist Operacional:\n\n- [ ] Executar checagem de integridade de links externos e handles (CEDAP/UFRGS e repositórios)\n\n- [ ] Validar integridade de schema e conformidade de metadados (`npm run data:validate`)\n\n- [ ] Garantir integridade do arquivo estático compactado no Zenodo
+URL:http://hdl.handle.net/20.500.11959/1269
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Auditoria de integridade e links do acervo DataGramaZero (2029)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-datagramazero-open-database-2030-07@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20300701
+DTEND;VALUE=DATE:20300801
+SUMMARY:[BRAN Curadoria] Auditoria de integridade e links do acervo DataGramaZero (2030)
+DESCRIPTION:Rotina anual de auditoria fria no acervo histórico (1999-2015) para checagem de links quebrados (DOIs e acervos UFRGS/CEDAP) e integridade do cold storage.\n\nRepositório: https://github.com/BRAN-Org/datagramazero-open-database\n\nFonte Oficial: http://hdl.handle.net/20.500.11959/1269\n\n\nChecklist Operacional:\n\n- [ ] Executar checagem de integridade de links externos e handles (CEDAP/UFRGS e repositórios)\n\n- [ ] Validar integridade de schema e conformidade de metadados (`npm run data:validate`)\n\n- [ ] Garantir integridade do arquivo estático compactado no Zenodo
+URL:http://hdl.handle.net/20.500.11959/1269
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Auditoria de integridade e links do acervo DataGramaZero (2030)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-datagramazero-open-database-2031-07@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20310701
+DTEND;VALUE=DATE:20310801
+SUMMARY:[BRAN Curadoria] Auditoria de integridade e links do acervo DataGramaZero (2031)
+DESCRIPTION:Rotina anual de auditoria fria no acervo histórico (1999-2015) para checagem de links quebrados (DOIs e acervos UFRGS/CEDAP) e integridade do cold storage.\n\nRepositório: https://github.com/BRAN-Org/datagramazero-open-database\n\nFonte Oficial: http://hdl.handle.net/20.500.11959/1269\n\n\nChecklist Operacional:\n\n- [ ] Executar checagem de integridade de links externos e handles (CEDAP/UFRGS e repositórios)\n\n- [ ] Validar integridade de schema e conformidade de metadados (`npm run data:validate`)\n\n- [ ] Garantir integridade do arquivo estático compactado no Zenodo
+URL:http://hdl.handle.net/20.500.11959/1269
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Auditoria de integridade e links do acervo DataGramaZero (2031)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bran-curation-datagramazero-open-database-2032-07@bran.org
+DTSTAMP:20261024T145606Z
+DTSTART;VALUE=DATE:20320701
+DTEND;VALUE=DATE:20320801
+SUMMARY:[BRAN Curadoria] Auditoria de integridade e links do acervo DataGramaZero (2032)
+DESCRIPTION:Rotina anual de auditoria fria no acervo histórico (1999-2015) para checagem de links quebrados (DOIs e acervos UFRGS/CEDAP) e integridade do cold storage.\n\nRepositório: https://github.com/BRAN-Org/datagramazero-open-database\n\nFonte Oficial: http://hdl.handle.net/20.500.11959/1269\n\n\nChecklist Operacional:\n\n- [ ] Executar checagem de integridade de links externos e handles (CEDAP/UFRGS e repositórios)\n\n- [ ] Validar integridade de schema e conformidade de metadados (`npm run data:validate`)\n\n- [ ] Garantir integridade do arquivo estático compactado no Zenodo
+URL:http://hdl.handle.net/20.500.11959/1269
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Lembrete: Auditoria de integridade e links do acervo DataGramaZero (2032)
+END:VALARM
+END:VEVENT
+END:VCALENDAR

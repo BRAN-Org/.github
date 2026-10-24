@@ -33,6 +33,8 @@ Public catalog of bibliometric databases from Brazilian scientific output, provi
 | **ABEC Meeting** | 2013–2025 | 259 | **257 PDFs** (OJS ABEC Brasil) | `abec-open-database-zenodo.zip` | 104 MB | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23595236.svg)](https://doi.org/10.5281/zenodo.23595236) |
 | **EBBC** | 2012–2024 | 643 | Complete census archive *(no digitalized PDFs at source)* | `ebbc-open-database-zenodo.zip` | 1.5 MB | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23593513.svg)](https://doi.org/10.5281/zenodo.23593513) |
 
+> 📅 **Data Governance & Ongoing Curation:** Routine verification and update cycles follow our [Curation Calendar](CALENDAR.md). You can also subscribe to the [iCal (.ics) feed](https://raw.githubusercontent.com/BRAN-Org/.github/main/calendar.ics) in Google Calendar to keep track of upcoming milestones.
+
 <details>
 <summary><b>Data Reliability Levels</b></summary>
 <br>

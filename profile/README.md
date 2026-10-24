@@ -37,6 +37,8 @@ Catálogo público de bases de dados bibliométricos da produção científica b
 | **ABEC Meeting** | 2013–2025 | 259 | **257 PDFs** (OJS ABEC Brasil) | `abec-open-database-zenodo.zip` | 104 MB | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23595236.svg)](https://doi.org/10.5281/zenodo.23595236) |
 | **EBBC** | 2012–2024 | 643 | Acervo censitário *(sem PDFs digitalizados na origem)* | `ebbc-open-database-zenodo.zip` | 1,5 MB | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23593513.svg)](https://doi.org/10.5281/zenodo.23593513) |
 
+> 📅 **Governança & Curadoria Contínua:** Os ciclos periódicos de verificação e atualização dos acervos seguem o nosso [Calendário de Curadoria](https://github.com/BRAN-Org/.github/blob/main/CALENDAR.md). Você também pode assinar o feed [iCal (.ics)](https://raw.githubusercontent.com/BRAN-Org/.github/main/calendar.ics) no seu Google Agenda para acompanhar os prazos.
+
 <details>
 <summary><b>Níveis de Confiabilidade dos Dados</b></summary>
 <br>

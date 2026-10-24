@@ -1,0 +1,75 @@
+# BRAN Org - Matriz de Curadoria e Calendário de Bases de Dados
+# Este arquivo é a fonte canônica para geração do calendar.ics e das issues automáticas mensais.
+
+settings:
+  calendar_title: "BRAN Org - Calendário de Curadoria de Dados"
+  calendar_description: "Ciclos de verificação, atualização e auditoria das bases de dados da BRAN Org."
+  timezone: "America/Sao_Paulo"
+  default_assignee: "GabrielBaiano"
+
+databases:
+  - id: "ebbc-open-database"
+    name: "EBBC - Encontro Brasileiro de Bibliometria e Cientometria"
+    short_name: "EBBC"
+    repo: "BRAN-Org/ebbc-open-database"
+    url: "https://ebbc.inf.br"
+    cadence: "biennial-even" # Anos pares (2024, 2026, 2028...)
+    check_months: [9, 10]    # Setembro e Outubro
+    summary: "Verificação dos anais do EBBC e atualização do dataset"
+    description: "Janela bienal para conferir a publicação dos anais da edição mais recente do EBBC, raspar novos artigos, validar schema e sincronizar com o Zenodo."
+    labels: ["curation", "ebbc-open-database"]
+    checklist:
+      - "Acessar o portal oficial do EBBC (https://ebbc.inf.br) e verificar a disponibilização dos anais da última edição"
+      - "Executar pipeline de extração e curadoria dos novos artigos e metadados metodológicos"
+      - "Validar integridade do schema JSON (`npm run data:validate`)"
+      - "Atualizar versão do pacote e registrar alterações no CHANGELOG.md"
+      - "Gerar e exportar o novo pacote consolidado para o Zenodo"
+
+  - id: "enancib-open-database"
+    name: "ENANCIB - Encontro Nacional de Pesquisa e Pós-Graduação em Ciência da Informação"
+    short_name: "ENANCIB"
+    repo: "BRAN-Org/enancib-open-database"
+    url: "https://enancib.ancib.org/"
+    cadence: "annual"        # Todos os anos
+    check_months: [12, 1]    # Dezembro e Janeiro
+    summary: "Verificação dos anais do ENANCIB e atualização do dataset"
+    description: "Janela anual para conferir os anais da última edição do ENANCIB, incorporar trabalhos dos GTs, validar conformidade de schema e atualizar preservação digital."
+    labels: ["curation", "enancib-open-database"]
+    checklist:
+      - "Acessar os anais no portal oficial da ANCIB / Benancib (https://enancib.ancib.org/) e checar publicação da edição mais recente"
+      - "Extrair os trabalhos apresentados nos Grupos de Trabalho (GTs) e normalizar DOIs/metadados"
+      - "Validar integridade do schema JSON (`npm run data:validate`)"
+      - "Atualizar versão e registrar no CHANGELOG.md"
+      - "Gerar novo bundle de preservação digital de texto completo para o Zenodo"
+
+  - id: "abec-open-database"
+    name: "ABEC Meeting (Associação Brasileira de Editores Científicos)"
+    short_name: "ABEC Meeting"
+    repo: "BRAN-Org/abec-open-database"
+    url: "https://www.abecbrasil.org.br/"
+    cadence: "annual"        # Todos os anos
+    check_months: [12, 1]    # Dezembro e Janeiro
+    summary: "Verificação dos anais do ABEC Meeting e atualização do dataset"
+    description: "Janela anual para verificar anais e resumos publicados no portal da ABEC Brasil, atualizar base e acervo de PDFs."
+    labels: ["curation", "abec-open-database"]
+    checklist:
+      - "Acessar o portal da ABEC Brasil (https://www.abecbrasil.org.br/) e verificar publicação dos anais da edição anual"
+      - "Executar rotina de extração de resumos e metadados dos artigos apresentados"
+      - "Validar integridade do schema JSON (`npm run data:validate`)"
+      - "Atualizar versão e registrar no CHANGELOG.md"
+      - "Atualizar cold storage no Zenodo"
+
+  - id: "datagramazero-open-database"
+    name: "DataGramaZero - Auditoria de Integridade e Preservação"
+    short_name: "DataGramaZero"
+    repo: "BRAN-Org/datagramazero-open-database"
+    url: "http://hdl.handle.net/20.500.11959/1269"
+    cadence: "annual"        # Auditoria anual em acervo histórico estático
+    check_months: [7]        # Julho
+    summary: "Auditoria de integridade e links do acervo DataGramaZero"
+    description: "Rotina anual de auditoria fria no acervo histórico (1999-2015) para checagem de links quebrados (DOIs e acervos UFRGS/CEDAP) e integridade do cold storage."
+    labels: ["curation", "datagramazero-open-database"]
+    checklist:
+      - "Executar checagem de integridade de links externos e handles (CEDAP/UFRGS e repositórios)"
+      - "Validar integridade de schema e conformidade de metadados (`npm run data:validate`)"
+      - "Garantir integridade do arquivo estático compactado no Zenodo"
