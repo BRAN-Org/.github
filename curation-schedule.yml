@@ -11,6 +11,8 @@ databases:
   - id: "ebbc-open-database"
     name: "EBBC - Encontro Brasileiro de Bibliometria e Cientometria"
     short_name: "EBBC"
+    sigla: "EBBC"
+    check_day: 1
     repo: "BRAN-Org/ebbc-open-database"
     url: "https://ebbc.inf.br"
     cadence: "biennial-even" # Anos pares (2024, 2026, 2028...)
@@ -28,6 +30,8 @@ databases:
   - id: "enancib-open-database"
     name: "ENANCIB - Encontro Nacional de Pesquisa e Pós-Graduação em Ciência da Informação"
     short_name: "ENANCIB"
+    sigla: "ENANCIB"
+    check_day: 1
     repo: "BRAN-Org/enancib-open-database"
     url: "https://enancib.ancib.org/"
     cadence: "annual"        # Todos os anos
@@ -44,7 +48,9 @@ databases:
 
   - id: "abec-open-database"
     name: "ABEC Meeting (Associação Brasileira de Editores Científicos)"
-    short_name: "ABEC Meeting"
+    short_name: "ABEC"
+    sigla: "ABEC"
+    check_day: 1
     repo: "BRAN-Org/abec-open-database"
     url: "https://www.abecbrasil.org.br/"
     cadence: "annual"        # Todos os anos
@@ -62,6 +68,8 @@ databases:
   - id: "datagramazero-open-database"
     name: "DataGramaZero - Auditoria de Integridade e Preservação"
     short_name: "DataGramaZero"
+    sigla: "DGZero"
+    check_day: 1
     repo: "BRAN-Org/datagramazero-open-database"
     url: "http://hdl.handle.net/20.500.11959/1269"
     cadence: "annual"        # Auditoria anual em acervo histórico estático

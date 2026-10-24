@@ -189,31 +189,21 @@ def render_calendar_grid_svg(schedule_data, year: int, month: int, today_date: d
                 svg_lines.append(f'  <rect x="{today_badge_x:.1f}" y="{today_badge_y:.1f}" width="38" height="15" rx="4" fill="{PRIMARY_RED}" />')
                 svg_lines.append(f'  <text x="{(today_badge_x + 19):.1f}" y="{(today_badge_y + 11):.1f}" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9px" font-weight="700" fill="#ffffff">HOJE</text>')
 
-            # Marcações e eventos da curadoria na grade
-            if is_cur_month and main_task:
-                # Milestone no dia 1: Abertura da janela
-                if day_date.day == 1:
-                    evt_w = col_width - 12
-                    svg_lines.append(f'  <rect x="{(col_x + 6):.1f}" y="{(row_y + 24):.1f}" width="{evt_w:.1f}" height="20" rx="4" fill="#fde8e9" stroke="{PRIMARY_RED}" stroke-width="0.8" />')
-                    svg_lines.append(f'  <text x="{(col_x + 10):.1f}" y="{(row_y + 38):.1f}" class="event-strip" fill="{PRIMARY_RED}">🚩 Início {main_name}</text>')
-                
-                # Milestone no dia 15: Validação
-                elif day_date.day == 15:
-                    evt_w = col_width - 12
-                    svg_lines.append(f'  <rect x="{(col_x + 6):.1f}" y="{(row_y + 24):.1f}" width="{evt_w:.1f}" height="20" rx="4" fill="#fff3cd" stroke="#ffc107" stroke-width="0.8" />')
-                    svg_lines.append(f'  <text x="{(col_x + 10):.1f}" y="{(row_y + 38):.1f}" class="event-strip" fill="#856404">⚙️ Auditoria</text>')
-                
-                # Milestone no último dia do mês: Fechamento / Zenodo
-                elif day_date.day == calendar.monthrange(year, month)[1]:
-                    evt_w = col_width - 12
-                    svg_lines.append(f'  <rect x="{(col_x + 6):.1f}" y="{(row_y + 24):.1f}" width="{evt_w:.1f}" height="20" rx="4" fill="#e2e3e5" stroke="#6c757d" stroke-width="0.8" />')
-                    svg_lines.append(f'  <text x="{(col_x + 10):.1f}" y="{(row_y + 38):.1f}" class="event-strip" fill="#383d41">📦 Zenodo</text>')
-                
-                # Se for dia de hoje e tiver tarefa
-                elif is_today:
-                    evt_w = col_width - 12
-                    svg_lines.append(f'  <rect x="{(col_x + 6):.1f}" y="{(row_y + 24):.1f}" width="{evt_w:.1f}" height="20" rx="4" fill="#fde8e9" stroke="{PRIMARY_RED}" stroke-width="0.8" />')
-                    svg_lines.append(f'  <text x="{(col_x + 10):.1f}" y="{(row_y + 38):.1f}" class="event-strip" fill="{PRIMARY_RED}">⚡ Curadoria</text>')
+            # Marcações e eventos da curadoria na grade: apenas a sigla no dia
+            if is_cur_month and active_tasks:
+                matching_tasks = [
+                    t for t in active_tasks
+                    if day_date.day in (t.get("check_days") or [t.get("check_day", 1)])
+                ]
+                if matching_tasks:
+                    badge_y = row_y + 26
+                    for t in matching_tasks:
+                        sigla = t.get("sigla") or t.get("short_name", t["name"])
+                        badge_w = max(44, len(sigla) * 8 + 14)
+                        badge_x = col_x + 8
+                        svg_lines.append(f'  <rect x="{badge_x:.1f}" y="{badge_y:.1f}" width="{badge_w:.1f}" height="20" rx="4" fill="#fde8e9" stroke="{PRIMARY_RED}" stroke-width="0.8" />')
+                        svg_lines.append(f'  <text x="{(badge_x + badge_w / 2.0):.1f}" y="{(badge_y + 14):.1f}" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, \'Segoe UI\', sans-serif" font-size="10px" font-weight="700" fill="{PRIMARY_RED}">{escape_xml(sigla)}</text>')
+                        badge_y += 24
 
     # Borda externa da grade
     svg_lines.append(f'  <rect x="{left_margin}" y="{weekday_bar_top}" width="{grid_width}" height="{weekday_bar_height + grid_height}" fill="none" stroke="{PRIMARY_RED}" stroke-width="1.5" />')
