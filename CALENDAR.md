@@ -31,7 +31,7 @@ https://raw.githubusercontent.com/BRAN-Org/calendar_config/main/calendar.ics
 3. Selecione a opção **"Do URL"** (*From URL*).
 4. Cole o link:
    ```text
-   https://raw.githubusercontent.com/BRAN-Org/.github/main/calendar.ics
+   https://raw.githubusercontent.com/BRAN-Org/calendar_config/main/calendar.ics
    ```
 5. Clique em **"Adicionar agenda"**.
 6. A agenda aparecerá na sua lista e sincronizará automaticamente com seu celular (Android/iOS).
@@ -55,7 +55,7 @@ https://raw.githubusercontent.com/BRAN-Org/calendar_config/main/calendar.ics
 
 ## 3. Automação de Issues no GitHub
 
-Além do calendário, o workflow [BRAN Curation Calendar & Tasks](.github/workflows/curation-calendar.yml) roda no dia **1º de cada mês às 12:00 UTC (09:00 BRT)**:
+Além do calendário, o workflow [BRAN Curation Calendar & Tasks](https://github.com/BRAN-Org/calendar_config/blob/main/.github/workflows/calendar-ci.yml) roda no dia **1º de cada mês às 12:00 UTC (09:00 BRT)**:
 
 1. **Inspeção de Janela**: Avalia se o mês e ano atuais coincidem com a janela de verificação de alguma base (respeitando cadências bienais e anuais).
 2. **Deduplicação**: Consulta se já existe uma issue aberta ou fechada para o ciclo atual (ex: `[Curadoria] EBBC (2026)`). Se já existir, a criação é ignorada.
