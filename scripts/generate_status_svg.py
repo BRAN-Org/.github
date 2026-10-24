@@ -73,8 +73,8 @@ def render_calendar_grid_svg(schedule_data, year: int, month: int, today_date: d
     grid_width = card_width - left_margin - right_margin  # 810 px
     col_width = grid_width / 7.0                          # ~115.71 px
     cell_height = 80                                      # altura de cada dia
-    header_top = 22
-    header_title_height = 48
+    header_top = 14
+    header_title_height = 56
     weekday_bar_top = header_top + header_title_height     # y = 70
     weekday_bar_height = 28
     grid_top = weekday_bar_top + weekday_bar_height        # y = 98
@@ -114,7 +114,8 @@ def render_calendar_grid_svg(schedule_data, year: int, month: int, today_date: d
         f'  <rect width="{card_width}" height="{total_height}" class="cal-bg" />',
         '',
         '  <!-- Top Header -->',
-        f'  <text x="{left_margin}" y="{header_top + 30}" class="month-title">{month_name} {year}</text>',
+        f'  <text x="{left_margin}" y="{header_top + 14}" class="cal-subtitle">BRAN ORG • CONFERÊNCIAS DO MÊS</text>',
+        f'  <text x="{left_margin}" y="{header_top + 40}" class="month-title">{month_name} {year}</text>',
     ]
 
     # Indicador / status pill no topo direito

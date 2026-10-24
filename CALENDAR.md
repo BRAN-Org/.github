@@ -4,8 +4,12 @@ A **BRAN Org** mantém um sistema de governança contínua para assegurar que as
 
 Este sistema une **notificações automatizadas no GitHub** com **sincronização de calendário público (`.ics`)** para o Google Agenda, Apple Calendar e dispositivos móveis.
 
+---
+
+## Conferências do Mês
+
 <p align="center">
-  <img src="assets/curation-status.svg" alt="Radar de Curadoria do Mês Atual" width="100%">
+  <img src="assets/curation-status.svg" alt="Conferências do Mês" width="100%">
 </p>
 
 ---
