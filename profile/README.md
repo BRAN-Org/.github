@@ -28,13 +28,13 @@ Catálogo público de bases de dados bibliométricos da produção científica b
 | [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting (2013-2025)](https://www.abecbrasil.org.br/) | **259 Artigos** (2013-2025) | [🟠 Em Averiguação](#-níveis-de-confiabilidade-dos-dados) |
 | [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC (2012-2024)](https://ebbc.inf.br) | **643 Artigos** (2012-2024) | [🟡 Fiel à Fonte (Cobertura Incompleta)](#-níveis-de-confiabilidade-dos-dados) |
 
-> 📅 **Governança & Curadoria Contínua:** Os ciclos periódicos de verificação e atualização dos acervos seguem o nosso [Calendário de Curadoria](https://github.com/BRAN-Org/.github/blob/main/CALENDAR.md). Você também pode assinar o feed [iCal (.ics)](https://raw.githubusercontent.com/BRAN-Org/.github/main/calendar.ics) no seu Google Agenda para acompanhar os prazos.
+> 📅 **Governança & Curadoria Contínua:** Os ciclos periódicos de verificação e atualização dos acervos seguem o repositório central [calendar_config](https://github.com/BRAN-Org/calendar_config). Você também pode assinar o feed [iCal (.ics)](https://raw.githubusercontent.com/BRAN-Org/calendar_config/main/calendar.ics) no seu Google Agenda para acompanhar os prazos.
 
 #### Conferências do Mês
 
 <p align="center">
-  <a href="https://github.com/BRAN-Org/.github/blob/main/CALENDAR.md">
-    <img src="https://raw.githubusercontent.com/BRAN-Org/.github/main/assets/curation-status.svg" alt="Conferências do Mês" width="100%">
+  <a href="https://github.com/BRAN-Org/calendar_config">
+    <img src="https://raw.githubusercontent.com/BRAN-Org/calendar_config/main/assets/current.svg" alt="Conferências do Mês" width="100%">
   </a>
 </p>
 

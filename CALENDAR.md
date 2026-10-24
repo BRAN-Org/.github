@@ -2,14 +2,16 @@
 
 A **BRAN Org** mantém um sistema de governança contínua para assegurar que as bases de dados acadêmicas (EBBC, ENANCIB, ABEC Meeting, DataGramaZero) sejam verificadas, atualizadas e preservadas com integridade.
 
-Este sistema une **notificações automatizadas no GitHub** com **sincronização de calendário público (`.ics`)** para o Google Agenda, Apple Calendar e dispositivos móveis.
+Este sistema une **notificações automatizadas no GitHub** com **sincronização de calendário público (`.ics`)** para o Google Agenda, Apple Calendar e dispositivos móveis, centralizado no repositório dedicado [**calendar_config**](https://github.com/BRAN-Org/calendar_config).
 
 ---
 
 ## Conferências do Mês
 
 <p align="center">
-  <img src="assets/curation-status.svg" alt="Conferências do Mês" width="100%">
+  <a href="https://github.com/BRAN-Org/calendar_config">
+    <img src="https://raw.githubusercontent.com/BRAN-Org/calendar_config/main/assets/current.svg" alt="Conferências do Mês" width="100%">
+  </a>
 </p>
 
 ---
@@ -20,7 +22,7 @@ Você pode assinar o calendário de curadoria para receber lembretes e visualiza
 
 ### URL Pública de Inscrição iCal (`.ics`):
 ```text
-https://raw.githubusercontent.com/BRAN-Org/.github/main/calendar.ics
+https://raw.githubusercontent.com/BRAN-Org/calendar_config/main/calendar.ics
 ```
 
 ### Passo a Passo no Google Agenda (Web):
