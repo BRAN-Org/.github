@@ -1,63 +1,134 @@
-<svg width="100%" height="207" viewBox="0 0 820 207" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Status de Curadoria - Outubro 2026">
+<svg width="100%" height="652" viewBox="0 0 860 652" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calendário Outubro 2026">
   <defs>
     <style>
-      .bg { fill: #0d1117; stroke: #30363d; stroke-width: 1.5; rx: 12px; }
-      .title-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 700; fill: #8b949e; letter-spacing: 1px; }
-      .title-main { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #f0f6fc; }
-      .status-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
-      .item-box { fill: #161b22; stroke: #30363d; stroke-width: 1; rx: 8px; }
-      .item-name { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; fill: #c9d1d9; }
-      .item-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; fill: #8b949e; }
-      .badge-text { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 11px; font-weight: 600; }
-      .footer-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11px; fill: #484f58; }
+      .cal-bg { fill: #ffffff; stroke: #e0d0c0; stroke-width: 1.5; rx: 10px; }
+      .month-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 26px; font-weight: 700; fill: #c5222f; }
+      .cal-subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #8a7364; }
+      .weekday-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #ffffff; text-anchor: middle; }
+      .day-num { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; }
+      .event-strip { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 10px; font-weight: 600; }
+      .notes-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 700; fill: #c5222f; letter-spacing: 0.5px; }
+      .notes-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; fill: #2c2520; }
+      .notes-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; fill: #7a6659; }
+      .footer-txt { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; fill: #998375; }
     </style>
   </defs>
-  <rect width="820" height="207" class="bg" />
+  <rect width="860" height="652" class="cal-bg" />
 
-  <!-- Header -->
-  <g transform="translate(24, 20)">
-    <!-- Calendar Icon -->
-    <g transform="translate(0, 4)">
-      <rect x="0" y="0" width="34" height="34" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.2" />
-      <path d="M9 7h16M9 13h16M9 18h10" stroke="#58a6ff" stroke-width="2" stroke-linecap="round" />
-      <circle cx="21" cy="18" r="2" fill="#e3b341" />
-    </g>
-    <g transform="translate(46, 12)">
-      <text class="title-sub">BRAN ORG • RADAR DE CURADORIA E GOVERNANÇA</text>
-      <text y="22" class="title-main">Outubro de 2026</text>
-    </g>
-
-    <!-- Status Pill -->
-    <g transform="translate(495, 8)">
-      <rect width="275" height="30" rx="15" fill="#382800" stroke="#bb8009" stroke-width="1.2" />
-      <circle cx="16" cy="15" r="4.5" fill="#e3b341" />
-      <text x="30" y="19" class="status-text" fill="#e3b341">JANELA ATIVA • 1 BASE</text>
-    </g>
+  <!-- Top Header -->
+  <text x="25" y="52" class="month-title">Outubro 2026</text>
+  <g transform="translate(565, 32)">
+    <rect width="270" height="26" rx="13" fill="#fde8e9" stroke="#c5222f" stroke-width="1" />
+    <text x="135" y="17" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11px" font-weight="700" fill="#c5222f">● 1 JANELA DE CURADORIA ATIVA</text>
   </g>
 
-  <!-- Divider -->
-  <line x1="24" y1="80" x2="796" y2="80" stroke="#21262d" stroke-width="1" />
+  <!-- Weekday Header Bar -->
+  <rect x="25" y="70" width="810" height="28" fill="#c5222f" />
+  <text x="82.9" y="88" class="weekday-text">Domingo</text>
+  <text x="198.6" y="88" class="weekday-text">Segunda-Feira</text>
+  <text x="314.3" y="88" class="weekday-text">Terça-Feira</text>
+  <text x="430.0" y="88" class="weekday-text">Quarta-Feira</text>
+  <text x="545.7" y="88" class="weekday-text">Quinta-Feira</text>
+  <text x="661.4" y="88" class="weekday-text">Sexta-Feira</text>
+  <text x="777.1" y="88" class="weekday-text">Sábado</text>
+  <line x1="140.7" y1="70" x2="140.7" y2="98" stroke="#e06670" stroke-width="1" />
+  <line x1="256.4" y1="70" x2="256.4" y2="98" stroke="#e06670" stroke-width="1" />
+  <line x1="372.1" y1="70" x2="372.1" y2="98" stroke="#e06670" stroke-width="1" />
+  <line x1="487.9" y1="70" x2="487.9" y2="98" stroke="#e06670" stroke-width="1" />
+  <line x1="603.6" y1="70" x2="603.6" y2="98" stroke="#e06670" stroke-width="1" />
+  <line x1="719.3" y1="70" x2="719.3" y2="98" stroke="#e06670" stroke-width="1" />
 
-  <!-- Content Body -->
-  <g transform="translate(24, 95)">
-    <rect width="772" height="58" class="item-box" />
+  <!-- Grid Cells -->
+  <rect x="25.0" y="98.0" width="115.7" height="80.0" fill="#f0e2d1" stroke="#e8d5c4" stroke-width="1" />
+  <text x="33.0" y="115.0" class="day-num" fill="#a68d7c">27</text>
+  <rect x="140.7" y="98.0" width="115.7" height="80.0" fill="#f0e2d1" stroke="#e8d5c4" stroke-width="1" />
+  <text x="148.7" y="115.0" class="day-num" fill="#a68d7c">28</text>
+  <rect x="256.4" y="98.0" width="115.7" height="80.0" fill="#f0e2d1" stroke="#e8d5c4" stroke-width="1" />
+  <text x="264.4" y="115.0" class="day-num" fill="#a68d7c">29</text>
+  <rect x="372.1" y="98.0" width="115.7" height="80.0" fill="#f0e2d1" stroke="#e8d5c4" stroke-width="1" />
+  <text x="380.1" y="115.0" class="day-num" fill="#a68d7c">30</text>
+  <rect x="487.9" y="98.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="495.9" y="115.0" class="day-num" fill="#c5222f">1</text>
+  <rect x="493.9" y="122.0" width="103.7" height="20" rx="4" fill="#fde8e9" stroke="#c5222f" stroke-width="0.8" />
+  <text x="497.9" y="136.0" class="event-strip" fill="#c5222f">🚩 Início EBBC</text>
+  <rect x="603.6" y="98.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="611.6" y="115.0" class="day-num" fill="#c5222f">2</text>
+  <rect x="719.3" y="98.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="727.3" y="115.0" class="day-num" fill="#c5222f">3</text>
+  <rect x="25.0" y="178.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="33.0" y="195.0" class="day-num" fill="#c5222f">4</text>
+  <rect x="140.7" y="178.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="148.7" y="195.0" class="day-num" fill="#c5222f">5</text>
+  <rect x="256.4" y="178.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="264.4" y="195.0" class="day-num" fill="#c5222f">6</text>
+  <rect x="372.1" y="178.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="380.1" y="195.0" class="day-num" fill="#c5222f">7</text>
+  <rect x="487.9" y="178.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="495.9" y="195.0" class="day-num" fill="#c5222f">8</text>
+  <rect x="603.6" y="178.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="611.6" y="195.0" class="day-num" fill="#c5222f">9</text>
+  <rect x="719.3" y="178.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="727.3" y="195.0" class="day-num" fill="#c5222f">10</text>
+  <rect x="25.0" y="258.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="33.0" y="275.0" class="day-num" fill="#c5222f">11</text>
+  <rect x="140.7" y="258.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="148.7" y="275.0" class="day-num" fill="#c5222f">12</text>
+  <rect x="256.4" y="258.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="264.4" y="275.0" class="day-num" fill="#c5222f">13</text>
+  <rect x="372.1" y="258.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="380.1" y="275.0" class="day-num" fill="#c5222f">14</text>
+  <rect x="487.9" y="258.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="495.9" y="275.0" class="day-num" fill="#c5222f">15</text>
+  <rect x="493.9" y="282.0" width="103.7" height="20" rx="4" fill="#fff3cd" stroke="#ffc107" stroke-width="0.8" />
+  <text x="497.9" y="296.0" class="event-strip" fill="#856404">⚙️ Auditoria</text>
+  <rect x="603.6" y="258.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="611.6" y="275.0" class="day-num" fill="#c5222f">16</text>
+  <rect x="719.3" y="258.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="727.3" y="275.0" class="day-num" fill="#c5222f">17</text>
+  <rect x="25.0" y="338.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="33.0" y="355.0" class="day-num" fill="#c5222f">18</text>
+  <rect x="140.7" y="338.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="148.7" y="355.0" class="day-num" fill="#c5222f">19</text>
+  <rect x="256.4" y="338.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="264.4" y="355.0" class="day-num" fill="#c5222f">20</text>
+  <rect x="372.1" y="338.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="380.1" y="355.0" class="day-num" fill="#c5222f">21</text>
+  <rect x="487.9" y="338.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="495.9" y="355.0" class="day-num" fill="#c5222f">22</text>
+  <rect x="603.6" y="338.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="611.6" y="355.0" class="day-num" fill="#c5222f">23</text>
+  <rect x="719.3" y="338.0" width="115.7" height="80.0" fill="#fff1f2" stroke="#e8d5c4" stroke-width="1" />
+  <text x="727.3" y="355.0" class="day-num" fill="#c5222f">24</text>
+  <rect x="791.0" y="343.0" width="38" height="15" rx="4" fill="#c5222f" />
+  <text x="810.0" y="354.0" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9px" font-weight="700" fill="#ffffff">HOJE</text>
+  <rect x="725.3" y="362.0" width="103.7" height="20" rx="4" fill="#fde8e9" stroke="#c5222f" stroke-width="0.8" />
+  <text x="729.3" y="376.0" class="event-strip" fill="#c5222f">⚡ Curadoria</text>
+  <rect x="25.0" y="418.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="33.0" y="435.0" class="day-num" fill="#c5222f">25</text>
+  <rect x="140.7" y="418.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="148.7" y="435.0" class="day-num" fill="#c5222f">26</text>
+  <rect x="256.4" y="418.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="264.4" y="435.0" class="day-num" fill="#c5222f">27</text>
+  <rect x="372.1" y="418.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="380.1" y="435.0" class="day-num" fill="#c5222f">28</text>
+  <rect x="487.9" y="418.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="495.9" y="435.0" class="day-num" fill="#c5222f">29</text>
+  <rect x="603.6" y="418.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="611.6" y="435.0" class="day-num" fill="#c5222f">30</text>
+  <rect x="719.3" y="418.0" width="115.7" height="80.0" fill="#fffbf7" stroke="#e8d5c4" stroke-width="1" />
+  <text x="727.3" y="435.0" class="day-num" fill="#c5222f">31</text>
+  <rect x="725.3" y="442.0" width="103.7" height="20" rx="4" fill="#e2e3e5" stroke="#6c757d" stroke-width="0.8" />
+  <text x="729.3" y="456.0" class="event-strip" fill="#383d41">📦 Zenodo</text>
+  <rect x="25" y="70" width="810" height="428" fill="none" stroke="#c5222f" stroke-width="1.5" />
 
-    <!-- Tag Badge -->
-    <rect x="14" y="14" width="70" height="28" rx="6" fill="#1f6feb22" stroke="#388bfd66" stroke-width="1" />
-    <text x="49" y="32" text-anchor="middle" class="badge-text" fill="#58a6ff">EBBC</text>
-
-    <!-- Info -->
-    <text x="96" y="27" class="item-name">EBBC - Encontro Brasileiro de Bibliometria e Cientometria</text>
-    <text x="96" y="44" class="item-desc">Ação: Verificação dos anais do EBBC e atualização do dataset • Repositório: BRAN-Org/ebbc-open-database</text>
-
-    <!-- Action Indicator -->
-    <g transform="translate(670, 16)">
-      <rect width="90" height="26" rx="13" fill="#23863622" stroke="#238636" stroke-width="1" />
-      <text x="45" y="17" text-anchor="middle" class="badge-text" fill="#3fb950">VERIFICAR</text>
-    </g>
-  </g>
+  <!-- Notes / Operational Checklist Section -->
+  <rect x="25" y="514" width="810" height="110" rx="8" fill="#fffcf9" stroke="#edd8c7" stroke-width="1.2" />
+  <text x="41" y="538" class="notes-title">📌 ATIVIDADES DE CURADORIA EM DESTAQUE NESTE MÊS:</text>
+  <text x="41" y="560" class="notes-body"><tspan font-weight="700">Base Ativa:</tspan> EBBC (2026) — Repositório: <tspan font-family="monospace">BRAN-Org/ebbc-open-database</tspan></text>
+  <text x="41" y="582" class="notes-sub"><tspan font-weight="600">Checklist Operacional:</tspan> Acessar o portal oficial do EBBC (https://ebbc.inf.br) e verificar a disponibilização dos anais da última edição • Executar pipeline de extração e curadoria dos novos artigos e metadados metodológicos • Validar integridade do schema JSON (`npm run data:validate`)...</text>
+  <text x="41" y="604" class="notes-sub"><tspan font-weight="600">Ação da Equipe:</tspan> Conferir issue aberta automaticamente no repositório <tspan font-family="monospace">BRAN-Org/.github</tspan> para registrar o progresso.</text>
 
   <!-- Footer -->
-  <text x="24" y="191" class="footer-text">Atualizado automaticamente via GitHub Actions • Fonte canônica: curation-schedule.yml</text>
-  <text x="796" y="191" text-anchor="end" class="footer-text">BRAN Org Data Network</text>
+  <text x="25" y="640" class="footer-txt">Atualizado automaticamente via GitHub Actions • Fonte canônica: curation-schedule.yml</text>
+  <text x="835" y="640" text-anchor="end" class="footer-txt">BRAN Org • Brazilian Research Archive Network</text>
 </svg>
