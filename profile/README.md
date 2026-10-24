@@ -21,21 +21,12 @@
 
 Catálogo público de bases de dados bibliométricos da produção científica brasileira, disponibilizadas em formatos abertos (`JSON`/`CSV`), com API REST gratuita e dashboard interativo para análise.
 
-| Repositório | Evento / Fonte Oficial | Registros | Confiabilidade | DOI Oficial |
-| :--- | :--- | :---: | :---: | :---: |
-| [enancib-open-database](https://github.com/BRAN-Org/enancib-open-database) | [ENANCIB (ANCIB / BENANCIB)](https://enancib.ancib.org/) | **6.998 Artigos** (1994-2026) | [🟢 Auditado e Validado](#-níveis-de-confiabilidade-dos-dados) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23593583.svg)](https://doi.org/10.5281/zenodo.23593583) |
-| [datagramazero-open-database](https://github.com/BRAN-Org/datagramazero-open-database) | [DataGramaZero (DGZero)](http://hdl.handle.net/20.500.11959/1269) | **466 Artigos** (1999-2015) | [🟢 Auditado e Validado](#-níveis-de-confiabilidade-dos-dados) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23593504.svg)](https://doi.org/10.5281/zenodo.23593504) |
-| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting](https://www.abecbrasil.org.br/) | **259 Artigos** (2013-2025) | [🟠 Em Averiguação](#-níveis-de-confiabilidade-dos-dados) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23595236.svg)](https://doi.org/10.5281/zenodo.23595236) |
-| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC](https://ebbc.inf.br) | **643 Artigos** (2012-2024) | [🟡 Fiel à Fonte (Cobertura Incompleta)](#-níveis-de-confiabilidade-dos-dados) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23593513.svg)](https://doi.org/10.5281/zenodo.23593513) |
-
-#### Preservação Digital no Zenodo (Cold Storage & Acervos Integrais)
-
-| Base de Dados | Período | Registros | Preservação Digital (Texto Completo) | Pacote Zenodo | Tamanho | DOI Oficial |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **ENANCIB** | 1994–2026 | 6.998 | **6.965 PDFs** (Brapci + OJS ANCIB) | `enancib-open-database-zenodo.zip` | 3,49 GB | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23593583.svg)](https://doi.org/10.5281/zenodo.23593583) |
-| **DataGramaZero** | 1999–2015 | 466 | **1.765 arquivos** (HTMLs, PDFs, imagens CEDAP/UFRGS) | `datagramazero-open-database-zenodo.zip` | 122 MB | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23593504.svg)](https://doi.org/10.5281/zenodo.23593504) |
-| **ABEC Meeting** | 2013–2025 | 259 | **257 PDFs** (OJS ABEC Brasil) | `abec-open-database-zenodo.zip` | 104 MB | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23595236.svg)](https://doi.org/10.5281/zenodo.23595236) |
-| **EBBC** | 2012–2024 | 643 | Acervo censitário *(sem PDFs digitalizados na origem)* | `ebbc-open-database-zenodo.zip` | 1,5 MB | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23593513.svg)](https://doi.org/10.5281/zenodo.23593513) |
+| Repositório | Evento / Fonte Oficial | Registros | Confiabilidade |
+| :--- | :--- | :---: | :---: |
+| [enancib-open-database](https://github.com/BRAN-Org/enancib-open-database) | [ENANCIB (ANCIB / BENANCIB)](https://enancib.ancib.org/) | **6.998 Artigos** (1994-2026) | [🟢 Auditado e Validado](#-níveis-de-confiabilidade-dos-dados) |
+| [datagramazero-open-database](https://github.com/BRAN-Org/datagramazero-open-database) | [DataGramaZero (DGZero)](http://hdl.handle.net/20.500.11959/1269) | **466 Artigos** (1999-2015) | [🟢 Auditado e Validado](#-níveis-de-confiabilidade-dos-dados) |
+| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting](https://www.abecbrasil.org.br/) | **259 Artigos** (2013-2025) | [🟠 Em Averiguação](#-níveis-de-confiabilidade-dos-dados) |
+| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC](https://ebbc.inf.br) | **643 Artigos** (2012-2024) | [🟡 Fiel à Fonte (Cobertura Incompleta)](#-níveis-de-confiabilidade-dos-dados) |
 
 > 📅 **Governança & Curadoria Contínua:** Os ciclos periódicos de verificação e atualização dos acervos seguem o nosso [Calendário de Curadoria](https://github.com/BRAN-Org/.github/blob/main/CALENDAR.md). Você também pode assinar o feed [iCal (.ics)](https://raw.githubusercontent.com/BRAN-Org/.github/main/calendar.ics) no seu Google Agenda para acompanhar os prazos.
 
