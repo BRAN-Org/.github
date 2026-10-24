@@ -26,6 +26,12 @@ Catálogo público de bases de dados bibliométricos da produção científica b
 
 > 📅 **Governança & Curadoria Contínua:** Os ciclos periódicos de verificação e atualização dos acervos seguem o nosso [Calendário de Curadoria](CALENDAR.md). Você também pode assinar o feed [iCal (.ics)](https://raw.githubusercontent.com/BRAN-Org/.github/main/calendar.ics) no seu Google Agenda para acompanhar os prazos.
 
+<p align="center">
+  <a href="CALENDAR.md">
+    <img src="assets/curation-status.svg" alt="Radar de Curadoria do Mês Atual" width="100%">
+  </a>
+</p>
+
 <details>
 <summary><b>Níveis de Confiabilidade dos Dados</b></summary>
 <br>

@@ -23,10 +23,11 @@ on:
     paths:
       - 'curation-schedule.yml'
       - 'scripts/generate_calendar.py'
+      - 'scripts/generate_status_svg.py'
 
 jobs:
-  sync-calendar:
-    name: Sincronizar calendar.ics
+  sync-calendar-and-assets:
+    name: Sincronizar calendar.ics e Status SVG
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -42,24 +43,33 @@ jobs:
       - name: Instalar PyYAML
         run: pip install pyyaml
 
-      - name: Gerar calendar.ics atualizado
-        run: python3 scripts/generate_calendar.py
+      - name: Gerar calendar.ics e Status SVG do mês
+        run: |
+          python3 scripts/generate_calendar.py
+          EXTRA_ARGS=""
+          if [ -n "${{ inputs.target_year }}" ]; then
+            EXTRA_ARGS="$EXTRA_ARGS --year ${{ inputs.target_year }}"
+          fi
+          if [ -n "${{ inputs.target_month }}" ]; then
+            EXTRA_ARGS="$EXTRA_ARGS --month ${{ inputs.target_month }}"
+          fi
+          python3 scripts/generate_status_svg.py $EXTRA_ARGS
 
-      - name: Comitar calendar.ics se houver alteração
+      - name: Comitar alterações se houver
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add calendar.ics
+          git add calendar.ics assets/curation-status.svg
           if git diff --staged --quiet; then
-            echo "calendar.ics já está atualizado. Nenhuma mudança para comitar."
+            echo "Arquivos já estão sincronizados. Nenhuma mudança para comitar."
           else
-            git commit -m "chore(calendar): sincronizar calendar.ics com curation-schedule.yml"
+            git commit -m "chore(calendar): atualizar calendar.ics e curation-status.svg"
             git push
           fi
 
   notify-tasks:
     name: Verificar Tarefas e Notificar
-    needs: sync-calendar
+    needs: sync-calendar-and-assets
     if: always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     permissions:
