@@ -21,12 +21,12 @@
 
 Public catalog of bibliometric databases from Brazilian scientific output, provided in open formats (`JSON`/`CSV`), featuring a free REST API and interactive dashboard for analysis.
 
-| Repository | Official Event / Source | Records | Data Reliability |
+| Repository | Historical Collection / Source | Records | Data Reliability |
 | :--- | :--- | :---: | :---: |
-| [enancib-open-database](https://github.com/BRAN-Org/enancib-open-database) | [ENANCIB (ANCIB / BENANCIB)](https://enancib.ancib.org/) | **6,998 Articles** (1994-2026) | [🟢 Audited & Validated](#-data-reliability-levels) |
-| [datagramazero-open-database](https://github.com/BRAN-Org/datagramazero-open-database) | [DataGramaZero (DGZero)](http://hdl.handle.net/20.500.11959/1269) | **466 Articles** (1999-2015) | [🟢 Audited & Validated](#-data-reliability-levels) |
-| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting](https://www.abecbrasil.org.br/) | **259 Articles** (2013-2025) | [🟠 Under Investigation](#-data-reliability-levels) |
-| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC](https://ebbc.inf.br) | **643 Articles** (2012-2024) | [🟡 Faithful to Source (Incomplete Coverage)](#-data-reliability-levels) |
+| [enancib-open-database](https://github.com/BRAN-Org/enancib-open-database) | [ENANCIB (1994-2026)](https://enancib.ancib.org/) | **6,998 Articles** (1994-2026) | [🟢 Audited & Validated](#-data-reliability-levels) |
+| [datagramazero-open-database](https://github.com/BRAN-Org/datagramazero-open-database) | [DataGramaZero (1999-2015)](http://hdl.handle.net/20.500.11959/1269) | **466 Articles** (1999-2015) | [🟢 Audited & Validated](#-data-reliability-levels) |
+| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting (2013-2025)](https://www.abecbrasil.org.br/) | **259 Articles** (2013-2025) | [🟠 Under Investigation](#-data-reliability-levels) |
+| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC (2012-2024)](https://ebbc.inf.br) | **643 Articles** (2012-2024) | [🟡 Faithful to Source (Incomplete Coverage)](#-data-reliability-levels) |
 
 <details>
 <summary><b>Data Reliability Levels</b></summary>
@@ -34,13 +34,13 @@ Public catalog of bibliometric databases from Brazilian scientific output, provi
 
 To ensure academic transparency and methodological rigor, each **BRAN Org** dataset receives an explicit reliability classification:
 
-- 🟢 **Audited & Validated**: Data audited and formally validated in collaboration with official event organizers or organizing committee.
-- 🟡 **Faithful to Source / Incomplete Coverage**: The dataset faithfully mirrors all public records available on the official site, but the original collection contains known gaps (e.g. non-digitized historical proceedings, absent DOIs at the source, or missing editions). *(Ex: `ebbc-open-database`)*.
-- 🟠 **Under Investigation**: Extracted data actively undergoing technical integrity audits, curation, or awaiting formal responses from the organizing institution. *(Ex: `abec-open-database`)*.
+- 🟢 **Audited & Validated**: Data audited and validated with methodological rigor, integrity checks, and direct verification against original proceedings and publications.
+- 🟡 **Faithful to Source / Incomplete Coverage**: The dataset mirrors records available from the primary source, with explicit technical documentation of any historical gaps (such as non-digitized years or absent source DOIs). *(Ex: `ebbc-open-database`)*.
+- 🟠 **Under Investigation**: Extracted data actively undergoing technical integrity audits, metadata normalization, and identifier checks. *(Ex: `abec-open-database`)*.
 - 🔴 **Unaudited**: Raw or newly extracted datasets that have not yet undergone integrity checks.
 
 > **Official Methodological Note:** 
-> *BRAN strictly preserves primary source fidelity and never hallucinates missing information. Gaps and anomalies found on official portals are documented in audit logs and addressed through active investigation and direct contact with organizing institutions.*
+> *BRAN strictly preserves primary source fidelity and never hallucinates missing information. Gaps and anomalies found on source portals are documented and handled technically in audit reports.*
 
 </details>
 

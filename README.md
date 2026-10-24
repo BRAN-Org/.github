@@ -17,12 +17,12 @@
 
 Catálogo público de bases de dados bibliométricos da produção científica brasileira, disponibilizadas em formatos abertos (`JSON`/`CSV`), com API REST gratuita e dashboard interativo para análise.
 
-| Repositório | Evento / Fonte Oficial | Registros | Confiabilidade |
+| Repositório | Acervo Histórico / Fonte | Registros | Confiabilidade |
 | :--- | :--- | :---: | :---: |
-| [enancib-open-database](https://github.com/BRAN-Org/enancib-open-database) | [ENANCIB (ANCIB / BENANCIB)](https://enancib.ancib.org/) | **6.998 Artigos** (1994-2026) | [🟢 Auditado e Validado](#-níveis-de-confiabilidade-dos-dados) |
-| [datagramazero-open-database](https://github.com/BRAN-Org/datagramazero-open-database) | [DataGramaZero (DGZero)](http://hdl.handle.net/20.500.11959/1269) | **466 Artigos** (1999-2015) | [🟢 Auditado e Validado](#-níveis-de-confiabilidade-dos-dados) |
-| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting](https://www.abecbrasil.org.br/) | **259 Artigos** (2013-2025) | [🟠 Em Averiguação](#-níveis-de-confiabilidade-dos-dados) |
-| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC](https://ebbc.inf.br) | **643 Artigos** (2012-2024) | [🟡 Fiel à Fonte (Cobertura Incompleta)](#-níveis-de-confiabilidade-dos-dados) |
+| [enancib-open-database](https://github.com/BRAN-Org/enancib-open-database) | [ENANCIB (1994-2026)](https://enancib.ancib.org/) | **6.998 Artigos** (1994-2026) | [🟢 Auditado e Validado](#-níveis-de-confiabilidade-dos-dados) |
+| [datagramazero-open-database](https://github.com/BRAN-Org/datagramazero-open-database) | [DataGramaZero (1999-2015)](http://hdl.handle.net/20.500.11959/1269) | **466 Artigos** (1999-2015) | [🟢 Auditado e Validado](#-níveis-de-confiabilidade-dos-dados) |
+| [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting (2013-2025)](https://www.abecbrasil.org.br/) | **259 Artigos** (2013-2025) | [🟠 Em Averiguação](#-níveis-de-confiabilidade-dos-dados) |
+| [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC (2012-2024)](https://ebbc.inf.br) | **643 Artigos** (2012-2024) | [🟡 Fiel à Fonte (Cobertura Incompleta)](#-níveis-de-confiabilidade-dos-dados) |
 
 > 📅 **Governança & Curadoria Contínua:** Os ciclos periódicos de verificação e atualização dos acervos seguem o nosso [Calendário de Curadoria](CALENDAR.md). Você também pode assinar o feed [iCal (.ics)](https://raw.githubusercontent.com/BRAN-Org/.github/main/calendar.ics) no seu Google Agenda para acompanhar os prazos.
 
@@ -38,13 +38,13 @@ Catálogo público de bases de dados bibliométricos da produção científica b
 
 Para assegurar transparência acadêmica e rigor metodológico, cada repositório da **BRAN Org** possui uma marcação de confiabilidade dos dados:
 
-- 🟢 **Auditado e Validado**: Dados auditados e validados formalmente em conjunto com os organizadores ou comissão oficial do evento.
-- 🟡 **Fiel à Fonte / Cobertura Incompleta**: Os dados reproduzem fielmente tudo o que está publicado no site oficial, mas o acervo original possui lacunas conhecidas (como anos de anais não digitalizados pela organização, ausência de DOIs na origem ou edições históricas faltantes). *(Ex: `ebbc-open-database`)*.
-- 🟠 **Em Averiguação**: Dados coletados que estão ativamente sendo averiguados, passando por auditoria técnica de integridade ou aguardando resposta formal da instituição organizadora. *(Ex: `abec-open-database`)*.
+- 🟢 **Auditado e Validado**: Dados auditados e validados com rigor metodológico, conferência de integridade e verificação contra os anais e publicações originais.
+- 🟡 **Fiel à Fonte / Cobertura Incompleta**: Os dados reproduzem fielmente os registros disponíveis na fonte primária, com documentação explícita de eventuais lacunas do acervo histórico original (como anos não digitalizados ou ausência de DOIs na origem). *(Ex: `ebbc-open-database`)*.
+- 🟠 **Em Averiguação**: Dados coletados que estão passando por auditoria técnica de integridade, normalização de metadados e checagem de identificadores. *(Ex: `abec-open-database`)*.
 - 🔴 **Não Auditado**: Dados brutos ou recém-extraídos que ainda não passaram por averiguação de integridade.
 
 > **Nota Metodológica Oficial:** 
-> *A BRAN preserva a fidelidade estrita à fonte de origem e nunca inventa dados inexistentes. Discrepâncias e lacunas identificadas nos portais oficiais são registradas nos relatórios de auditoria e tratadas via averiguação ativa e contato direto com as instituições organizadoras.*
+> *A BRAN preserva a fidelidade estrita à fonte de origem e nunca inventa dados inexistentes. Discrepâncias e lacunas identificadas nos portais de origem são registradas e tratadas tecnicamente nos relatórios de auditoria.*
 
 </details>
 
