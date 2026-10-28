@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-BRAN Org - Notificador de Curadoria via GitHub Issues.
-Inspeciona tarefas ativas do mês e abre issues de checklist com deduplicação.
+BRAN Org - CRONA Bot: Notificador de Curadoria via GitHub Issues.
+Inspeciona tarefas ativas do mês conforme o curation-schedule.yml,
+audita status de saúde da base e abre issues de checklist com deduplicação
+diretamente nos repositórios alvo marcando o mantenedor responsável.
 """
 
 import sys
@@ -36,7 +38,7 @@ def check_existing_issue(repo: str, title_prefix: str, year: int) -> bool:
         "--json", "number,title"
     ])
     if code != 0:
-        print(f"Aviso ao consultar issues existentes: {err}")
+        print(f"Aviso ao consultar issues existentes em {repo}: {err}")
         return False
     
     try:
@@ -44,7 +46,7 @@ def check_existing_issue(repo: str, title_prefix: str, year: int) -> bool:
         for issue in issues:
             title = issue.get("title", "")
             if title_prefix.lower() in title.lower() and str(year) in title:
-                print(f"Issue existente detectada: #{issue.get('number')} - '{title}'")
+                print(f"Issue existente detectada em {repo}: #{issue.get('number')} - '{title}'")
                 return True
     except Exception as e:
         print(f"Erro ao analisar issues existentes: {e}")
@@ -55,7 +57,7 @@ def check_existing_issue(repo: str, title_prefix: str, year: int) -> bool:
 
 def create_issue(repo: str, title: str, body: str, labels: list, assignee: str, dry_run: bool = False):
     if dry_run:
-        print(f"\n[DRY RUN] Criaria Issue:")
+        print(f"\n[DRY RUN] CRONA criaria Issue:")
         print(f"Repo: {repo}")
         print(f"Título: {title}")
         print(f"Assignee: {assignee}")
@@ -102,13 +104,28 @@ def create_issue(repo: str, title: str, body: str, labels: list, assignee: str, 
     return True
 
 
+def fetch_database_provenance(repo: str):
+    """Tenta obter o provenance.json da branch principal do repositório para enriquecer a issue."""
+    raw_url = f"https://raw.githubusercontent.com/{repo}/main/provenance.json"
+    try:
+        import urllib.request
+        req = urllib.request.Request(raw_url, headers={"User-Agent": "BRAN-CronaBot/1.0"})
+        with urllib.request.urlopen(req, timeout=5) as resp:
+            if resp.status == 200:
+                return json.loads(resp.read().decode("utf-8"))
+    except Exception:
+        pass
+    return None
+
+
 def main():
-    parser = argparse.ArgumentParser(description="Notificador de tarefas de curadoria BRAN")
+    parser = argparse.ArgumentParser(description="CRONA Bot - Notificador de tarefas e auditorias de curadoria")
     parser.add_argument("--schedule", default=DEFAULT_SCHEDULE_PATH, help="Caminho do curation-schedule.yml")
     parser.add_argument("--year", type=int, help="Ano de referência (padrão: ano atual)")
     parser.add_argument("--month", type=int, help="Mês de referência (padrão: mês atual 1-12)")
-    parser.add_argument("--repo", default=os.getenv("GITHUB_REPOSITORY", "BRAN-Org/.github"), help="Repositório alvo")
-    parser.add_argument("--assignee", help="Assignee da issue")
+    parser.add_argument("--repo", help="Forçar repositório específico em vez do repositório configurado na base")
+    parser.add_argument("--target-db-repos", action="store_true", default=True, help="Abre a issue diretamente no repositório da database (padrão)")
+    parser.add_argument("--assignee", help="Assignee da issue (sobrescreve o default)")
     parser.add_argument("--dry-run", action="store_true", help="Apenas simula a criação das issues")
     
     args = parser.parse_args()
@@ -119,48 +136,73 @@ def main():
     
     schedule_data = load_schedule(args.schedule)
     settings = schedule_data.get("settings", {})
-    assignee = args.assignee or settings.get("default_assignee", "GabrielBaiano")
+    default_assignee = settings.get("default_assignee", "GabrielBaiano")
+    assignee = args.assignee or default_assignee
     
     tasks = get_active_tasks(schedule_data, year, month)
-    print(f"Verificando tarefas para {month:02d}/{year} no repositório {args.repo}...")
+    print(f"🤖 CRONA: Verificando tarefas ativas para {month:02d}/{year}...")
     
     if not tasks:
-        print("Nenhuma tarefa de curadoria prevista para este mês.")
+        print("🤖 CRONA: Nenhuma tarefa de curadoria prevista para este mês no calendário.")
         return
     
-    print(f"Encontradas {len(tasks)} tarefas potenciais:")
+    print(f"🤖 CRONA: Encontradas {len(tasks)} tarefas potenciais:")
     for t in tasks:
-        print(f"- {t['name']}")
+        print(f"- {t['name']} ({t.get('repo')})")
         
     for task in tasks:
         short_name = task["short_name"]
-        title_prefix = f"[Curadoria] {short_name}"
-        title = f"{title_prefix}: Verificação de Anais e Integridade ({year})"
+        target_repo = args.repo or (task.get("repo") if args.target_db_repos else "BRAN-Org/calendar_config")
+        title_prefix = f"[CRONA/Curadoria] {short_name}"
+        title = f"{title_prefix}: Verificação de Anais e Auditoria ({year})"
         
         # Deduplicação
-        if not args.dry_run and check_existing_issue(args.repo, title_prefix, year):
-            print(f"Ignorando '{short_name}' ({year}): Issue para este ciclo já existe.")
+        if not args.dry_run and check_existing_issue(target_repo, title_prefix, year):
+            print(f"Ignorando '{short_name}' ({year}): Issue para este ciclo já existe em {target_repo}.")
             continue
             
         checklist_str = "\n".join([f"- [ ] {item}" for item in task.get("checklist", [])])
         
-        body = f"""## Ciclo de Curadoria: {task['name']} ({year})
+        # Enriquecimento com provenance.json
+        provenance = fetch_database_provenance(task.get("repo", ""))
+        prov_info = ""
+        if provenance:
+            health = provenance.get("health_level", "NÃO INFORMADO")
+            records = provenance.get("total_records", "N/A")
+            doi_rate = provenance.get("doi_resolution_rate")
+            doi_rate_str = f"{doi_rate * 100:.1f}%" if doi_rate is not None else "Ainda não auditado"
+            last_audit = provenance.get("last_audit_at", "N/A")
+            prov_info = f"""
+### 📊 Status de Integridade da Base (Última Auditoria)
+- **Nível de Saúde:** `{health}`
+- **Total de Registros:** `{records}`
+- **Taxa de Resolução de DOIs:** `{doi_rate_str}`
+- **Última Auditoria:** `{last_audit}`
+"""
+
+        mention_str = f"@{assignee}" if assignee else "equipe de curadoria"
+
+        body = f"""## 🤖 Alerta de Curadoria CRONA: {task['name']} ({year})
+
+Olá {mention_str}! Segundo o [Calendário Oficial de Curadoria da BRAN Org](https://github.com/BRAN-Org/calendar_config), o mês **{month:02d}/{year}** é a janela programada para verificar atualizações no evento **{short_name}**.
 
 **Janela de Verificação:** Mês {month:02d}/{year}  
-**Repositório:** [{task['repo']}](https://github.com/{task['repo']})  
-**Fonte Oficial:** [{task['url']}]({task['url']})  
-
-### Objetivo
+**Repositório Oficial:** [{task['repo']}](https://github.com/{task['repo']})  
+**Portal Primário:** [{task['url']}]({task['url']})  
+{prov_info}
+### 🎯 Objetivo do Ciclo
 {task['description']}
 
-### Checklist Operacional
+### 📋 Checklist Operacional Recomendado
 {checklist_str}
+- [ ] Executar auditoria de DOIs e integridade com a CRONA (`crona_audit_engine.py`)
+- [ ] Confirmar integridade de cold storage no Zenodo
 
 ---
-*Esta issue foi aberta automaticamente pelo workflow de [Calendário de Curadoria da BRAN Org](CALENDAR.md).*
+*Esta issue foi gerada automaticamente pelo **CRONA Bot** (@crona-bot) via `calendar_config/curation-schedule.yml`.*
 """
         create_issue(
-            repo=args.repo,
+            repo=target_repo,
             title=title,
             body=body,
             labels=task.get("labels", ["curation"]),

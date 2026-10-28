@@ -1,0 +1,244 @@
+name: Reusable CRONA Database Governance CI
+
+on:
+  workflow_call:
+    inputs:
+      data_file:
+        description: 'Caminho do dataset JSON principal (ex: data/ebbc_articles.json)'
+        required: false
+        type: string
+        default: ''
+      schema_file:
+        description: 'Caminho do schema de artigo (opcional)'
+        required: false
+        type: string
+        default: 'schemas/article.v1.schema.json'
+      sample_size:
+        description: 'Número de DOIs para testar em PRs (0 para todos)'
+        required: false
+        type: number
+        default: 50
+    secrets:
+      CRONA_APP_ID:
+        required: false
+      CRONA_PRIVATE_KEY:
+        required: false
+
+jobs:
+  crona-guard:
+    name: CRONA Bot Guard & Code Review
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: Checkout Repositório Alvo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Obter Token da CRONA (GitHub App)
+        id: app-token
+        if: ${{ secrets.CRONA_APP_ID != '' && secrets.CRONA_PRIVATE_KEY != '' }}
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.CRONA_APP_ID }}
+          private-key: ${{ secrets.CRONA_PRIVATE_KEY }}
+
+      - name: Definir Token Ativo
+        id: auth
+        run: |
+          if [ -n "${{ steps.app-token.outputs.token }}" ]; then
+            echo "token=${{ steps.app-token.outputs.token }}" >> $GITHUB_OUTPUT
+            echo "bot_name=crona-bot[bot]" >> $GITHUB_OUTPUT
+          else
+            echo "token=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_OUTPUT
+            echo "bot_name=github-actions[bot]" >> $GITHUB_OUTPUT
+          fi
+
+      # 1. BLOQUEIO DE FORKS EXTERNOS EM DADOS
+      - name: Verificar Política de Contribuição em Dados (Forks Externos)
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == true
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ steps.auth.outputs.token }}
+          script: |
+            const message = `🤖 **CRONA Bot Guard**: Olá! Agradecemos pelo interesse em colaborar com a **BRAN Org**.
+
+            Conforme documentado em nossas [Diretrizes de Contribuição](https://github.com/BRAN-Org/.github/blob/main/CONTRIBUTING.md#1-correção-e-apontamento-de-erros-em-dados), repositórios de bases de dados acadêmicas **não aceitam alterações diretas de dados via Pull Request de forks externos** para assegurar a rastreabilidade estrita da proveniência (\`provenance.json\`) e a integridade da fonte primária.
+
+            Para reportar inconsistências ou atualizações:
+            1. Abra uma **Issue** neste repositório.
+            2. Forneça o link da publicação oficial na fonte primária.
+
+            Nossa equipe de curadoria auditará a fonte canônica e aplicará a atualização.`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: message
+            });
+
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              state: 'closed'
+            });
+            core.setFailed("PR externo em base de dados encerrado conforme política de proveniência.");
+
+      - name: Configurar Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar Ferramentas de Validação
+        run: pip install check-jsonschema jsonschema
+
+      - name: Baixar Schemas Canônicos
+        run: |
+          mkdir -p .bran_schemas
+          curl -sSL -o .bran_schemas/article.v1.schema.json https://raw.githubusercontent.com/BRAN-Org/schemas/main/schemas/article.v1.schema.json
+          curl -sSL -o .bran_schemas/provenance.v1.schema.json https://raw.githubusercontent.com/BRAN-Org/schemas/main/schemas/provenance.v1.schema.json
+
+      - name: Baixar Engine da CRONA
+        run: |
+          mkdir -p .bran_scripts
+          curl -sSL -o .bran_scripts/crona_audit_engine.py https://raw.githubusercontent.com/BRAN-Org/.github/main/scripts/crona_audit_engine.py
+
+      - name: Localizar Arquivo de Dados
+        id: find-data
+        run: |
+          if [ -n "${{ inputs.data_file }}" ]; then
+            TARGET="${{ inputs.data_file }}"
+          else
+            TARGET=$(find data -name "*.json" 2>/dev/null | head -n 1)
+          fi
+          echo "target_file=$TARGET" >> $GITHUB_OUTPUT
+          echo "Alvo detectado: $TARGET"
+
+      # 2. EXECUÇÃO DA AUDITORIA DA CRONA COM TRIAGEM DE 3 NÍVEIS
+      - name: Executar Auditoria CRONA (PR Mode)
+        id: crona-audit
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        run: |
+          EXTRA_ARGS=""
+          if [ "${{ inputs.sample_size }}" -gt 0 ]; then
+            EXTRA_ARGS="--sample ${{ inputs.sample_size }}"
+          fi
+          python3 .bran_scripts/crona_audit_engine.py \
+            --file "${{ steps.find-data.outputs.target_file }}" \
+            --schema .bran_schemas/article.v1.schema.json \
+            --output-md crona_report.md \
+            --output-review crona_review.json \
+            --output-json crona_report.json \
+            $EXTRA_ARGS
+          echo "exit_code=$?" >> $GITHUB_OUTPUT
+
+      # 3. CODE REVIEW DA CRONA (INLINE COMMENTS, STICKY UPDATE & AUTO-APPROVE)
+      - name: Processar Code Review e Decisão da CRONA no PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ steps.auth.outputs.token }}
+          script: |
+            const fs = require('fs');
+            if (!fs.existsSync('crona_review.json')) {
+              console.log("Arquivo crona_review.json não encontrado.");
+              return;
+            }
+
+            const reviewData = JSON.parse(fs.readFileSync('crona_review.json', 'utf8'));
+            const isFatal = reviewData.decision === 'FATAL_ERROR';
+            const isApproved = reviewData.decision === 'APPROVE';
+
+            // 1. Atualizar ou Criar Sticky Comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const stickyMarker = '<!-- id: crona-integrity-report -->';
+            const botComment = comments.find(c => c.body && c.body.includes(stickyMarker));
+
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: reviewData.summary
+              });
+              console.log(`Sticky comment #${botComment.id} atualizado com sucesso.`);
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: reviewData.summary
+              });
+              console.log("Novo sticky comment da CRONA criado no PR.");
+            }
+
+            // 2. Submeter Code Review Formal (APPROVE ou REQUEST_CHANGES com Inline Comments)
+            if (isApproved) {
+              try {
+                await github.rest.pulls.createReview({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: context.issue.number,
+                  event: 'APPROVE',
+                  body: '🤖 **CRONA Bot**: Dados estruturais e schemas 100% validados! PR aprovado para merge.'
+                });
+                console.log("Review APPROVE submetido com sucesso pela CRONA.");
+              } catch (e) {
+                console.log("Aviso ao submeter APPROVE (autor do PR pode ser o mesmo do token):", e.message);
+              }
+            } else if (!isFatal && reviewData.comments && reviewData.comments.length > 0) {
+              // Tenta submeter inline comments via review
+              try {
+                await github.rest.pulls.createReview({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: context.issue.number,
+                  event: 'REQUEST_CHANGES',
+                  body: '🤖 **CRONA Bot**: Inconsistências de schema detectadas. Verifique os comentários inline neste PR.',
+                  comments: reviewData.comments.slice(0, 15) // limite de inline comments por review
+                });
+              } catch (err) {
+                console.log("Aviso ao submeter review com inline comments:", err.message);
+              }
+            }
+
+            // 3. Quebrar o check se houver erro fatal ou schema inválido
+            if (isFatal || !isApproved) {
+              core.setFailed("A auditoria da CRONA reprovou este PR por inconsistências estruturais no dataset.");
+            }
+
+      # 4. ATUALIZAÇÃO CONTÍNUA EM PUSH / CRON NA MAIN
+      - name: Executar Auditoria Completa e Atualizar Histórico (Push / Schedule)
+        if: github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          python3 .bran_scripts/crona_audit_engine.py \
+            --file "${{ steps.find-data.outputs.target_file }}" \
+            --schema .bran_schemas/article.v1.schema.json \
+            --provenance provenance.json \
+            --update-provenance \
+            --output-md crona_audit_summary.md
+
+      - name: Comitar Atualização de Provenance
+        if: github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name "${{ steps.auth.outputs.bot_name }}"
+          git config user.email "${{ steps.auth.outputs.bot_name }}@users.noreply.github.com"
+          git add provenance.json
+          if git diff --staged --quiet; then
+            echo "Nenhuma alteração em provenance.json para comitar."
+          else
+            git commit -m "chore(audit): registrar auditoria de dados e DOIs por CRONA [skip ci]"
+            git push origin HEAD:${{ github.ref_name }}
+          fi

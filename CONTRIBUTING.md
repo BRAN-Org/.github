@@ -10,26 +10,38 @@ Toda a comunidade acadêmica e técnica — pesquisadores, bibliotecários, cien
 
 ---
 
+## Governança Automatizada: Bots CRONA e BRAN
+
+A organização opera com dois bots oficiais para manter a integridade científica e o ciclo de vida dos repositórios:
+
+- **CRONA (`@crona-bot`)**: Guardiã dos repositórios de dados (`*-open-database`) e governança temporal (`calendar_config`). Realiza testes de resolução de DOIs, validação estrita de esquemas JSON, atualização diária do calendário e auditoria contínua de proveniência.
+- **BRAN (`@bran-bot`)**: Guardião dos repositórios de software e infraestrutura (`bibliolatam`, `schemas`, ferramentas e templates). Gerencia testes automatizados, padronização de commits semânticos e sincronização de código.
+
+---
+
 ## Formas de Contribuição
 
 ### 1. Correção e Apontamento de Erros em Dados
-
 Se você identificou uma inconsistência, título cortado, DOI ausente na extração ou metadado divergente da fonte original em uma de nossas bases:
 
 1. Acesse o repositório específico do dataset (ex: [`ebbc-open-database`](https://github.com/BRAN-Org/ebbc-open-database) ou [`abec-open-database`](https://github.com/BRAN-Org/abec-open-database)).
-2. Abra uma **Issue** detalhando o erro e, **obrigatoriamente**, forneça o link da fonte primária oficial onde o dado correto está publicado.
-3. *Aviso sobre Pull Requests em bases de dados*: Para garantir a inviolabilidade científica e a rastreabilidade da proveniência (`provenance.json`), repositórios de bases de dados não recebem alterações diretas via PR de terceiros. As correções são auditadas e aplicadas pelos mantenedores a partir da fonte oficial indicada.
+2. Abra uma **Issue** detalhando o erro e, **obrigatoriamente**, forneça o link da publicação oficial na fonte primária onde o dado correto está disponível.
+3. **Política de Pull Requests em Dados**: Para garantir a inviolabilidade científica e a rastreabilidade da proveniência (`provenance.json`), repositórios de bases de dados **não aceitam alterações diretas via Pull Request de forks externos**. Qualquer PR externo em arquivos de dados é automaticamente encerrado pela **CRONA**, orientando a abertura de uma Issue para curadoria canônica.
 
-### 2. Sugestão e Submissão de Novos Acervos
+### 2. Fluxo de Curadoria Interna de Dados (Mantenedores e Curadores)
+Para curadores que enviam novos anais ou correções em branches internas da organização:
+- **Nível 1 (Erro Fatal)**: Se o arquivo JSON contiver erros de sintaxe (malformado), a CRONA interrompe o pipeline e solicita a correção do arquivo.
+- **Nível 2 (Erros de Schema)**: Se campos obrigatórios estiverem ausentes ou fora de especificação, a CRONA insere comentários *inline* de Code Review diretamente nas linhas com erro no PR.
+- **Nível 3 (Aprovação Automática)**: Se a estrutura e o schema estiverem 100% em conformidade, a CRONA submete uma revisão de **`APPROVE`** formal no PR e publica o relatório de integridade de DOIs (sem bloquear por links caídos na origem). O mantenedor pode então realizar o merge.
 
+### 3. Sugestão e Submissão de Novos Acervos
 Se você organiza um evento acadêmico, representa uma sociedade científica ou possui anais e acervos históricos que correm risco de desaparecimento digital (*link rot*):
 
 - Submeta a indicação através do **[Formulário de Submissão de Datasets](https://forms.gle/jNBuP1mjyUXc6v1fA)**.
 - Ou abra uma discussão via **[Issues do .github](https://github.com/BRAN-Org/.github/issues)** descrevendo o evento, volume aproximado de artigos e links disponíveis.
 
-### 3. Contribuição com Código e Ferramentas Abertas
-
-Desenvolvemos softwares, analisadores e bibliotecas livres (como o pacote [`bibliolatam`](https://github.com/BRAN-Org/bibliolatam), o repositório de validação [`schemas`](https://github.com/BRAN-Org/schemas) e templates de interface). Nesses repositórios, Pull Requests são muito bem-vindos.
+### 4. Contribuição com Código e Ferramentas Abertas
+Desenvolvemos softwares, analisadores e bibliotecas livres (como o pacote [`bibliolatam`](https://github.com/BRAN-Org/bibliolatam), o repositório [`schemas`](https://github.com/BRAN-Org/schemas) e templates de interface). Nesses repositórios, Pull Requests são muito bem-vindos.
 
 #### Fluxo para Envio de Código:
 1. Faça um Fork do repositório correspondente.
@@ -40,7 +52,7 @@ Desenvolvemos softwares, analisadores e bibliotecas livres (como o pacote [`bibl
    - `fix:` correção de bug em rotina existente.
    - `docs:` melhorias em documentação.
    - `test:` adição ou ajuste de suíte de testes.
-5. Abra o Pull Request descrevendo claramente o que foi feito, o problema resolvido e as evidências de teste.
+5. O bot **BRAN** validará o formato do commit e executará as suites de testes (`testthat`/`pytest`). Estando verde, seu PR será revisado e mesclado.
 
 ---
 
