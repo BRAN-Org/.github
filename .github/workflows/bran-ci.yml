@@ -36,8 +36,8 @@ jobs:
 
       - name: Obter Token do BRAN Bot (GitHub App)
         id: app-token
-        if: ${{ secrets.BRAN_APP_ID != '' && secrets.BRAN_PRIVATE_KEY != '' }}
         uses: actions/create-github-app-token@v1
+        continue-on-error: true
         with:
           app-id: ${{ secrets.BRAN_APP_ID }}
           private-key: ${{ secrets.BRAN_PRIVATE_KEY }}

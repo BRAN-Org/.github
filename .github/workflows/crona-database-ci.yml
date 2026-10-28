@@ -41,8 +41,8 @@ jobs:
 
       - name: Obter Token da CRONA (GitHub App)
         id: app-token
-        if: ${{ secrets.CRONA_APP_ID != '' && secrets.CRONA_PRIVATE_KEY != '' }}
         uses: actions/create-github-app-token@v1
+        continue-on-error: true
         with:
           app-id: ${{ secrets.CRONA_APP_ID }}
           private-key: ${{ secrets.CRONA_PRIVATE_KEY }}
