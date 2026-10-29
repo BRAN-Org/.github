@@ -24,7 +24,7 @@ Catálogo público de bases de dados bibliométricos da produção científica b
 | Repositório | Acervo Histórico / Fonte | Registros | Confiabilidade |
 | :--- | :--- | :---: | :---: |
 | [enancib-open-database](https://github.com/BRAN-Org/enancib-open-database) | [ENANCIB (1994-2026)](https://enancib.ancib.org/) | **6.998 Artigos** (1994-2026) | [🟢 Auditado e Validado](#-níveis-de-confiabilidade-dos-dados) |
-| [datagramazero-open-database](https://github.com/BRAN-Org/datagramazero-open-database) | [DataGramaZero (1999-2015)](http://hdl.handle.net/20.500.11959/1269) | **466 Artigos** (1999-2015) | [🟢 Auditado e Validado](#-níveis-de-confiabilidade-dos-dados) |
+| [datagramazero-open-database](https://github.com/BRAN-Org/datagramazero-open-database) | [DataGramaZero (1999-2015)](http://hdl.handle.net/20.500.11959/1269) | **485 Artigos** (1999-2015) | [🟠 Em Averiguação](#-níveis-de-confiabilidade-dos-dados) |
 | [abec-open-database](https://github.com/BRAN-Org/abec-open-database) | [ABEC Meeting (2013-2025)](https://www.abecbrasil.org.br/) | **259 Artigos** (2013-2025) | [🟠 Em Averiguação](#-níveis-de-confiabilidade-dos-dados) |
 | [ebbc-open-database](https://github.com/BRAN-Org/ebbc-open-database) | [EBBC (2012-2024)](https://ebbc.inf.br) | **643 Artigos** (2012-2024) | [🟡 Fiel à Fonte (Cobertura Incompleta)](#-níveis-de-confiabilidade-dos-dados) |
 
