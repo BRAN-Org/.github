@@ -166,6 +166,8 @@ def main():
         # Enriquecimento com provenance.json
         provenance = fetch_database_provenance(task.get("repo", ""))
         prov_info = ""
+        cold_storage_alert = ""
+        cold_storage_task = ""
         if provenance:
             health = provenance.get("health_level", "NÃO INFORMADO")
             records = provenance.get("total_records", "N/A")
@@ -179,25 +181,34 @@ def main():
 - **Taxa de Resolução de DOIs:** `{doi_rate_str}`
 - **Última Auditoria:** `{last_audit}`
 """
+            cold_storage = provenance.get("cold_storage", {})
+            if cold_storage.get("pdf_corpus_pending"):
+                cold_storage_alert = """
+> ⚠️ **Preservação de PDFs Pendente (Cold Storage)**:
+> O acervo de dados e metadados está sincronizado no Zenodo, mas o arquivo completo de PDFs de texto completo precisa ser sincronizado localmente via `npm run data:zenodo:full`.
+"""
+                cold_storage_task = "- [ ] ⚠️ Sincronizar pacote completo de PDFs (Cold Storage) com o Zenodo (Pendente upload local via `npm run data:zenodo:full`)\n"
 
         mention_str = f"@{assignee}" if assignee else "equipe de curadoria"
+        suggested_calver = f"v{year}.{month:02d}"
 
         body = f"""## 🤖 Alerta de Curadoria CRONA: {task['name']} ({year})
 
 Olá {mention_str}! Segundo o [Calendário Oficial de Curadoria da BRAN Org](https://github.com/BRAN-Org/calendar_config), o mês **{month:02d}/{year}** é a janela programada para verificar atualizações no evento **{short_name}**.
 
 **Janela de Verificação:** Mês {month:02d}/{year}  
+**Versão do Ciclo Sugerida:** `{suggested_calver}` (Padrão CalVer da BRAN Org)  
 **Repositório Oficial:** [{task['repo']}](https://github.com/{task['repo']})  
 **Portal Primário:** [{task['url']}]({task['url']})  
-{prov_info}
+{prov_info}{cold_storage_alert}
 ### 🎯 Objetivo do Ciclo
 {task['description']}
 
 ### 📋 Checklist Operacional Recomendado
 {checklist_str}
-- [ ] Executar auditoria de DOIs e integridade com a CRONA (`crona_audit_engine.py`)
-- [ ] Confirmar integridade de cold storage no Zenodo
-
+- [ ] Executar auditoria de DOIs e integridade com a CRONA (`crona_audit_engine.py` ou `npm run data:audit`)
+- [ ] Confirmar integridade do pacote no Zenodo ao publicar a Release `{suggested_calver}`
+{cold_storage_task}
 ---
 *Esta issue foi gerada automaticamente pelo **CRONA Bot** (@crona-bot) via `calendar_config/curation-schedule.yml`.*
 """

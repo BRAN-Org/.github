@@ -18,10 +18,17 @@ on:
         required: false
         type: number
         default: 50
+      sync_zenodo:
+        description: 'Sincronizar pacotes com Zenodo'
+        required: false
+        type: boolean
+        default: false
     secrets:
       CRONA_APP_ID:
         required: false
       CRONA_PRIVATE_KEY:
+        required: false
+      ZENODO_TOKEN:
         required: false
 
 jobs:
@@ -230,8 +237,27 @@ jobs:
             --update-provenance \
             --output-md crona_audit_summary.md
 
+      # 5. SINCRONIZAÇÃO COM ZENODO EM RELEASES CALVER
+      - name: Baixar Engine de Sincronização Zenodo da CRONA
+        if: github.event_name == 'release' || inputs.sync_zenodo == true
+        run: |
+          mkdir -p .bran_scripts
+          curl -sSL -o .bran_scripts/crona_zenodo_sync.py https://raw.githubusercontent.com/BRAN-Org/.github/main/scripts/crona_zenodo_sync.py
+
+      - name: Sincronizar Pacotes de Dados no Zenodo (Release CalVer)
+        if: github.event_name == 'release' || inputs.sync_zenodo == true
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: |
+          TAG_NAME="${{ github.event.release.tag_name || github.ref_name }}"
+          echo "Tag de release identificada: $TAG_NAME"
+          python3 .bran_scripts/crona_zenodo_sync.py \
+            --file "${{ steps.find-data.outputs.target_file }}" \
+            --tag "$TAG_NAME" \
+            --upload
+
       - name: Comitar Atualização de Provenance
-        if: github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event_name == 'release'
         run: |
           git config user.name "${{ steps.auth.outputs.bot_name }}"
           git config user.email "${{ steps.auth.outputs.bot_name }}@users.noreply.github.com"
@@ -239,6 +265,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "Nenhuma alteração em provenance.json para comitar."
           else
-            git commit -m "chore(audit): registrar auditoria de dados e DOIs por CRONA [skip ci]"
+            git commit -m "chore(audit): registrar auditoria e sincronização Zenodo por CRONA [skip ci]"
+            git pull --rebase origin ${{ github.ref_name }} || true
             git push origin HEAD:${{ github.ref_name }}
           fi
