@@ -27,6 +27,21 @@ Repositórios de bases de dados acadêmicas da BRAN Org **não utilizam SemVer t
 
 ---
 
+## 1.2 Taxonomia Oficial de Identificadores Acadêmicos
+
+Todo artigo acadêmico catalogado na BRAN Org **deve possuir obrigatoriamente um identificador rastreável**. Registros órfãos (sem `id` e sem `doi`) violam o schema canônico (`article.v1.schema.json`) e têm o Pull Request reprovado automaticamente pela CRONA.
+
+A CRONA categoriza e reporta os identificadores nas seguintes classes:
+
+1. **`DOI` (Digital Object Identifier)**: Identificador persistente formal (prefixo `10.xxxx/...`). A CRONA audita via rede se o link está ativo (200 OK) ou se é inativo na fonte primária (soft fail).
+2. **`OJS_INTERNAL_ID` (Identificador Nativo OJS/PKP)**: ID numérico sequencial da submissão no Open Journal/Conference Systems (ex: `id: "51"` que mapeia para `/article/view/51` no ENANCIB).
+3. **`CANONICAL_SLUG` (Slug Estruturado de Acervo Histórico)**: Código unívoco e determinístico baseado na matriz da edição para acervos pré-OJS ou estáticos (ex: `dgz-v00-n00-a01` no DataGramaZero).
+4. **`HANDLE_SYSTEM` (CNRI Handle / DSpace)**: Identificador persistente de repositórios universitários (ex: `hdl:20.500.11959/1269`).
+5. **`CONTENT_HASH` (Hash Criptográfico de Proveniência)**: Hash SHA-256 do arquivo fonte bruto quando inexiste código na editora.
+6. **`PERMALINK_URI` (URI / URL Canônica Direta)**: Endereço web direto da publicação ou PDF catalogado.
+
+---
+
 ## 2. Funções e Automações da CRONA
 
 ### 2.1 Governança Temporal (Diária e Mensal)
