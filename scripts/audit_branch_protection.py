@@ -108,8 +108,6 @@ def create_protection_alert_issue(repo: str, assignee: str, dry_run: bool = Fals
 
 > *"Deixar a porta aberta assim dá medo... qualquer push direto na main pode bagunçar o histórico e eu não sei lidar com isso."*
 
-Olá @{assignee}!
-
 A branch principal (`main`) de [{repo}](https://github.com/{repo}) está atualmente sem regras de proteção ativadas.
 
 ### Risco
@@ -187,7 +185,7 @@ def close_protection_alert_issue(repo: str, issue_number: int, dry_run: bool = F
 def main():
     parser = argparse.ArgumentParser(description="CRONA Bot - Watchdog de Proteção de Branches de Bases de Dados")
     parser.add_argument("--schedule", default=DEFAULT_SCHEDULE_PATH, help="Caminho do curation-schedule.yml")
-    parser.add_argument("--assignee", default="GabrielBaiano", help="Usuário a ser marcado nas issues")
+    parser.add_argument("--assignee", default=None, help="Usuário a ser marcado nas issues (opcional)")
     parser.add_argument("--dry-run", action="store_true", help="Apenas simula a checagem sem abrir issues reais")
 
     args = parser.parse_args()

@@ -136,7 +136,7 @@ def main():
     
     schedule_data = load_schedule(args.schedule)
     settings = schedule_data.get("settings", {})
-    default_assignee = settings.get("default_assignee", "GabrielBaiano")
+    default_assignee = settings.get("default_assignee")
     assignee = args.assignee or default_assignee
     
     tasks = get_active_tasks(schedule_data, year, month)
@@ -189,14 +189,13 @@ def main():
 """
                 cold_storage_task = "- [ ] ⚠️ Sincronizar pacote completo de PDFs (Cold Storage) com o Zenodo (Pendente upload local via `npm run data:zenodo:full`)\n"
 
-        mention_str = f"@{assignee}" if assignee else "equipe de curadoria"
         suggested_calver = f"v{year}.{month:02d}"
 
         body = f"""## Curadoria do Acervo: {task['name']} ({year})
 
 > *"Chegou a janela do calendário... dei uma olhada na programação e separei as tarefas deste ciclo."*
 
-Olá {mention_str}! Conforme o [Calendário Oficial de Curadoria da BRAN Org](https://github.com/BRAN-Org/calendar_config), o mês **{month:02d}/{year}** é a janela programada para verificar atualizações no evento **{short_name}**.
+Conforme o [Calendário Oficial de Curadoria da BRAN Org](https://github.com/BRAN-Org/calendar_config), o mês **{month:02d}/{year}** é a janela programada para verificar atualizações no evento **{short_name}**.
 
 **Janela de Verificação:** Mês {month:02d}/{year}  
 **Versão Sugerida:** `{suggested_calver}` (Padrão CalVer da BRAN Org)  
