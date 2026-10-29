@@ -106,7 +106,7 @@ def create_protection_alert_issue(repo: str, assignee: str, dry_run: bool = Fals
     title = "[CRONA/Segurança] Proteção de Branch Ausente na Main"
     body = f"""## Proteção de Branch Ausente na Main
 
-> *"Deixar a porta aberta assim dá medo... qualquer push direto na main pode bagunçar o histórico e eu não sei lidar com isso."*
+> *"Uma branch main desprotegida é uma fenda temporal aberta... qualquer push direto pode causar um paradoxo e quebrar a rastreabilidade do nosso acervo."*
 
 A branch principal (`main`) de [{repo}](https://github.com/{repo}) está atualmente sem regras de proteção ativadas.
 
@@ -167,7 +167,7 @@ gh api -X PUT /repos/{repo}/branches/main/protection \\
 
 def close_protection_alert_issue(repo: str, issue_number: int, dry_run: bool = False):
     """Fecha a issue de alerta informando que a proteção foi restabelecida."""
-    msg = "Proteção de branch restabelecida na `main`. Agora tá tudo seguro e em ordem."
+    msg = "Proteção de branch restabelecida na `main`. A linha do tempo está segura novamente!"
     if dry_run:
         print(f"\n[DRY RUN] CRONA fecharia issue #{issue_number} em {repo}.")
         return True

@@ -2,7 +2,7 @@
 
 > **Guia Operacional para Membros, Curadores e Desenvolvedores da BRAN Org**
 
-A **CRONA** é a GitHub App oficial da **BRAN Org** responsável pela governança temporal, auditoria de integridade de dados, conformidade científica e integração com o Zenodo em todos os repositórios de bases de dados acadêmicas (`*-open-database`) e no repositório central de calendário (`calendar_config`).
+A **CRONA** é a GitHub App oficial da **BRAN Org** responsável pela governança temporal, auditoria de integridade de dados, conformidade científica e integração com o Zenodo em todos os repositórios de bases de dados acadêmicas (`*-open-database`) e no repositório central de calendário (`calendar_config`). Inspirada em **Crona / Chromie** (*Chronormu da Revoada Dragônica Bronze em World of Warcraft*), ela vigia anomalias temporais e mantém as linhas do tempo dos acervos em perfeita ordem ao lado de Brann Bronzebeard.
 
 ---
 

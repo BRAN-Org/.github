@@ -193,7 +193,7 @@ def main():
 
         body = f"""## Curadoria do Acervo: {task['name']} ({year})
 
-> *"Chegou a janela do calendário... dei uma olhada na programação e separei as tarefas deste ciclo."*
+> *"Chegou a janela do calendário! Hora de verificar os anais e manter o fluxo temporal do acervo em dia."*
 
 Conforme o [Calendário Oficial de Curadoria da BRAN Org](https://github.com/BRAN-Org/calendar_config), o mês **{month:02d}/{year}** é a janela programada para verificar atualizações no evento **{short_name}**.
 
