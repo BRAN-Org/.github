@@ -55,6 +55,12 @@ Em qualquer Pull Request que altere arquivos em `data/*.json`, `provenance.json`
 - **Soft Fail**: Links mortos na fonte primária (HTTP 404, 500 ou indisponíveis) **não bloqueiam** o merge. Eles são documentados em tabela para registro histórico e atualizam o campo `doi_resolution_rate` no `provenance.json`.
 - A cada merge na branch `main`, a CRONA comita a atualização criptográfica do `provenance.json` assinada oficialmente como `crona-bot[bot]`.
 
+### 2.4 Watchdog de Proteção de Branches e Alerta Automático
+A integridade da base depende de a branch `main` nunca receber commits diretos sem PR:
+- **Auditoria de Branches**: A CRONA inspeciona se a branch `main` de todos os repositórios `*-open-database` (e do template) possui branch protection ativada.
+- **Abertura de Issue**: Caso uma base esteja desprotegida, a CRONA abre uma issue no repositório (`[CRONA/Segurança] Alerta: Proteção de Branch Ausente na Main`) atribuindo o mantenedor responsável com os comandos exatos de mitigação.
+- **Auto-resolução**: Assim que a proteção for ativada, a CRONA detecta na varredura seguinte e fecha a issue automaticamente com mensagem de conformidade.
+
 ---
 
 ## 3. Sincronização com Zenodo e Gestão de Cold Storage
