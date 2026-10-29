@@ -5,7 +5,6 @@ settings:
   calendar_title: "BRAN Org - Calendário de Curadoria de Dados"
   calendar_description: "Ciclos de verificação, atualização e auditoria das bases de dados da BRAN Org."
   timezone: "America/Sao_Paulo"
-  default_assignee: "GabrielBaiano"
 
 databases:
   - id: "ebbc-open-database"

@@ -2,7 +2,7 @@
 
 > **Guia Operacional para Membros, Curadores e Desenvolvedores da BRAN Org**
 
-A **CRONA** é a GitHub App oficial da **BRAN Org** responsável pela governança temporal, auditoria de integridade de dados, conformidade científica e integração com o Zenodo em todos os repositórios de bases de dados acadêmicas (`*-open-database`) e no repositório central de calendário (`calendar_config`). Inspirada em **Crona / Chromie** (*Chronormu da Revoada Dragônica Bronze em World of Warcraft*), ela vigia anomalias temporais e mantém as linhas do tempo dos acervos em perfeita ordem ao lado de Brann Bronzebeard.
+A **CRONA** é a GitHub App oficial da **BRAN Org** responsável pela governança temporal, auditoria de integridade de dados, conformidade científica e integração com o Zenodo em todos os repositórios de bases de dados acadêmicas (`*-open-database`) e no repositório central de calendário (`calendar_config`). Inspirada em **Crona / Chromie** (*World of Warcraft*), ela vigia anomalias nos dados e mantém as linhas do tempo dos acervos em perfeita ordem ao lado de Brann Bronzebeard.
 
 ---
 
@@ -51,7 +51,7 @@ A CRONA categoriza e reporta os identificadores nas seguintes classes:
   2. Identifica se há eventos com janela aberta de novos anais (EBBC, ENANCIB, ABEC, DataGramaZero).
   3. Inspeciona a saúde atual da base (nível de integridade, contagem e taxa de DOIs).
   4. Sugere a versão do ciclo no padrão `vYYYY.MM`.
-  5. Abre a issue de curadoria **diretamente no repositório da base**, atribuindo e mencionando o mantenedor responsável (ex: `@GabrielBaiano`).
+  5. Abre a issue de curadoria **diretamente no repositório da base** com o checklist operacional do ciclo.
 
 ### 2.2 Guarda e Triagem de Pull Requests (Bases de Dados)
 Em qualquer Pull Request que altere arquivos em `data/*.json`, `provenance.json` ou `schemas/`:
@@ -73,7 +73,7 @@ Em qualquer Pull Request que altere arquivos em `data/*.json`, `provenance.json`
 ### 2.4 Watchdog de Proteção de Branches e Alerta Automático
 A integridade da base depende de a branch `main` nunca receber commits diretos sem PR:
 - **Auditoria de Branches**: A CRONA inspeciona se a branch `main` de todos os repositórios `*-open-database` (e do template) possui branch protection ativada.
-- **Abertura de Issue**: Caso uma base esteja desprotegida, a CRONA abre uma issue no repositório (`[CRONA/Segurança] Alerta: Proteção de Branch Ausente na Main`) atribuindo o mantenedor responsável com os comandos exatos de mitigação.
+- **Abertura de Issue**: Caso uma base esteja desprotegida, a CRONA abre uma issue no repositório (`[CRONA/Segurança] Proteção de Branch Ausente na Main`) com as instruções e comandos exatos de mitigação.
 - **Auto-resolução**: Assim que a proteção for ativada, a CRONA detecta na varredura seguinte e fecha a issue automaticamente com mensagem de conformidade.
 
 ---
