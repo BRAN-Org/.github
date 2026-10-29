@@ -72,15 +72,9 @@ jobs:
         with:
           github-token: ${{ steps.auth.outputs.token }}
           script: |
-            const message = `🤖 **CRONA Bot Guard**: Olá! Agradecemos pelo interesse em colaborar com a **BRAN Org**.
+            const message = `Oi... Para manter a proveniência dos dados sob controle estrito, repositórios de dados da BRAN não aceitam alterações diretas via PR de forks externos.
 
-            Conforme documentado em nossas [Diretrizes de Contribuição](https://github.com/BRAN-Org/.github/blob/main/CONTRIBUTING.md#1-correção-e-apontamento-de-erros-em-dados), repositórios de bases de dados acadêmicas **não aceitam alterações diretas de dados via Pull Request de forks externos** para assegurar a rastreabilidade estrita da proveniência (\`provenance.json\`) e a integridade da fonte primária.
-
-            Para reportar inconsistências ou atualizações:
-            1. Abra uma **Issue** neste repositório.
-            2. Forneça o link da publicação oficial na fonte primária.
-
-            Nossa equipe de curadoria auditará a fonte canônica e aplicará a atualização.`;
+            Se você encontrou alguma inconsistência na base, por favor abra uma issue com o link da publicação na fonte original pra gente atualizar por aqui.`;
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
@@ -199,7 +193,7 @@ jobs:
                   repo: context.repo.repo,
                   pull_number: context.issue.number,
                   event: 'APPROVE',
-                  body: '🤖 **CRONA Bot**: Dados estruturais e schemas 100% validados! PR aprovado para merge.'
+                  body: 'Dei uma olhada no schema e nos dados... parece tudo certo e em ordem. Tudo pronto pro merge.'
                 });
                 console.log("Review APPROVE submetido com sucesso pela CRONA.");
               } catch (e) {
@@ -213,7 +207,7 @@ jobs:
                   repo: context.repo.repo,
                   pull_number: context.issue.number,
                   event: 'REQUEST_CHANGES',
-                  body: '🤖 **CRONA Bot**: Inconsistências de schema detectadas. Verifique os comentários inline neste PR.',
+                  body: 'Encontrei algumas inconsistências nas linhas marcadas... dá uma olhada nos comentários inline pra gente ajustar.',
                   comments: reviewData.comments.slice(0, 15) // limite de inline comments por review
                 });
               } catch (err) {
@@ -223,7 +217,7 @@ jobs:
 
             // 3. Quebrar o check se houver erro fatal ou schema inválido
             if (isFatal || !isApproved) {
-              core.setFailed("A auditoria da CRONA reprovou este PR por inconsistências estruturais no dataset.");
+              core.setFailed("Inconsistências de schema detectadas no dataset.");
             }
 
       # 4. ATUALIZAÇÃO CONTÍNUA EM PUSH / CRON NA MAIN

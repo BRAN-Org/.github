@@ -140,13 +140,13 @@ def main():
     assignee = args.assignee or default_assignee
     
     tasks = get_active_tasks(schedule_data, year, month)
-    print(f"🤖 CRONA: Verificando tarefas ativas para {month:02d}/{year}...")
+    print(f"CRONA: Verificando tarefas ativas para {month:02d}/{year}...")
     
     if not tasks:
-        print("🤖 CRONA: Nenhuma tarefa de curadoria prevista para este mês no calendário.")
+        print("CRONA: Nenhuma tarefa de curadoria prevista para este mês no calendário.")
         return
     
-    print(f"🤖 CRONA: Encontradas {len(tasks)} tarefas potenciais:")
+    print(f"CRONA: Encontradas {len(tasks)} tarefas potenciais:")
     for t in tasks:
         print(f"- {t['name']} ({t.get('repo')})")
         
@@ -175,7 +175,7 @@ def main():
             doi_rate_str = f"{doi_rate * 100:.1f}%" if doi_rate is not None else "Ainda não auditado"
             last_audit = provenance.get("last_audit_at", "N/A")
             prov_info = f"""
-### 📊 Status de Integridade da Base (Última Auditoria)
+### Status de Integridade da Base (Última Auditoria)
 - **Nível de Saúde:** `{health}`
 - **Total de Registros:** `{records}`
 - **Taxa de Resolução de DOIs:** `{doi_rate_str}`
@@ -192,25 +192,25 @@ def main():
         mention_str = f"@{assignee}" if assignee else "equipe de curadoria"
         suggested_calver = f"v{year}.{month:02d}"
 
-        body = f"""## 🤖 Alerta de Curadoria CRONA: {task['name']} ({year})
+        body = f"""## Curadoria do Acervo: {task['name']} ({year})
 
-Olá {mention_str}! Segundo o [Calendário Oficial de Curadoria da BRAN Org](https://github.com/BRAN-Org/calendar_config), o mês **{month:02d}/{year}** é a janela programada para verificar atualizações no evento **{short_name}**.
+> *"Chegou a janela do calendário... dei uma olhada na programação e separei as tarefas deste ciclo."*
+
+Olá {mention_str}! Conforme o [Calendário Oficial de Curadoria da BRAN Org](https://github.com/BRAN-Org/calendar_config), o mês **{month:02d}/{year}** é a janela programada para verificar atualizações no evento **{short_name}**.
 
 **Janela de Verificação:** Mês {month:02d}/{year}  
-**Versão do Ciclo Sugerida:** `{suggested_calver}` (Padrão CalVer da BRAN Org)  
+**Versão Sugerida:** `{suggested_calver}` (Padrão CalVer da BRAN Org)  
 **Repositório Oficial:** [{task['repo']}](https://github.com/{task['repo']})  
 **Portal Primário:** [{task['url']}]({task['url']})  
 {prov_info}{cold_storage_alert}
-### 🎯 Objetivo do Ciclo
+### Objetivo do Ciclo
 {task['description']}
 
-### 📋 Checklist Operacional Recomendado
+### Checklist Operacional Recomendado
 {checklist_str}
-- [ ] Executar auditoria de DOIs e integridade com a CRONA (`crona_audit_engine.py` ou `npm run data:audit`)
+- [ ] Executar auditoria de DOIs e integridade (`npm run data:audit`)
 - [ ] Confirmar integridade do pacote no Zenodo ao publicar a Release `{suggested_calver}`
 {cold_storage_task}
----
-*Esta issue foi gerada automaticamente pelo **CRONA Bot** (@crona-bot) via `calendar_config/curation-schedule.yml`.*
 """
         create_issue(
             repo=target_repo,

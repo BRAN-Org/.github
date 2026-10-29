@@ -103,22 +103,22 @@ def find_existing_protection_issue(repo: str, marker: str = "[CRONA/Segurança]"
 
 def create_protection_alert_issue(repo: str, assignee: str, dry_run: bool = False):
     """Abre issue de alerta com instruções técnicas de mitigação."""
-    title = "[CRONA/Segurança] Alerta: Proteção de Branch Ausente na Main"
-    body = f"""## 🚨 CRONA Bot: Alerta de Governança e Proteção de Dados
+    title = "[CRONA/Segurança] Proteção de Branch Ausente na Main"
+    body = f"""## Proteção de Branch Ausente na Main
+
+> *"Deixar a porta aberta assim dá medo... qualquer push direto na main pode bagunçar o histórico e eu não sei lidar com isso."*
 
 Olá @{assignee}!
 
-O watchdog automatizado da **CRONA Bot** detectou que a branch principal (`main`) do repositório [{repo}](https://github.com/{repo}) **não possui regras de proteção de branch ativadas**.
+A branch principal (`main`) de [{repo}](https://github.com/{repo}) está atualmente sem regras de proteção ativadas.
 
-### ⚠️ Risco Identificado
+### Risco
 Sem proteção de branch na `main`:
-1. Commits diretos podem ser enviados sem passar por Pull Request (`git push origin main`), contornando a validação de integridade de schemas e checagem de DOIs da CRONA.
+1. Commits diretos podem entrar sem passar por Pull Request (`git push origin main`), pulando a validação de schema e checagem de DOIs.
 2. Force pushes acidentais (`git push --force`) podem sobrescrever o histórico canônico de proveniência (`provenance.json`).
-3. O selo formal de `APPROVE` da CRONA deixa de ser um requisito vinculante para inclusão de novos dados.
+3. O review de integridade da base deixa de ser um requisito vinculante para inclusão de novos dados.
 
-### 🛠️ Como Resolver (Execução Rápida via CLI)
-
-Execute o comando abaixo com a CLI `gh` logada com permissões de administrador:
+### Como Resolver via CLI (`gh`)
 
 ```bash
 gh api -X PUT /repos/{repo}/branches/main/protection \\
@@ -136,17 +136,12 @@ gh api -X PUT /repos/{repo}/branches/main/protection \\
   }}'
 ```
 
-### 🖱️ Ou via Interface do GitHub (Settings):
+### Ou via Interface do GitHub (Settings)
 1. Acesse: **Settings** -> **Branches** -> **Add branch protection rule**.
 2. **Branch name pattern**: `main`.
-3. Marque:
-   - `Require a pull request before merging`.
-   - `Do not allow bypassing the above settings` (opcional).
-4. Desmarque: `Allow force pushes` e `Allow deletions`.
-5. Clique em **Save changes**.
-
----
-*Assim que a proteção for ativada, a CRONA detectará na próxima varredura e fechará esta issue automaticamente.*
+3. Marque `Require a pull request before merging`.
+4. Desmarque `Allow force pushes` e `Allow deletions`.
+5. Salve as alterações.
 """
     if dry_run:
         print(f"\n[DRY RUN] CRONA abriria issue de alerta em {repo}:")
@@ -165,16 +160,16 @@ gh api -X PUT /repos/{repo}/branches/main/protection \\
 
     code, out, err = run_gh_command(cmd)
     if code == 0:
-        print(f"   🚨 Issue de alerta #{out} criada em {repo}.")
+        print(f"   Issue de alerta #{out} criada em {repo}.")
         return True
     else:
-        print(f"   ❌ Falha ao criar issue em {repo}: {err}")
+        print(f"   Falha ao criar issue em {repo}: {err}")
         return False
 
 
 def close_protection_alert_issue(repo: str, issue_number: int, dry_run: bool = False):
     """Fecha a issue de alerta informando que a proteção foi restabelecida."""
-    msg = "🤖 **CRONA Bot**: Proteção de branch restabelecida com sucesso na branch `main`. Alerta de governança encerrado!"
+    msg = "Proteção de branch restabelecida na `main`. Agora tá tudo seguro e em ordem."
     if dry_run:
         print(f"\n[DRY RUN] CRONA fecharia issue #{issue_number} em {repo}.")
         return True
@@ -199,7 +194,7 @@ def main():
 
     repos = get_target_repositories(args.schedule)
     print("=" * 65)
-    print("🛡️  CRONA Bot: Watchdog de Proteção e Governança de Branches")
+    print("CRONA: Watchdog de Proteção de Branches")
     print(f"Total de repositórios auditados: {len(repos)}")
     print("=" * 65)
 
