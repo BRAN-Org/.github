@@ -126,7 +126,10 @@ gh api -X PUT /repos/{repo}/branches/main/protection \\
     "required_pull_request_reviews": {{
       "dismiss_stale_reviews": true,
       "require_code_owner_reviews": false,
-      "required_approving_review_count": 0
+      "required_approving_review_count": 0,
+      "bypass_pull_request_allowances": {{
+        "apps": ["crona-bot"]
+      }}
     }},
     "restrictions": null,
     "allow_force_pushes": false,

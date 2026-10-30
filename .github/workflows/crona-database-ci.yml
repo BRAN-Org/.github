@@ -41,11 +41,6 @@ jobs:
       issues: write
 
     steps:
-      - name: Checkout Repositório Alvo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
       - name: Obter Token da CRONA (GitHub App)
         id: app-token
         uses: actions/create-github-app-token@v1
@@ -64,6 +59,12 @@ jobs:
             echo "token=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_OUTPUT
             echo "bot_name=github-actions[bot]" >> $GITHUB_OUTPUT
           fi
+
+      - name: Checkout Repositório Alvo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ steps.auth.outputs.token }}
 
       # 1. BLOQUEIO DE FORKS EXTERNOS EM DADOS
       - name: Verificar Política de Contribuição em Dados (Forks Externos)
@@ -261,5 +262,5 @@ jobs:
           else
             git commit -m "chore(audit): registrar auditoria e sincronização Zenodo por CRONA [skip ci]"
             git pull --rebase origin ${{ github.ref_name }} || true
-            git push origin HEAD:${{ github.ref_name }}
+            git push "https://x-access-token:${{ steps.auth.outputs.token }}@github.com/${{ github.repository }}.git" HEAD:${{ github.ref_name }}
           fi
