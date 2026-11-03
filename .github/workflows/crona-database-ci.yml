@@ -208,7 +208,7 @@ jobs:
                   repo: context.repo.repo,
                   pull_number: context.issue.number,
                   event: 'REQUEST_CHANGES',
-                  body: 'Detectei anomalias no schema nas linhas marcadas... dá uma olhada nos comentários inline pra gente consertar essa linha do tempo.',
+                  body: 'Detectei anomalias no schema nas linhas marcadas... dá uma olhada nos comentários inline pra gente ajustar.',
                   comments: reviewData.comments.slice(0, 15) // limite de inline comments por review
                 });
               } catch (err) {
