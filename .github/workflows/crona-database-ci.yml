@@ -73,7 +73,7 @@ jobs:
         with:
           github-token: ${{ steps.auth.outputs.token }}
           script: |
-            const message = `Oi! Para manter a integridade da linha do tempo e a rastreabilidade estrita da proveniência, repositórios de dados da BRAN não aceitam alterações diretas via PR de forks externos.
+            const message = `Para garantir a rastreabilidade e a integridade dos dados, este repositório não aceita alterações diretas via PR de forks externos.
 
             Se você encontrou alguma inconsistência na base, por favor abra uma issue com o link da publicação na fonte original pra gente atualizar por aqui!`;
 
@@ -194,7 +194,7 @@ jobs:
                   repo: context.repo.repo,
                   pull_number: context.issue.number,
                   event: 'APPROVE',
-                  body: 'Dei uma conferida na linha temporal e nos dados... tudo alinhado e sem anomalias. Tudo pronto pro merge!'
+                  body: 'Dados e schema validados com sucesso. Tudo pronto pro merge.'
                 });
                 console.log("Review APPROVE submetido com sucesso pela CRONA.");
               } catch (e) {
@@ -208,7 +208,7 @@ jobs:
                   repo: context.repo.repo,
                   pull_number: context.issue.number,
                   event: 'REQUEST_CHANGES',
-                  body: 'Detectei anomalias no schema nas linhas marcadas... dá uma olhada nos comentários inline pra gente ajustar.',
+                  body: 'Inconsistências de schema encontradas. Ajuste os campos apontados nos comentários inline.',
                   comments: reviewData.comments.slice(0, 15) // limite de inline comments por review
                 });
               } catch (err) {

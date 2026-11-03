@@ -106,7 +106,7 @@ def create_protection_alert_issue(repo: str, assignee: str, dry_run: bool = Fals
     title = "[CRONA/Segurança] Proteção de Branch Ausente na Main"
     body = f"""## Proteção de Branch Ausente na Main
 
-> *"A branch main está desprotegida... commits diretos podem quebrar a integridade e o histórico do acervo."*
+> *"A branch main está sem proteção contra commits diretos. Ative as regras para proteger o histórico da base."*
 
 A branch principal (`main`) de [{repo}](https://github.com/{repo}) está atualmente sem regras de proteção ativadas.
 
