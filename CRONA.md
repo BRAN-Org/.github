@@ -44,37 +44,35 @@ A CRONA categoriza e reporta os identificadores nas seguintes classes:
 
 ## 2. Funções e Automações da CRONA
 
-### 2.1 Governança Temporal (Diária e Mensal)
-- **Rotina Diária (06:00 UTC)**: A CRONA varre o repositório `calendar_config`, recalcula o avanço dos dias e regera automaticamente os arquivos visuais (`calendar.ics` e os badges SVG dos 12 meses) para manter os ponteiros do dia em dia.
-- **Rotina Mensal (Dia 1º de cada mês)**:
-  1. Cruza a data atual com a matriz do `curation-schedule.yml`.
-  2. Identifica se há eventos com janela aberta de novos anais (EBBC, ENANCIB, ABEC, DataGramaZero).
-  3. Inspeciona a saúde atual da base (nível de integridade, contagem e taxa de DOIs).
-  4. Sugere a versão do ciclo no padrão `vYYYY.MM`.
-  5. Abre a issue de curadoria **diretamente no repositório da base** com o checklist operacional do ciclo.
+### 2.1 Governança de Calendário e Curadoria Mensal
+- **Rotina Mensal (Dia 1º de cada mês às 12:00 UTC)**:
+  1. Cruza a data atual com a matriz do `calendar_config/curation-schedule.yml`.
+  2. Identifica se há eventos com janela aberta de novos anais (EBBC, ENANCIB, ABEC, DataGramaZero, CBBD).
+  3. Sugere a versão do ciclo no padrão `vYYYY.MM`.
+  4. Abre a issue de curadoria **diretamente no repositório da base** com o checklist operacional do ciclo.
+- **Sincronização de Calendário**: O arquivo `calendar.ics` e os cards SVG são gerados no `calendar_config` quando houver alterações em `curation-schedule.yml` ou no ciclo mensal.
 
-### 2.2 Guarda e Triagem de Pull Requests (Bases de Dados)
+### 2.2 Guarda e Triagem de Pull Requests (`data-ci.yml`)
 Em qualquer Pull Request que altere arquivos em `data/*.json`, `provenance.json` ou `schemas/`:
 
 ```text
 [PR Aberto]
-   ├── Fork Externo? ───────────► [CRONA fecha o PR e orienta abrir Issue]
-   └── Branch Interna (Membro):
-         ├── Sintaxe JSON Inválida? ──► [Nível 1: Erro Fatal - Interrompe pipeline e alerta linha/coluna]
-         ├── Schema com Erros? ──────► [Nível 2: Review com comentários inline nas linhas do JSON]
-         └── 100% Conforme? ─────────► [Nível 3: Submete APPROVE formal + Resumo de DOIs]
+   ├── Sintaxe JSON Inválida? ──► [Erro Fatal: Interrompe pipeline imediatamente]
+   ├── Schema com Erros? ──────► [Reprova PR e detalha inconsistências no Sticky Comment]
+   └── 100% Conforme? ─────────► [Aprova o PR com resumo de métricas e DOIs]
 ```
 
-### 2.3 Auditoria Contínua de DOIs e Proveniência
+O bot mantém um **único Sticky Comment** no topo do PR (`<!-- id: crona-integrity-report -->`), evitando poluição de notificações.
+
+### 2.3 Auditoria Contínua de DOIs e Proveniência Criptográfica
 - Varre de forma assíncrona os DOIs dos artigos contra a **DOI Foundation** (`https://doi.org/<doi>`) e a API da **CrossRef**.
 - **Soft Fail**: Links mortos na fonte primária (HTTP 404, 500 ou indisponíveis) **não bloqueiam** o merge. Eles são documentados em tabela para registro histórico e atualizam o campo `doi_resolution_rate` no `provenance.json`.
-- A cada merge na branch `main`, a CRONA comita a atualização criptográfica do `provenance.json` assinada oficialmente como `crona-bot[bot]`.
+- A cada merge na branch `main`, a CRONA recalcula os hashes SHA-256 e comita a atualização do `provenance.json` assinada oficialmente como `crona-bot[bot] [skip ci]`.
 
-### 2.4 Watchdog de Proteção de Branches e Alerta Automático
-A integridade da base depende de a branch `main` nunca receber commits diretos sem PR:
-- **Auditoria de Branches**: A CRONA inspeciona se a branch `main` de todos os repositórios `*-open-database` (e do template) possui branch protection ativada.
-- **Abertura de Issue**: Caso uma base esteja desprotegida, a CRONA abre uma issue no repositório (`[CRONA/Segurança] Proteção de Branch Ausente na Main`) com as instruções e comandos exatos de mitigação.
-- **Auto-resolução**: Assim que a proteção for ativada, a CRONA detecta na varredura seguinte e fecha a issue automaticamente com mensagem de conformidade.
+### 2.4 Proteção de Branches Nativa (GitHub Rulesets)
+A integridade das bases de dados é garantida por **Rulesets nativos** configurados na organização `BRAN-Org`:
+- Commits diretos na branch `main` são bloqueados nativamente pela infraestrutura do GitHub.
+- Todo commit em dados deve vir de Pull Request com o check `CRONA Data Audit & Zenodo Sync` verde.
 
 ---
 
